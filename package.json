@@ -7,7 +7,10 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "upgrade:latest": "yarn upgrade-interactive --latest",
+    "format": "prettier --write .",
+    "github": "github.sh"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.10.1",
