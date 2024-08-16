@@ -1,10 +1,10 @@
-import "~/styles/globals.css";
+import '~/styles/globals.css'
 
-import { GeistSans } from "geist/font/sans";
-import getSeo from "~/constant/seo";
-import AppProviders from "~/providers";
+import { GeistSans } from 'geist/font/sans'
+import getSeo from '~/constant/seo'
+import AppProviders from '~/providers'
 
-export const metadata = getSeo();
+export const metadata = getSeo()
 
 export default function RootLayout({
   children,
@@ -15,5 +15,5 @@ export default function RootLayout({
         <AppProviders>{children}</AppProviders>
       </body>
     </html>
-  );
+  )
 }
