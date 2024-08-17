@@ -7,9 +7,7 @@ export const env = createEnv({
     throw new Error('Invalid environment variables')
   },
   onInvalidAccess: (_: string) => {
-    throw new Error(
-      '❌ Attempted to access a server-side environment variable on the client',
-    )
+    throw new Error('❌ Attempted to access a server-side environment variable on the client')
   },
 
   server: {

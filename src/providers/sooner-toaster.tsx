@@ -6,17 +6,17 @@ const SoonerToaster = ({ ...props }: ToasterProps) => {
   return (
     <Toaster
       richColors
-      position="bottom-right"
+      position='bottom-right'
       toastOptions={{
         classNames: {
           content: 'text-sm font-sans',
         },
       }}
       icons={{
-        success: <CheckCircle className="size-5" />,
-        info: <Info className="size-5" />,
-        warning: <AlertTriangle className="size-5" />,
-        error: <XCircle className="size-5" />,
+        success: <CheckCircle className='size-5' />,
+        info: <Info className='size-5' />,
+        warning: <AlertTriangle className='size-5' />,
+        error: <XCircle className='size-5' />,
       }}
       {...props}
     />
