@@ -1,5 +1,4 @@
 import { type ConfigProps } from '~/types/_config'
-import { env } from './env'
 
 const config: ConfigProps = {
   theme: 'light',
@@ -9,20 +8,13 @@ const config: ConfigProps = {
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
   domainName: 'next-clean-beryl.vercel.app',
 
-  crisp: {
-    // https://crisp.chat/en/ Crisp website ID. IF YOU DON'T USE CRISP: just remove this => Then add a support email in this config file (mailgun.supportEmail) otherwise customer support won't work.
-    id: '',
-    // Hide Crisp by default, except on route "/". Crisp is toggled with <ButtonSupport/>. If you want to show Crisp on every routes, just remove this below
-    onlyShowOnRoutes: ['/'],
-  },
-
   stripe: {
     // Create multiple plans in your Stripe dashboard, then add them here. You can add as many plans as you want, just make sure to add the priceId
     plans: [
       {
         // REQUIRED — we use this to find the plan in the webhook (for instance if you want to update the user's credits based on the plan)
         priceId:
-          env.NODE_ENV === 'development'
+          process.env.NODE_ENV === 'development'
             ? 'price_1Niyy5AxyNprDp7iZIqEyD2h'
             : 'price_456',
         //  REQUIRED - Name of the plan, displayed on the pricing page
@@ -44,7 +36,7 @@ const config: ConfigProps = {
       },
       {
         priceId:
-          env.NODE_ENV === 'development'
+          process.env.NODE_ENV === 'development'
             ? 'price_1O5KtcAxyNprDp7iftKnrrpw'
             : 'price_456',
         // This plan will look different on the pricing page, it will be highlighted. You can only have one plan with isFeatured: true

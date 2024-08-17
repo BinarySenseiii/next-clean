@@ -39,7 +39,6 @@ export interface ConfigProps {
   domainName: string
   social: Social
   mailgun: Mailgun
-  crisp: Crisp
   stripe: {
     plans: Plan[]
   }
