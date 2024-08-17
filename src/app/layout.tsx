@@ -1,8 +1,8 @@
 import '~/styles/globals.css'
 
 import { GeistSans } from 'geist/font/sans'
-import getSeo from '~/constant/seo'
 import AppProviders from '~/providers'
+import getSeo from '~/lib/seo'
 
 export const metadata = getSeo()
 
