@@ -6,7 +6,7 @@ const SoonerToaster = ({ ...props }: ToasterProps) => {
   return (
     <Toaster
       richColors
-      position='bottom-right'
+      position='top-right'
       toastOptions={{
         classNames: {
           content: 'text-sm font-sans',

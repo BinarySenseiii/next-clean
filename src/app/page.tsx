@@ -9,17 +9,18 @@ export default function HomePage() {
       <Button
         variant='destructive'
         onClick={() =>
-          toast.error('Attempted to access a server-side environment variable on the client', {
-            duration: Infinity,
-          })
+          toast.error(
+            'Attempted to access a server-side environment variable on the client'
+          )
         }>
         Give me toast
       </Button>
 
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error omnis similique nostrum neque
-        voluptate aperiam, quibusdam, minus dolores nisi cupiditate numquam sint qui. Possimus
-        debitis odit neque voluptatem! Nobis, veniam!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error omnis
+        similique nostrum neque voluptate aperiam, quibusdam, minus dolores nisi
+        cupiditate numquam sint qui. Possimus debitis odit neque voluptatem!
+        Nobis, veniam!
       </p>
     </div>
   )

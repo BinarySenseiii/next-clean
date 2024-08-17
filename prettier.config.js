@@ -1,7 +1,7 @@
 /** @type {import('prettier').Config & import('prettier-plugin-tailwindcss').PluginOptions} */
 const config = {
   plugins: ['prettier-plugin-tailwindcss'],
-  printWidth: 100,
+  printWidth: 80,
   arrowParens: 'avoid',
   bracketSameLine: true,
   bracketSpacing: true,

@@ -6,7 +6,9 @@ type ReactQueryProviderProps = {
   children: ReactNode
 }
 
-const ReactQueryProvider: React.FC<ReactQueryProviderProps> = ({ children }) => {
+const ReactQueryProvider: React.FC<ReactQueryProviderProps> = ({
+  children,
+}) => {
   const [queryClient] = useState(() => new QueryClient())
 
   return (
