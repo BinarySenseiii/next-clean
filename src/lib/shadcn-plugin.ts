@@ -1,5 +1,6 @@
 import plugin from 'tailwindcss/plugin'
 import { fontFamily } from 'tailwindcss/defaultTheme'
+import easing from 'open-props/src/props.easing.js'
 
 export const shadcnPlugin = plugin(
   ({ addBase }) => {
@@ -82,7 +83,9 @@ export const shadcnPlugin = plugin(
         fontFamily: {
           sans: ['var(--font-sans)', ...fontFamily.sans],
         },
+
         colors: {
+          highlight: '#6202FF',
           border: 'hsl(var(--border))',
           input: 'hsl(var(--input))',
           ring: 'hsl(var(--ring))',
@@ -122,6 +125,16 @@ export const shadcnPlugin = plugin(
           md: 'calc(var(--radius) - 2px)',
           sm: 'calc(var(--radius) - 4px)',
         },
+        // ! remove these screens &  fontSize when u used this starter
+        screens: {
+          sm: '520px',
+          lg: '976px',
+        },
+        fontSize: {
+          '4.5xl': ['2.625rem', '1.15'],
+          '5.5xl': ['3.375rem', '1'],
+        },
+
         keyframes: {
           'accordion-down': {
             from: {
@@ -139,10 +152,32 @@ export const shadcnPlugin = plugin(
               height: '0',
             },
           },
+          // ! remove these animation when u used this starter
+          'slide-top': {
+            from: { opacity: '0', transform: 'translateY(20px)' },
+            to: { opacity: '1', transform: 'translateY(0)' },
+          },
+          'slide-left': {
+            from: { opacity: '0', transform: 'translateX(20px)' },
+            to: { opacity: '1', transform: 'translateX(0)' },
+          },
+          'roll-reveal': {
+            from: { opacity: '0', transform: 'rotate(12deg) scale(0)' },
+            to: { opacity: '1', transform: 'rotate(0deg) scale(1)' },
+          },
+          'fade-in': {
+            from: { opacity: '0' },
+            to: { opacity: '1' },
+          },
         },
         animation: {
           'accordion-down': 'accordion-down 0.2s ease-out',
           'accordion-up': 'accordion-up 0.2s ease-out',
+          // ! remove these animation when u used this starter
+          'slide-top': 'slide-top 0.3s ease-out backwards',
+          'slide-left': 'slide-left 0.3s ease-out backwards',
+          'fade-in': 'fade-in 0.4s ease-out backwards',
+          'roll-reveal': `roll-reveal 0.4s ${easing['--ease-spring-2']} backwards`,
         },
       },
     },
