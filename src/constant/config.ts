@@ -2,8 +2,8 @@ import { type ConfigProps } from '~/types/_config'
 
 const config: ConfigProps = {
   theme: 'light',
-  appName: 'Next Js Clean Starter Template',
-  appDescription: `Next.js Clean Starter Template is a boilerplate designed to kickstart your Next.js projects. It provides a well-structured and organized codebase with essential features and best practices, making it easier to build scalable and maintainable applications. Perfect for developers who want to start their projects with a clean foundation, including social integrations and modern development tools.`,
+  appName: 'Clean Starter',
+  appDescription: `Boilerplate designed to kickstart your Next project. A well-structured and organized codebase with essential features and best practices, making it easier to build scalable and maintainable applications. Perfect for developers who want to start their projects with a clean foundation`,
 
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
   domainName: 'next-clean-beryl.vercel.app',

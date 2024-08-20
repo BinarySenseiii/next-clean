@@ -2,6 +2,9 @@ import config from '~/constant/config'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
+// for generating openGraph (OG) Image https://imgsrc.io/
+// for getting favicon https://favicon.io/
+
 // These are all the SEO tags you can add to your pages.
 // It prefills data with default title/description/OG, etc.. and you can cusotmize it for each page.
 // It's already added in the root layout.js so you don't have to add it to every pages

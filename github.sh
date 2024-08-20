@@ -1,3 +1,4 @@
+#!/bin/bash
 yarn format
 yarn lint
 read -p "Enter the commit message : " commitMessage
