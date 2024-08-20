@@ -1,8 +1,8 @@
 import { Frown } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
-import { getBackgroundPattern } from '~/components/ui/bg-patterns'
-import { Button } from '~/components/ui/button'
+import { getBackgroundPattern } from '~/components/bg-patterns'
+import { Button } from '~/components/design-system/button'
 
 const NotFoundPage = () => {
   return (

@@ -1,11 +1,11 @@
 import '~/styles/globals.css'
 
-import { fontSans } from '~/components/ui/fonts'
 import { getSEOTags } from '~/lib/seo'
 import { cn } from '~/lib/utils'
 import AppProviders from '~/providers'
 import { type Viewport } from 'next'
 import config from '~/constant/config'
+import { fontSans } from '~/components/design-system/fonts'
 
 export const viewport: Viewport = {
   themeColor: config.theme,
