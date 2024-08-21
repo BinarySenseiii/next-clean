@@ -3,7 +3,7 @@ import { type ConfigProps } from '~/types/_config'
 const config: ConfigProps = {
   theme: 'light',
   appName: 'Clean Starter',
-  appDescription: `Boilerplate designed to kickstart your Next project. A well-structured and organized codebase with essential features and best practices, making it easier to build scalable and maintainable applications. Perfect for developers who want to start their projects with a clean foundation`,
+  appDescription: `Boilerplate designed to kickstart your Next project.`,
 
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
   domainName: 'next-clean-beryl.vercel.app',
@@ -69,7 +69,7 @@ const config: ConfigProps = {
     // Email shown to customer if need support. Leave empty if not needed => if empty, set up Crisp above, otherwise you won't be able to offer customer support."
     supportEmail: 'faisaltariq1812@gmail.com',
     // When someone replies to supportEmail sent by the app, forward it to the email below (otherwise it's lost). If you set supportEmail to empty, this will be ignored.
-    forwardRepliesTo: 'marc.louvion@gmail.com',
+    forwardRepliesTo: 'faisal._test.com',
   },
 
   social: {
