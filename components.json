@@ -11,7 +11,8 @@
     "prefix": ""
   },
   "aliases": {
-    "components": "~/components/design-system",
-    "utils": "~/lib/utils"
+    "components": "~/components",
+    "utils": "~/lib/utils",
+    "ui": "~/components/design-system"
   }
 }
