@@ -6,10 +6,10 @@ import Script from 'next/script'
 // for getting favicon https://favicon.io/
 
 // These are all the SEO tags you can add to your pages.
-// It prefills data with default title/description/OG, etc.. and you can cusotmize it for each page.
+// It prefills data with default title/description/OG, etc.. and you can customize it for each page.
 // It's already added in the root layout.js so you don't have to add it to every pages
 // But I recommend to set the canonical URL for each page (export const metadata = getSEOTags({canonicalUrlRelative: "/"});)
-// See https://shipfa.st/docs/features/seo
+
 export const getSEOTags = ({
   title,
   description,
@@ -93,7 +93,7 @@ export const renderSchemaTags = () => {
           url: `https://${config.domainName}/`,
           author: {
             '@type': 'Person',
-            name: 'Marc Lou',
+            name: 'Faisal Tariq',
           },
           datePublished: '2023-08-01',
           applicationCategory: 'EducationalApplication',
