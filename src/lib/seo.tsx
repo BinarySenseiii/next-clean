@@ -2,6 +2,11 @@ import config from '~/constant/config'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
+export type SeoMeta = {
+  canonicalUrlRelative?: string
+  extraTags?: Record<string, never>
+} & Metadata
+
 // for generating openGraph (OG) Image https://imgsrc.io/
 // for getting favicon https://favicon.io/
 
@@ -17,10 +22,7 @@ export const getSEOTags = ({
   openGraph,
   canonicalUrlRelative,
   extraTags,
-}: Metadata & {
-  canonicalUrlRelative?: string
-  extraTags?: Record<string, never>
-} = {}) => {
+}: SeoMeta = {}): SeoMeta => {
   return {
     // up to 50 characters (what does your app do for the user?) > your main should be here
     title: title ?? config.appName,
@@ -40,7 +42,8 @@ export const getSEOTags = ({
       title: openGraph?.title ?? config.appName,
       description: openGraph?.description ?? config.appDescription,
       url: openGraph?.url ?? `https://${config.domainName}/`,
-      siteName: openGraph?.title ?? config.appName,
+      // siteName: openGraph?.title ?? config.appName,
+      siteName: (openGraph?.title as string) ?? config.appName,
       // If you add an opengraph-image.(jpg|jpeg|png|gif) image to the /app folder, you don't need the code below
       // images: [
       //   {
