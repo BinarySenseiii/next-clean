@@ -16,6 +16,7 @@ const config = {
     '@typescript-eslint/unbound-method': 'off',
     '@typescript-eslint/consistent-type-definitions': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unused-expressions': 'off',
     '@typescript-eslint/consistent-type-imports': [
       'warn',
       {
