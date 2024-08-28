@@ -1,0 +1,1 @@
+npx run commitlint ${1}

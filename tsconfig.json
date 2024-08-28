@@ -34,7 +34,7 @@
     }
   },
   "include": [
-    ".eslintrc.cjs",
+    ".eslintrc.json",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
