@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/design-system/button.tsx
 import * as React from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { cva, type VariantProps } from 'class-variance-authority'
@@ -60,3 +61,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = 'Button'
 
 export { Button, buttonVariants }
+=======
+import { Button, type ButtonProps, type ElementProps } from '@mantine/core'
+import React from 'react'
+
+interface CustomButtonProps
+  extends ButtonProps,
+    ElementProps<'button', keyof ButtonProps> {}
+
+const CustomButton: React.FC<CustomButtonProps> = ({ children, ...props }) => {
+  return <Button {...props}>{children}</Button>
+}
+export default CustomButton
+>>>>>>> cfe569534a79ed96a2c2eed69ad4cd7c370db17e:next-mantine/src/components/design-system/button.tsx
