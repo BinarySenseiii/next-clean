@@ -1,5 +1,5 @@
+import { AlertTriangle, CheckCircle, Info, XCircle } from 'lucide-react'
 import React from 'react'
-import { CheckCircle, Info, AlertTriangle, XCircle } from 'lucide-react'
 import { Toaster, type ToasterProps } from 'sonner'
 
 const SoonerToaster = ({ ...props }: ToasterProps) => {

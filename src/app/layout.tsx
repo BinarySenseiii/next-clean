@@ -1,6 +1,7 @@
 import '~/styles/globals.css'
 
 import { type Viewport } from 'next'
+
 import { fontSans } from '~/components/design-system/fonts'
 import config from '~/constant/config'
 import { getSEOTags } from '~/lib/seo'
@@ -24,11 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body
-        className={cn(
-          'min-h-dvh bg-background font-sans antialiased',
-          fontSans.variable
-        )}>
+      <body className={cn('min-h-dvh bg-background font-sans antialiased', fontSans.variable)}>
         <AppProviders>{children}</AppProviders>
       </body>
     </html>

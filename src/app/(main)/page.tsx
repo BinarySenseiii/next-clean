@@ -1,4 +1,5 @@
 import React from 'react'
+
 import config from '~/constant/config'
 
 export default function HomePage() {

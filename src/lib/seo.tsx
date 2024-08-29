@@ -1,6 +1,7 @@
-import config from '~/constant/config'
 import type { Metadata } from 'next'
 import Script from 'next/script'
+
+import config from '~/constant/config'
 
 export type SeoMeta = {
   canonicalUrlRelative?: string

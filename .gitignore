@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 typecheck_error.log
+node_modules/
 
 # testing
 /coverage

@@ -2,17 +2,12 @@
 import { Frown } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect } from 'react'
+
 import { getBackgroundPattern } from '~/components/bg-patterns'
 import { Button } from '~/components/design-system/button'
 import { makeUrlsExternal } from '~/lib/utils'
 
-const ErrorPage = ({
-  error,
-  reset,
-}: {
-  error: Error & { digest?: string }
-  reset: () => void
-}) => {
+const ErrorPage = ({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) => {
   useEffect(() => {
     console.error(error)
   }, [error])
@@ -36,9 +31,8 @@ const ErrorPage = ({
                 __html: makeUrlsExternal(error.message),
               }}
             />
-            It looks like there is an issue with the API request, or a variable
-            might not be properly defined. Please check your code or try again
-            later .
+            It looks like there is an issue with the API request, or a variable might not be
+            properly defined. Please check your code or try again later .
           </p>
 
           <div className='flex items-center gap-4'>

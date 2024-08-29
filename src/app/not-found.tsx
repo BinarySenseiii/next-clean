@@ -1,6 +1,7 @@
 import { Frown } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
+
 import { getBackgroundPattern } from '~/components/bg-patterns'
 import { Button } from '~/components/design-system/button'
 
@@ -16,9 +17,8 @@ const NotFoundPage = () => {
             This page doesn&apos;t exist
           </h1>
           <p className='mx-auto my-4 mb-4 max-w-xl text-center text-base'>
-            Oops! It seems like you&apos;ve stumbled upon a page that
-            doesn&apos;t exist Don&apos;t worry, even the best of us get lost
-            sometimes
+            Oops! It seems like you&apos;ve stumbled upon a page that doesn&apos;t exist Don&apos;t
+            worry, even the best of us get lost sometimes
           </p>
 
           <Button asChild>
