@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "analyze": "ANALYZE=true next build",
+    "analyze": "npx cross-env ANALYZE=true yarn build",
     "build": "next build",
     "dev": "next dev",
     "typecheck": "tsc --noEmit",
@@ -36,7 +36,6 @@
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
-    "yarn": "^1.22.22",
     "zod": "^3.23.3",
     "zustand": "^4.5.5"
   },

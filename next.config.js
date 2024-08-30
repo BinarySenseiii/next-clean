@@ -2,6 +2,7 @@ import createJiti from 'jiti'
 import { fileURLToPath } from 'node:url'
 
 import withBundleAnalyzer from '@next/bundle-analyzer'
+
 const jiti = createJiti(fileURLToPath(import.meta.url))
 
 jiti('./src/constant/env.ts')
