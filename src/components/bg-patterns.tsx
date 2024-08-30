@@ -1,3 +1,5 @@
+import { type ReactNode } from 'react'
+
 const BgLightGrid1 = () => {
   return (
     <div className='absolute inset-0 -z-10 size-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]' />
@@ -15,7 +17,7 @@ const BgLightGrid2 = () => {
 const BgLightGrid5 = () => {
   return (
     <div className='relative size-full bg-white'>
-      <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]' />
+      <div className='absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]' />
     </div>
   )
 }
@@ -23,7 +25,7 @@ const BgLightGrid5 = () => {
 const BgLightGradient1 = () => {
   return (
     <div className='absolute inset-0 -z-10 size-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]'>
-      <div className='absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)]' />
+      <div className='absolute inset-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)]' />
     </div>
   )
 }
@@ -37,7 +39,7 @@ const BgLightGrid3 = () => {
 const BgLightGridGradient1 = () => {
   return (
     <div className='absolute inset-0 -z-10 size-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]'>
-      <div className='absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]' />
+      <div className='absolute inset-x-0 top-0 -z-10 m-auto size-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]' />
     </div>
   )
 }
@@ -56,7 +58,7 @@ const BgLightGrid4 = () => {
 
 const BgLightGradient2 = () => {
   return (
-    <div className='absolute top-0 z-[-2] h-screen w-screen rotate-180 transform bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]' />
+    <div className='absolute top-0 z-[-2] h-screen w-screen rotate-180 bg-white bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]' />
   )
 }
 
@@ -75,7 +77,7 @@ const BgLightGradient3 = () => {
 const BgLightGradient4 = () => {
   return (
     <div className='absolute top-0 -z-10 size-full bg-white'>
-      <div className='absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]' />
+      <div className='absolute bottom-auto left-auto right-0 top-0 size-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]' />
     </div>
   )
 }
@@ -109,7 +111,7 @@ const BgDarkGradient3 = () => {
 const BgLightGridGradient2 = () => {
   return (
     <div className='absolute inset-0 -z-10 size-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]'>
-      <div className='absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]' />
+      <div className='absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]' />
     </div>
   )
 }
@@ -117,7 +119,7 @@ const BgLightGridGradient2 = () => {
 const BgDarkGradient4 = () => {
   return (
     <div className='relative size-full bg-slate-950'>
-      <div className='absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]' />
+      <div className='absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]' />
     </div>
   )
 }
@@ -125,8 +127,8 @@ const BgDarkGradient4 = () => {
 const BgDarkGradient5 = () => {
   return (
     <div className='relative size-full bg-slate-950'>
-      <div className='absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]' />
-      <div className='absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]' />
+      <div className='absolute bottom-0 left-[-20%] right-0 top-[-10%] size-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]' />
+      <div className='absolute bottom-0 right-[-20%] top-[-10%] size-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]' />
     </div>
   )
 }
@@ -134,7 +136,7 @@ const BgDarkGradient5 = () => {
 const BgDarkGrid2 = () => {
   return (
     <div className='relative size-full bg-slate-950'>
-      <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]' />
+      <div className='absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]' />
     </div>
   )
 }
@@ -142,8 +144,8 @@ const BgDarkGrid2 = () => {
 const BgDarkGridGradient1 = () => {
   return (
     <div className='relative size-full bg-black'>
-      <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]' />
-      <div className='absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]' />
+      <div className='absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]' />
+      <div className='absolute inset-x-0 top-[-10%] size-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]' />
     </div>
   )
 }
@@ -151,7 +153,7 @@ const BgDarkGridGradient1 = () => {
 const BgDarkGrid3 = () => {
   return (
     <div className='relative size-full bg-slate-950'>
-      <div className='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]' />
+      <div className='absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]' />
     </div>
   )
 }
@@ -159,7 +161,7 @@ const BgDarkGrid3 = () => {
 export type BackgroundOption = {
   id: string
   name: string
-  component: JSX.Element
+  component: ReactNode
   theme: 'light' | 'dark'
 }
 
@@ -300,7 +302,7 @@ export const BACKGROUND_OPTIONS = [
 
 export type BackgroundId = (typeof BACKGROUND_OPTIONS)[number]['id']
 
-export const getBackgroundPattern = (id: BackgroundId): JSX.Element | null => {
+export const getBackgroundPattern = (id: BackgroundId): ReactNode | null => {
   const bg = BACKGROUND_OPTIONS.find(option => option.id === id)
   return bg ? bg.component : null
 }

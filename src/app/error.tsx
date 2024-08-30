@@ -1,7 +1,7 @@
 'use client'
+import { useEffect } from 'react'
 import { Frown } from 'lucide-react'
 import Link from 'next/link'
-import { useEffect } from 'react'
 
 import { getBackgroundPattern } from '~/components/bg-patterns'
 import { Button } from '~/components/design-system/button'
@@ -24,7 +24,7 @@ const ErrorPage = ({ error, reset }: { error: Error & { digest?: string }; reset
               ? error.name.replace(/([a-z])([A-Z])/g, '$1 $2')
               : 'Internal Server Error!'}
           </h1>
-          <p className='mx-auto my-4 mb-4 max-w-xl text-center text-base'>
+          <p className='mx-auto my-4 max-w-xl text-center text-base'>
             Oops! Something went wrong{' '}
             <strong
               dangerouslySetInnerHTML={{

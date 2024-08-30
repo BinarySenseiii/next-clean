@@ -1,6 +1,7 @@
-import '~/styles/globals.css'
-
+import React from 'react'
 import { type Viewport } from 'next'
+
+import '~/styles/globals.css'
 
 import { fontSans } from '~/components/design-system/fonts'
 import config from '~/constant/config'

@@ -7,12 +7,13 @@
     "analyze": "ANALYZE=true next build",
     "build": "next build",
     "dev": "next dev",
-    "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "start": "next start",
     "upgrade:latest": "yarn upgrade-interactive --latest",
-    "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",
-    "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
+    "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
     "prepare": "husky",
     "commitlint": "commitlint --edit"
   },
@@ -54,6 +55,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-tailwindcss": "^3.17.4",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.9",
     "postcss": "^8.4.41",
@@ -65,10 +67,15 @@
   "ct3aMetadata": {
     "initVersion": "7.36.2"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown",
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
+    "*.{jsx,js,ts,tsx}": [
+      "eslint --cache --fix",
+      "prettier --write"
     ]
   }
 }

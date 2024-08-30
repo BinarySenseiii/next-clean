@@ -1,28 +1,73 @@
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": true
+    "project": "./tsconfig.json"
   },
-  "plugins": ["simple-import-sort", "@typescript-eslint", "@tanstack/query"],
+  "plugins": [
+    "simple-import-sort",
+    "@typescript-eslint",
+    "@tanstack/query",
+    "prettier",
+    "tailwindcss"
+  ],
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:@tanstack/eslint-plugin-query/recommended",
-    "eslint-config-prettier",
-    "plugin:prettier/recommended"
+    "plugin:tailwindcss/recommended",
+    "plugin:prettier/recommended",
+    "eslint:recommended"
   ],
   "rules": {
     "import/prefer-default-export": "off",
     "no-console": "off",
-    "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
-    "prettier/prettier": "error",
     "@typescript-eslint/array-type": "off",
     "@typescript-eslint/unbound-method": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-unused-expressions": "off",
+    "tailwindcss/no-contradicting-classname": "off",
+    "tailwindcss/enforces-negative-arbitrary-values": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "sort-imports": "off",
+    "tailwindcss/no-custom-classname": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          // Packages `react` related packages come first.
+          ["^react", "^\\w", "^@hookform", "^@radix-ui"],
+          // npm packages
+          // Anything that starts with a letter (or digit or underscore), or `@` followed by a letter.
+          // ['^\\w'],
+          // Internal packages.
+          ["^@store(/.*|$)"],
+          ["^@components(/.*|$)"],
+          ["^@ui(/.*|$)"],
+          ["^@lib(/.*|$)"],
+          ["^@pages(/.*|$)"],
+          ["^@utils(/.*|$)"],
+          ["^@hooks(/.*|$)"],
+          ["^@services(/.*|$)"],
+          // Side effect imports.
+          ["^\\u0000"],
+          // Parent imports. Put `..` last.
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          // Style imports.
+          ["^.+\\.?(css)$"]
+        ]
+      }
+    ],
     "@typescript-eslint/consistent-type-imports": [
       "warn",
       {
@@ -45,5 +90,11 @@
         }
       }
     ]
+  },
+  "settings": {
+    "tailwindcss": {
+      "callees": ["cn"],
+      "config": "tailwind.config.ts"
+    }
   }
 }
