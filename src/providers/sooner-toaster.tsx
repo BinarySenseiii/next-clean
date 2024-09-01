@@ -1,5 +1,5 @@
 import React from 'react'
-import { AlertTriangle, CheckCircle, Info, XCircle } from 'lucide-react'
+import { FaCheckCircle, FaExclamationTriangle, FaInfoCircle, FaTimesCircle } from 'react-icons/fa'
 import { Toaster, type ToasterProps } from 'sonner'
 
 const SoonerToaster = ({ ...props }: ToasterProps) => {
@@ -13,10 +13,10 @@ const SoonerToaster = ({ ...props }: ToasterProps) => {
         },
       }}
       icons={{
-        success: <CheckCircle className='size-5' />,
-        info: <Info className='size-5' />,
-        warning: <AlertTriangle className='size-5' />,
-        error: <XCircle className='size-5' />,
+        success: <FaCheckCircle className='size-5' />,
+        info: <FaInfoCircle className='size-5' />,
+        warning: <FaExclamationTriangle className='size-5' />,
+        error: <FaTimesCircle className='size-5' />,
       }}
       {...props}
     />
