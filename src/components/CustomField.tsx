@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import {
   type Control,
   type ControllerRenderProps,
@@ -9,8 +10,11 @@ import { match } from 'ts-pattern'
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from './design-system/form'
 import { Input } from './design-system/input'
 
+import { RenderPasswordRequirements } from '~/constant/validations'
+
 export enum FORM_FIELD {
   INPUT = 'input',
+  PASSWORD = 'password',
   TEXTAREA = 'textarea',
   PHONE_INPUT = 'phoneInput',
   CHECKBOX = 'checkbox',
@@ -19,24 +23,21 @@ export enum FORM_FIELD {
   SKELETON = 'skeleton',
 }
 
-type CustomFormFieldProps<
-  TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = {
+type CustomFieldProps<TFieldValues extends FieldValues, TName extends FieldPath<TFieldValues>> = {
   control: Control<TFieldValues>
   name: TName
   fieldType: FORM_FIELD
   placeholder: string
   label?: string
+  withPasswordRequirement?: boolean
 }
 
 const RenderInput = <TFieldValues extends FieldValues, TName extends FieldPath<TFieldValues>>({
   fieldType,
   placeholder,
   field,
-}: {
-  fieldType: FORM_FIELD
-  placeholder: string
+  withPasswordRequirement,
+}: CustomFieldProps<TFieldValues, TName> & {
   field: ControllerRenderProps<TFieldValues, TName>
 }) => {
   return match(fieldType)
@@ -45,29 +46,35 @@ const RenderInput = <TFieldValues extends FieldValues, TName extends FieldPath<T
         <Input placeholder={placeholder} {...field} />
       </FormControl>
     ))
+    .with(FORM_FIELD.PASSWORD, () => (
+      <FormControl>
+        <Fragment>
+          <Input type='password' placeholder={placeholder} {...field} />
+          {withPasswordRequirement && <RenderPasswordRequirements password={field.value} />}
+        </Fragment>
+      </FormControl>
+    ))
     .otherwise(() => 'Invalid Input')
 }
 
-const CustomFormField = <TFieldValues extends FieldValues, TName extends FieldPath<TFieldValues>>({
-  control,
-  name,
-  fieldType,
-  placeholder,
-  label,
-}: CustomFormFieldProps<TFieldValues, TName>) => {
+const CustomField = <TFieldValues extends FieldValues, TName extends FieldPath<TFieldValues>>(
+  props: CustomFieldProps<TFieldValues, TName>
+) => {
   return (
     <FormField
-      control={control}
-      name={name}
+      control={props.control}
+      name={props.name}
       render={({ field }) => (
         <FormItem className='flex-1'>
-          {fieldType !== FORM_FIELD.CHECKBOX && label && <FormLabel>{label}</FormLabel>}
-          <RenderInput field={field} fieldType={fieldType} placeholder={placeholder} />
-          <FormMessage className='text-sm' />
+          {props.fieldType !== FORM_FIELD.CHECKBOX && props.label && (
+            <FormLabel>{props.label}</FormLabel>
+          )}
+          <RenderInput field={field} {...props} />
+          <FormMessage className='text-[13px]' />
         </FormItem>
       )}
     />
   )
 }
 
-export default CustomFormField
+export default CustomField
