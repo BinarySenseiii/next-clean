@@ -16,22 +16,15 @@
     "plugin:@tanstack/eslint-plugin-query/recommended",
     "plugin:tailwindcss/recommended",
     "eslint:recommended",
-    "prettier/prettier",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "prettier/prettier"
   ],
   "rules": {
     "tailwindcss/no-contradicting-classname": "off",
     "@typescript-eslint/unbound-method": "off",
-    "simple-import-sort/exports": "error",
-    // "prettier/prettier": [
-    // 	"error",
-    // 	{
-    // 		"endOfLine": "auto"
-    // 	}
-    // ],
+    "prettier/prettier": "error",
     "sort-imports": "off",
-    "tailwindcss/no-custom-classname": "off",
-    "@typescript-eslint/no-var-requires": "off",
+    "simple-import-sort/exports": "error",
     "simple-import-sort/imports": [
       "error",
       {
@@ -45,6 +38,9 @@
         ]
       }
     ],
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
     "@typescript-eslint/consistent-type-imports": [
       "warn",
       {
