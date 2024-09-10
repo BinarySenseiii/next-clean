@@ -7,7 +7,6 @@
     "simple-import-sort",
     "@typescript-eslint",
     "@tanstack/query",
-    "prettier",
     "tailwindcss"
   ],
   "extends": [
@@ -16,27 +15,20 @@
     "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:@tanstack/eslint-plugin-query/recommended",
     "plugin:tailwindcss/recommended",
-    "plugin:prettier/recommended",
-    "eslint:recommended"
+    "eslint:recommended",
+    "prettier/prettier",
+    "plugin:prettier/recommended"
   ],
   "rules": {
-    "import/prefer-default-export": "off",
-    "no-console": "off",
-    "simple-import-sort/exports": "error",
-    "@typescript-eslint/array-type": "off",
-    "@typescript-eslint/no-empty-object-type": "off",
-    "@typescript-eslint/unbound-method": "off",
-    "@typescript-eslint/consistent-type-definitions": "off",
-    "@typescript-eslint/no-unsafe-assignment": "off",
-    "@typescript-eslint/no-unused-expressions": "off",
     "tailwindcss/no-contradicting-classname": "off",
-    "tailwindcss/enforces-negative-arbitrary-values": "off",
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto"
-      }
-    ],
+    "@typescript-eslint/unbound-method": "off",
+    "simple-import-sort/exports": "error",
+    // "prettier/prettier": [
+    // 	"error",
+    // 	{
+    // 		"endOfLine": "auto"
+    // 	}
+    // ],
     "sort-imports": "off",
     "tailwindcss/no-custom-classname": "off",
     "@typescript-eslint/no-var-requires": "off",
@@ -44,17 +36,11 @@
       "error",
       {
         "groups": [
-          // Packages `react` related packages come first.
           ["^react", "^@?\\w"],
-          // Internal packages.
           ["^(@|components)(/.*|$)"],
-          // Side effect imports.
           ["^\\u0000"],
-          // Parent imports. Put `..` last.
           ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-          // Other relative imports. Put same-folder imports and `.` last.
           ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-          // Style imports.
           ["^.+\\.?(css)$"]
         ]
       }

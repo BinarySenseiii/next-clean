@@ -8,7 +8,7 @@ export interface Social {
 
 export type Theme = 'light' | 'dark'
 
-export type Crisp = {
+export interface Crisp {
   id?: string
   onlyShowOnRoutes?: string[]
 }
@@ -28,9 +28,9 @@ export interface Plan {
   description?: string
   price: number
   priceAnchor?: number
-  features: Array<{
+  features: {
     name: string
-  }>
+  }[]
 }
 export interface ConfigProps {
   theme: Theme

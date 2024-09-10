@@ -22,14 +22,14 @@
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@t3-oss/env-nextjs": "^0.11.0",
-    "@tanstack/react-query": "^5.54.1",
-    "@tanstack/react-query-devtools": "^5.54.1",
+    "@tanstack/react-query": "^5.55.4",
+    "@tanstack/react-query-devtools": "^5.55.4",
     "axios": "^1.7.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.5.2",
+    "framer-motion": "^11.5.4",
     "jiti": "^1.21.6",
-    "next": "^14.2.8",
+    "next": "^14.2.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.0",
@@ -45,17 +45,17 @@
     "@commitlint/cli": "^19.4.1",
     "@commitlint/config-conventional": "^19.4.1",
     "@hookform/devtools": "^4.3.1",
-    "@next/bundle-analyzer": "^14.2.8",
+    "@next/bundle-analyzer": "^14.2.9",
     "@tanstack/eslint-plugin-query": "^5.53.0",
     "@types/eslint": "^9.6.1",
     "@types/node": "^22.5.4",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^8.4.0",
-    "@typescript-eslint/parser": "^8.4.0",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.8",
+    "eslint-config-next": "^14.2.9",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
@@ -63,7 +63,7 @@
     "husky": "^9.1.5",
     "lint-staged": "^15.2.10",
     "postcss": "^8.4.45",
-    "prettier": "3.3.3",
+    "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.3"
@@ -79,7 +79,7 @@
   "lint-staged": {
     "*.{jsx,js,ts,tsx}": [
       "eslint --cache --fix",
-      "prettier --write"
+      "prettier --write --ignore-unknown"
     ]
   }
 }

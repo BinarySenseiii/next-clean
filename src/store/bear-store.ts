@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-type BearStore = {
+interface BearStore {
   bears: number
   fish: number
   // ⬇️ separate "namespace" for actions
@@ -16,9 +16,18 @@ const useBearStore = create<BearStore>(set => ({
   fish: 0,
   // ⬇️ separate "namespace" for actions
   actions: {
-    increasePopulation: by => set(state => ({ bears: state.bears + by })),
-    eatFish: () => set(state => ({ fish: state.fish - 1 })),
-    removeAllBears: () => set({ bears: 0 }),
+    increasePopulation: by =>
+      set(state => ({
+        bears: state.bears + by,
+      })),
+    eatFish: () =>
+      set(state => ({
+        fish: state.fish - 1,
+      })),
+    removeAllBears: () =>
+      set({
+        bears: 0,
+      }),
   },
 }))
 

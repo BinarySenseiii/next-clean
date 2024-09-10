@@ -36,7 +36,7 @@ export const getSEOTags = ({
     metadataBase: new URL(
       process.env.NODE_ENV === 'development'
         ? 'http://localhost:3000/'
-        : `https://${config.domainName}/`
+        : `https://${config.domainName}/`,
     ),
 
     openGraph: {
@@ -68,7 +68,9 @@ export const getSEOTags = ({
 
     // If a canonical URL is given, we add it. The metadataBase will turn the relative URL into a fully qualified URL
     ...(canonicalUrlRelative && {
-      alternates: { canonical: canonicalUrlRelative },
+      alternates: {
+        canonical: canonicalUrlRelative,
+      },
     }),
 
     // If you want to add extra tags, you can pass them here
@@ -85,8 +87,8 @@ export const getSEOTags = ({
 export const renderSchemaTags = () => {
   return (
     <Script
-      id='schema-tags'
-      type='application/ld+json'
+      id="schema-tags"
+      type="application/ld+json"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify({
           '@context': 'http://schema.org',

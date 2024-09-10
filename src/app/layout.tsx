@@ -25,8 +25,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
-      <body className={cn('min-h-dvh bg-background font-sans antialiased', fontSans.variable)}>
+    <html lang="en">
+      <body
+        className={cn(
+          'min-h-dvh bg-background font-sans antialiased',
+          fontSans.variable,
+        )}
+      >
         <AppProviders>{children}</AppProviders>
       </body>
     </html>
