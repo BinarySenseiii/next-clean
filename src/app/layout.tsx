@@ -1,13 +1,13 @@
 import React from 'react'
 import { type Viewport } from 'next'
 
-import '~/styles/globals.css'
+import '~/core/styles/globals.css'
 
-import { fontSans } from '~/components/design-system/fonts'
-import config from '~/constant/config'
-import { getSEOTags } from '~/lib/seo'
-import { cn } from '~/lib/utils'
-import AppProviders from '~/providers'
+import { fontSans } from '~/core/components/design-system/fonts'
+import config from '~/core/constant/config'
+import { getSEOTags } from '~/core/lib/seo'
+import { cn } from '~/core/lib/utils'
+import AppProviders from '~/core/providers'
 
 export const viewport: Viewport = {
   themeColor: config.theme,

@@ -1,4 +1,4 @@
-import { type ConfigProps } from '~/types/_config'
+import { type ConfigProps } from '~/core/types/_config'
 
 const config: ConfigProps = {
   theme: 'light',

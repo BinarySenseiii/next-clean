@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
-import config from '~/constant/config'
+import config from '~/core/constant/config'
 
 export type SeoMeta = {
   canonicalUrlRelative?: string
@@ -26,7 +26,7 @@ export const getSEOTags = ({
 }: SeoMeta = {}): SeoMeta => {
   return {
     // up to 50 characters (what does your app do for the user?) > your main should be here
-    title: title ?? config.appName,
+    title: config.appName ?? title,
     // up to 160 characters (how does your app help the user?)
     description: description ?? config.appDescription,
     // some keywords separated by commas. by default it will be your app name

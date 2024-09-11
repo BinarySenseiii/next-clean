@@ -1,6 +1,4 @@
-import React from 'react'
-
-import config from '~/constant/config'
+import config from '~/core/constant/config'
 
 export default function HomePage() {
   return (

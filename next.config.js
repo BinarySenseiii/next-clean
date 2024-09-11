@@ -1,11 +1,10 @@
+import withBundleAnalyzer from '@next/bundle-analyzer'
 import createJiti from 'jiti'
 import { fileURLToPath } from 'node:url'
 
-import withBundleAnalyzer from '@next/bundle-analyzer'
-
 const jiti = createJiti(fileURLToPath(import.meta.url))
 
-jiti('./src/constant/env.ts')
+jiti('./src/core/constant/env.ts')
 
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',

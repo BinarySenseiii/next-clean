@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import { cn } from '~/lib/utils'
+import { cn } from '~/core/lib/utils'
 
 export const validatePasswordRequirements = (password: string) =>
   passwordRequirements.every(({ re }) => re.test(password))

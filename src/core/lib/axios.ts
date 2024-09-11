@@ -4,7 +4,7 @@ import axios, {
   type AxiosResponse,
 } from 'axios'
 
-import config from '~/constant/config'
+import config from '~/core/constant/config'
 
 export const ORIGIN =
   process.env.NODE_ENV === 'development'

@@ -3,9 +3,9 @@ import { useEffect } from 'react'
 import { Frown } from 'lucide-react'
 import Link from 'next/link'
 
-import { getBackgroundPattern } from '~/components/bg-patterns'
-import { Button } from '~/components/design-system/button'
-import { makeUrlsExternal } from '~/lib/utils'
+import { getBackgroundPattern } from '~/core/components/bg-patterns'
+import { Button } from '~/core/components/design-system/button'
+import { makeUrlsExternal } from '~/core/lib/utils'
 
 const ErrorPage = ({
   error,

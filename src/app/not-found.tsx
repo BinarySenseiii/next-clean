@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
-import { getBackgroundPattern } from '~/components/bg-patterns'
-import { Button } from '~/components/design-system/button'
+import { getBackgroundPattern } from '~/core/components/bg-patterns'
+import { Button } from '~/core/components/design-system/button'
 
 const NotFoundPage = () => {
   return (
