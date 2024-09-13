@@ -17,6 +17,7 @@
     "plugin:tailwindcss/recommended",
     "eslint:recommended",
     "plugin:prettier/recommended",
+    "next/typescript",
     "prettier/prettier"
   ],
   "rules": {
