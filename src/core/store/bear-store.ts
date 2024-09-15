@@ -7,7 +7,7 @@ interface BearState {
   fish: number
 }
 interface BearActions {
-  increasePopulation: (payload: number) => void
+  increasePopulation: (by: number) => void
   eatFish: () => void
   resetBears: () => void
 }
@@ -19,7 +19,7 @@ const initialBearState: BearState = {
   fish: 0,
 }
 
-const bearStore = create<BearStore>(set => ({
+const useBearStore = create<BearStore>(set => ({
   ...initialBearState,
   // ⬇️ separate "namespace" for actions
   actions: {
@@ -29,13 +29,12 @@ const bearStore = create<BearStore>(set => ({
   },
 }))
 
+export const useBears = () => useBearStore(state => state.bears)
+export const useFish = () => useBearStore(state => state.fish)
+
+// ✅ this Optimized approach also fine - // Object pick, re-renders the component when either state.bears or state.fish change
 export const useBearState = () =>
-  bearStore(
-    useShallow(state => ({
-      bears: state.bears,
-      fish: state.fish,
-    })),
-  )
+  useBearStore(useShallow(state => ({ bears: state.bears })))
 
 //  🎉 one selector for all our actions
-export const useBearActions = () => bearStore(state => state.actions)
+export const useBearActions = () => useBearStore(state => state.actions)

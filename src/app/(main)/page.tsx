@@ -1,9 +1,9 @@
 'use client'
 import { Button } from '~/core/components/design-system/button'
-import { useBearActions, useBearState } from '~/core/store/bear-store'
+import { useBearActions, useBears } from '~/core/store/bear-store'
 
 export default function HomePage() {
-  const { bears } = useBearState()
+  const bears = useBears()
   const { increasePopulation } = useBearActions()
   return (
     <div className="grid min-h-dvh place-content-center p-4">
