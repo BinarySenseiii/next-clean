@@ -13,8 +13,12 @@ export default function HomePage() {
           <h3 className="text-7xl font-black text-white">{count}</h3>
         </div>
         <div className="flex items-center justify-center gap-2">
-          <Button size="sm" disabled={count === 0} onClick={() => decrementCount()}>
-            Decrement
+          <Button
+            size="sm"
+            disabled={count === 0}
+            onClick={() => decrementCount()}
+          >
+            Decrement Count
           </Button>
           <Button size="sm" onClick={() => incrementCount()}>
             Increment
