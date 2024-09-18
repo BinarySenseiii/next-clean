@@ -16,7 +16,7 @@
     "clean": "rimraf .next",
     "clean-build": "yarn run clean && yarn run build",
     "reinstall": "yarn run clean && rimraf node_modules && rm yarn.lock && yarn install",
-    "prepare": "husky",
+    "prepare": "husky || true",
     "commitlint": "commitlint --edit"
   },
   "dependencies": {
@@ -72,16 +72,5 @@
   },
   "ct3aMetadata": {
     "initVersion": "7.36.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{jsx,js,ts,tsx}": [
-      "prettier --write --ignore-unknown",
-      "eslint --fix"
-    ]
   }
 }

@@ -39,8 +39,9 @@ const ErrorPage = ({
                 __html: makeUrlsExternal(error.message),
               }}
             />
-            It looks like there is an issue with the API request, or a variable might not be
-            properly defined. Please check your code or try again later .
+            It looks like there is an issue with the API request, or a variable
+            might not be properly defined. Please check your code or try again
+            later .
           </p>
 
           <div className="flex items-center gap-4">
