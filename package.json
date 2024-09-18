@@ -12,7 +12,7 @@
     "upgrade:latest": "yarn upgrade-interactive --latest",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\"",
     "clean": "rimraf .next",
     "clean-build": "yarn run clean && yarn run build",
     "reinstall": "yarn run clean && rimraf node_modules && rm yarn.lock && yarn install",
@@ -80,8 +80,8 @@
   },
   "lint-staged": {
     "*.{jsx,js,ts,tsx}": [
-      "eslint --cache --fix",
-      "prettier --write --ignore-unknown"
+      "prettier --write --ignore-unknown",
+      "eslint --fix"
     ]
   }
 }
