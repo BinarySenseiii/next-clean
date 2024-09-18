@@ -21,17 +21,14 @@ const passwordRequirements: PasswordRequirement[] = [
   },
   {
     re: /[a-z]/,
-
     label: 'Includes lowercase letter',
   },
   {
     re: /[A-Z]/,
-
     label: 'Includes uppercase letter',
   },
   {
     re: /[$&+,:;=?@#|'<>.^*()%!-]/,
-
     label: 'Includes special symbol',
   },
 ]

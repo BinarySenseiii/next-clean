@@ -30,7 +30,9 @@
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "~/core/*": ["./src/modules/core/*"],
+      "~/module/*": ["./src/modules/*"]
     }
   },
   "include": [

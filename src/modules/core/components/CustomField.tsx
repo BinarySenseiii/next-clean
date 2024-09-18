@@ -7,16 +7,9 @@ import {
 } from 'react-hook-form'
 import { match } from 'ts-pattern'
 
-import {
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from './design-system/form'
+import { FormControl, FormField, FormItem, FormLabel, FormMessage } from './design-system/form'
 import { Input } from './design-system/input'
-
-import { RenderPasswordRequirements } from '~/constant/validations'
+import { RenderPasswordRequirements } from '../constant/validations'
 
 export enum FORM_FIELD {
   INPUT = 'input',
@@ -41,10 +34,7 @@ interface CustomFieldProps<
   withPasswordRequirement?: boolean
 }
 
-const RenderInput = <
-  TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
->({
+const RenderInput = <TFieldValues extends FieldValues, TName extends FieldPath<TFieldValues>>({
   fieldType,
   placeholder,
   field,
@@ -62,19 +52,14 @@ const RenderInput = <
       <FormControl>
         <Fragment>
           <Input type="password" placeholder={placeholder} {...field} />
-          {withPasswordRequirement && (
-            <RenderPasswordRequirements password={field.value} />
-          )}
+          {withPasswordRequirement && <RenderPasswordRequirements password={field.value} />}
         </Fragment>
       </FormControl>
     ))
     .otherwise(() => 'Invalid Input')
 }
 
-const CustomField = <
-  TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
->(
+const CustomField = <TFieldValues extends FieldValues, TName extends FieldPath<TFieldValues>>(
   props: CustomFieldProps<TFieldValues, TName>,
 ) => {
   return (

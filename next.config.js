@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 
 const jiti = createJiti(fileURLToPath(import.meta.url))
 
-jiti('./src/core/constant/env.ts')
+jiti('./src/modules/core/constant/env.ts')
 
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',

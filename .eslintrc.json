@@ -7,7 +7,8 @@
     "simple-import-sort",
     "@typescript-eslint",
     "@tanstack/query",
-    "tailwindcss"
+    "tailwindcss",
+    "prettier"
   ],
   "extends": [
     "next/core-web-vitals",
@@ -16,29 +17,32 @@
     "plugin:@tanstack/eslint-plugin-query/recommended",
     "plugin:tailwindcss/recommended",
     "eslint:recommended",
-    "plugin:prettier/recommended",
-    "next/typescript",
-    "prettier/prettier"
+    "plugin:prettier/recommended"
   ],
   "rules": {
     "tailwindcss/no-contradicting-classname": "off",
     "@typescript-eslint/unbound-method": "off",
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "usePrettierrc": true
+      }
+    ],
     "sort-imports": "off",
-    "simple-import-sort/exports": "error",
     "simple-import-sort/imports": [
       "error",
       {
         "groups": [
           ["^react", "^@?\\w"],
-          ["^(@|components)(/.*|$)"],
+          ["^(@|components|utils|hooks|contexts)(/.*|$)"],
           ["^\\u0000"],
           ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
           ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-          ["^.+\\.?(css)$"]
+          ["^.+\\.?(css|scss)$"]
         ]
       }
     ],
+    "simple-import-sort/exports": "error",
     "import/first": "error",
     "import/newline-after-import": "error",
     "import/no-duplicates": "error",

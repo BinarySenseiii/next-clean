@@ -23,8 +23,7 @@ const useCountStore = create<BearStore>(set => ({
   // ⬇️ separate "namespace" for actions
   actions: {
     incrementCount: () => set(state => ({ count: state.count + 1 })),
-    decrementCount: (by = 1) =>
-      set(state => ({ count: state.count > by ? state.count - by : 0 })),
+    decrementCount: (by = 1) => set(state => ({ count: state.count > by ? state.count - by : 0 })),
     resetCount: () => set(initialBearState),
   },
 }))
@@ -32,8 +31,7 @@ const useCountStore = create<BearStore>(set => ({
 export const useCount = () => useCountStore(state => state.count)
 
 // ✅ this Optimized approach also fine - // Object pick, re-renders the component when any value changes
-export const useCountState = () =>
-  useCountStore(useShallow(state => ({ count: state.count })))
+export const useCountState = () => useCountStore(useShallow(state => ({ count: state.count })))
 
 //  🎉 one selector for all our actions
 export const useCountActions = () => useCountStore(state => state.actions)

@@ -12,8 +12,10 @@
     "upgrade:latest": "yarn upgrade-interactive --latest",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
     "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "clean": "rimraf .next",
+    "clean-build": "yarn run clean && yarn run build",
+    "reinstall": "yarn run clean && rimraf node_modules && rm yarn.lock && yarn install",
     "prepare": "husky",
     "commitlint": "commitlint --edit"
   },
