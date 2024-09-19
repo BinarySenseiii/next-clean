@@ -18,7 +18,7 @@ export default function HomePage() {
             disabled={count === 0}
             onClick={() => decrementCount()}
           >
-            Decrement Count
+            Decrement
           </Button>
           <Button size="sm" onClick={() => incrementCount()}>
             Increment
