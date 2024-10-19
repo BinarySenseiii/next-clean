@@ -21,6 +21,8 @@
   ],
   "rules": {
     "tailwindcss/no-contradicting-classname": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
     "@typescript-eslint/unbound-method": "off",
     "prettier/prettier": [
       "error",

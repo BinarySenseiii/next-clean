@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react'
+import React, { type ReactElement, type ReactNode } from 'react'
 
 const BgLightGrid1 = () => {
   return (
@@ -161,7 +161,7 @@ const BgDarkGrid3 = () => {
 export interface BackgroundOption {
   id: string
   name: string
-  component: ReactNode
+  component: ReactElement
   theme: 'light' | 'dark'
 }
 
@@ -302,9 +302,9 @@ export const BACKGROUND_OPTIONS = [
 
 export type BackgroundId = (typeof BACKGROUND_OPTIONS)[number]['id']
 
-export const getBackgroundPattern = (id: BackgroundId): ReactNode | null => {
+export const getBackgroundPattern = (id: BackgroundId): ReactNode => {
   const bg = BACKGROUND_OPTIONS.find((option) => option.id === id)
-  return bg ? bg.component : null
+  return bg ? bg.component : <BgDarkGridGradient1 />
 }
 
 // Example Usage:

@@ -2,7 +2,7 @@
   "compilerOptions": {
     /* Base Options: */
     "esModuleInterop": true,
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "target": "es2022",
     "allowJs": true,
     "resolveJsonModule": true,
@@ -17,7 +17,7 @@
     /* Bundled projects */
     "lib": ["dom", "dom.iterable", "ES2022"],
     "noEmit": true,
-    "module": "ESNext",
+    "module": "ES2022",
     "moduleResolution": "Bundler",
     "jsx": "preserve",
     "plugins": [
@@ -31,8 +31,8 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"],
-      "~/core/*": ["./src/modules/core/*"],
-      "~/module/*": ["./src/modules/*"]
+      "~/core/*": ["./src/core/*"],
+      "~/features/*": ["./src/features/*"]
     }
   },
   "include": [
