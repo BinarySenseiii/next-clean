@@ -1,5 +1,17 @@
 {
-  "name": "next-shadcn",
+  "name": "next-clean",
+  "author": "BinarySenseiii",
+  "description": "Open-source starter template for building Next.js applications with Shadcn and Tailwind CSS.",
+  "keywords": [
+    "Next.js",
+    "TypeScript",
+    "React",
+    "Tailwind CSS",
+    "Shadcn",
+    "starter template",
+    "web app",
+    "open-source"
+  ],
   "version": "0.1.1",
   "private": true,
   "type": "module",
