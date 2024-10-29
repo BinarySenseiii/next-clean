@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { type SoftwareApplication, type WithContext } from 'schema-dts'
 
 import config from '~/core/constant/config'
 
@@ -84,39 +85,43 @@ export const getSEOTags = ({
 // You don't have to use this component, but it increase your chances of having a rich snippet on Google.
 // I recommend this one below to your /page.js for software apps: It tells Google your AppName is a Software, and it has a rating of 4.8/5 from 12 reviews.
 // Fill the fields with your own data
-export const renderSchemaTags = () => {
+
+export const jsonLd: WithContext<SoftwareApplication> = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: config.appName,
+  description: config.appDescription,
+  image: 'https://yourdomain.com/icon.png',
+  url: `https://${config.domainName}/`,
+  author: {
+    '@type': 'Person',
+    name: config.author,
+  },
+  datePublished: '2024-01-01',
+  applicationCategory: 'WebApplication',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.5',
+    ratingCount: '50',
+  },
+  offers: [
+    {
+      '@type': 'Offer',
+      price: '0.00',
+      priceCurrency: 'USD',
+    },
+  ],
+  operatingSystem: 'Windows, macOS, Linux',
+  softwareVersion: '1.0.0',
+  license: 'https://opensource.org/licenses/MIT',
+}
+
+export const renderJsonLd = () => {
   return (
     <Script
-      id="schema-tags"
+      id="jsonLd-data"
       type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          '@context': 'http://schema.org',
-          '@type': 'SoftwareApplication',
-          name: config.appName,
-          description: config.appDescription,
-          image: `https://${config.domainName}/icon.png`,
-          url: `https://${config.domainName}/`,
-          author: {
-            '@type': 'Person',
-            name: 'Faisal Tariq',
-          },
-          datePublished: '2023-08-01',
-          applicationCategory: 'EducationalApplication',
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: '4.8',
-            ratingCount: '12',
-          },
-          offers: [
-            {
-              '@type': 'Offer',
-              price: '9.00',
-              priceCurrency: 'USD',
-            },
-          ],
-        }),
-      }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
     />
   )
 }

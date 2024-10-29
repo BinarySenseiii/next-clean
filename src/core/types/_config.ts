@@ -14,6 +14,7 @@ export interface Crisp {
 }
 
 export interface ConfigProps {
+  author: string
   theme: Theme
   appName: string
   appDescription: string

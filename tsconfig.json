@@ -8,16 +8,18 @@
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
-
     /* Strictness */
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "checkJs": true,
-
     /* Bundled projects */
-    "lib": ["dom", "dom.iterable", "ES2022"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "ES2022"
+    ],
     "noEmit": true,
-    "module": "ES2022",
+    "module": "esnext",
     "moduleResolution": "Bundler",
     "jsx": "preserve",
     "plugins": [
@@ -26,13 +28,18 @@
       }
     ],
     "incremental": true,
-
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"],
-      "~/core/*": ["./src/core/*"],
-      "~/features/*": ["./src/features/*"]
+      "~/*": [
+        "./src/*"
+      ],
+      "~/core/*": [
+        "./src/core/*"
+      ],
+      "~/features/*": [
+        "./src/features/*"
+      ]
     }
   },
   "include": [
@@ -44,5 +51,7 @@
     "**/*.js",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

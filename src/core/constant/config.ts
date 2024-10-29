@@ -1,9 +1,10 @@
 import { type ConfigProps } from '~/core/types/_config'
 
 const config: ConfigProps = {
+  author: 'faisal tariq',
   theme: 'light',
   appName: 'Clean Starter',
-  appDescription: `Boilerplate designed to kickstart your Next project.`,
+  appDescription: `An open-source starter template for building applications using Next.js with best practices and features.`,
 
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
   domainName: 'next-clean-beryl.vercel.app',

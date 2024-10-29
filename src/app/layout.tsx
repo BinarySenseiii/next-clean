@@ -5,7 +5,7 @@ import '~/core/styles/globals.css'
 
 import { fontSans } from '~/core/components/design-system/fonts'
 import config from '~/core/constant/config'
-import { getSEOTags } from '~/core/lib/seo'
+import { getSEOTags, renderJsonLd } from '~/core/lib/seo'
 import { cn } from '~/core/lib/utils'
 import AppProviders from '~/core/providers'
 
@@ -32,6 +32,7 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
+        {renderJsonLd()}
         <AppProviders>{children}</AppProviders>
       </body>
     </html>
