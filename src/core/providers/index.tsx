@@ -1,21 +1,21 @@
-'use client';
+'use client'
 
-import type React from 'react';
-import { type ReactNode } from 'react';
+import type React from 'react'
+import { type ReactNode } from 'react'
 
-import ReactQueryProvider from './react-query';
-import SoonerToaster from './sooner-toaster';
+import ReactQueryProvider from './react-query'
+import SoonerToaster from './sooner-toaster'
 
 interface AppProvidersProps {
-    children: ReactNode;
+	children: ReactNode
 }
 
 const AppProviders: React.FC<AppProvidersProps> = ({ children }) => {
-    return (
-        <ReactQueryProvider>
-            {children}
-            <SoonerToaster />
-        </ReactQueryProvider>
-    );
-};
-export default AppProviders;
+	return (
+		<ReactQueryProvider>
+			{children}
+			<SoonerToaster />
+		</ReactQueryProvider>
+	)
+}
+export default AppProviders

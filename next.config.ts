@@ -1,23 +1,23 @@
-import { type NextConfig } from 'next';
+import initializeBundleAnalyzer from '@next/bundle-analyzer'
+import { type NextConfig } from 'next'
+import { fileURLToPath } from 'node:url'
 
-// import initializeBundleAnalyzer from '@next/bundle-analyzer';
+const withBundleAnalyzer = initializeBundleAnalyzer({
+	enabled: process.env.BUNDLE_ANALYZER_ENABLED === 'true',
+})
 
-// import createJiti from 'jiti';
-// import { fileURLToPath } from 'node:url';
+async function createNextConfig(): Promise<NextConfig> {
+	const { createJiti } = await import('jiti')
+	const jiti = createJiti(fileURLToPath(import.meta.url))
 
-// const jiti = createJiti(fileURLToPath(import.meta.url));
+	// Import env or other files here, within the async function
+	await jiti.import('./src/core/constant/env.ts')
 
-// jiti('./src/core/constant/env.ts');
+	return {
+		experimental: {
+			optimizePackageImports: ['lucide-react'],
+		},
+	}
+}
 
-// const withBundleAnalyzer = initializeBundleAnalyzer({
-//     enabled: process.env.BUNDLE_ANALYZER_ENABLED === 'true'
-// });
-
-const nextConfig: NextConfig = {
-    experimental: {
-        optimizePackageImports: ['lucide-react']
-    }
-};
-
-// export default withBundleAnalyzer(nextConfig);
-export default nextConfig;
+export default (async () => withBundleAnalyzer(await createNextConfig()))()
