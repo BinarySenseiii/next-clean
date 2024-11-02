@@ -8,6 +8,8 @@
 
 ### Features
 
+## Features
+
 * **Next.js 15 with App Router (Turbo):** Enjoy optimized performance, fast routing, and improved scalability.
 * **ESLint 9:** Maintain clean and consistent code with the latest linting rules and configuration.
 * **Tailwind CSS:** Build responsive, custom designs directly in your HTML using Tailwind's utility-first CSS framework.
@@ -16,6 +18,8 @@
 * **SEO Optimization:** Improve search engine visibility with meta tags and JSON-LD for structured data.
 * **Environment Variable Validation with t3-env:** Ensure a smooth deployment process by validating environment variables, minimizing configuration errors.
 * **Type-safe Axios Setup:** Perform reliable API calls and data fetching with a properly configured, type-safe Axios setup.
+* **Husky & CommitLint Support:** Enforce commit message conventions and prevent bad commits with Husky and CommitLint for a more organized and predictable version control workflow.
+
 
 ### Getting Started
 
