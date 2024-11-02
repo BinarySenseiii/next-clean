@@ -8,8 +8,6 @@
 
 ### Features
 
-## Features
-
 * **Next.js 15 with App Router (Turbo):** Enjoy optimized performance, fast routing, and improved scalability.
 * **ESLint 9:** Maintain clean and consistent code with the latest linting rules and configuration.
 * **Tailwind CSS:** Build responsive, custom designs directly in your HTML using Tailwind's utility-first CSS framework.
