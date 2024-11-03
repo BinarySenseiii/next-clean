@@ -4,7 +4,7 @@ const config: ConfigProps = {
 	author: 'faisal tariq',
 	theme: 'light',
 	appName: 'Clean Starter',
-	appDescription: `An open-source starter template for building applications using Next.js with best practices and features.`,
+	appDescription: `Kickstart your Next.js 15 projects with this starter template, featuring Shadcn and Tailwind CSS for easy, modern web development!`,
 
 	// REQUIRED (no https://, not trialing slash at the end, just the naked domain)
 	domainName: 'next-clean-beryl.vercel.app',

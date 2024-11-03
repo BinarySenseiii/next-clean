@@ -12,6 +12,7 @@
 * **ESLint 9:** Maintain clean and consistent code with the latest linting rules and configuration.
 * **Tailwind CSS:** Build responsive, custom designs directly in your HTML using Tailwind's utility-first CSS framework.
 * **Shaden UI:** Pre-configured and accessible UI components managed with Shaden provide a consistent and polished user interface.
+* **Hooks:** Modern & fully tested hooks https://streamich.github.io/react-use/
 * **Strict TypeScript 5:** Enforce type safety across the project using TypeScript 5 for reliable and maintainable code.
 * **SEO Optimization:** Improve search engine visibility with meta tags and JSON-LD for structured data.
 * **Environment Variable Validation with t3-env:** Ensure a smooth deployment process by validating environment variables, minimizing configuration errors.
