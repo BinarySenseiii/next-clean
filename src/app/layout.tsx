@@ -7,7 +7,7 @@ import { fontSans } from '~/core/components/design-system/fonts'
 import config from '~/core/constant/config'
 import { getSEOTags, renderJsonLd } from '~/core/lib/seo'
 import { cn } from '~/core/lib/utils'
-import AppProviders from '~/core/providers'
+import RootProviders from '~/core/providers'
 
 export const viewport: Viewport = {
 	themeColor: config.theme,
@@ -33,7 +33,7 @@ export default function RootLayout({
 				)}
 			>
 				{renderJsonLd()}
-				<AppProviders>{children}</AppProviders>
+				<RootProviders>{children}</RootProviders>
 			</body>
 		</html>
 	)

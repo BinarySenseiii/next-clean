@@ -1,21 +1,27 @@
 'use client'
-
-import type React from 'react'
 import { type ReactNode } from 'react'
+import { Toaster, type ToasterProps } from 'sonner'
 
 import ReactQueryProvider from './react-query'
-import SoonerToaster from './sooner-toaster'
 
-interface AppProvidersProps {
-	children: ReactNode
-}
+const providers = [ReactQueryProvider]
+const globalComponents = [
+	{
+		Component: Toaster,
+		props: { position: 'top-right', richColors: true } as ToasterProps,
+	},
+]
 
-const AppProviders: React.FC<AppProvidersProps> = ({ children }) => {
-	return (
-		<ReactQueryProvider>
+const RootProviders = ({ children }: { children: ReactNode }) => {
+	return providers.reduceRight(
+		(acc, Provider) => <Provider>{acc}</Provider>,
+		<>
+			{globalComponents.map(({ Component, props }, index) => (
+				<Component key={index} {...props} />
+			))}
 			{children}
-			<SoonerToaster />
-		</ReactQueryProvider>
+		</>,
 	)
 }
-export default AppProviders
+
+export default RootProviders
