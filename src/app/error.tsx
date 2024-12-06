@@ -8,15 +8,14 @@ import {getBackgroundPattern} from '~/core/components/bg-patterns';
 import {Button} from '~/core/components/design-system/button';
 import {makeUrlsExternal} from '~/core/helpers';
 
-const ErrorPage = ({
-  error,
-  reset,
-}: {
+interface ErrorPageProps {
   error: Error & {
     digest?: string;
   };
   reset: () => void;
-}) => {
+}
+
+const ErrorPage = ({error, reset}: ErrorPageProps) => {
   useEffect(() => {
     console.error(error);
   }, [error]);
