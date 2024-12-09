@@ -1,7 +1,7 @@
 {
   "arrowParens": "avoid",
   "bracketSameLine": true,
-  "bracketSpacing": false,
+  "bracketSpacing": true,
   "embeddedLanguageFormatting": "auto",
   "endOfLine": "lf",
   "htmlWhitespaceSensitivity": "css",
@@ -16,5 +16,5 @@
   "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "all",
-  "useTabs": false
+  "useTabs": true
 }
