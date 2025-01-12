@@ -13,6 +13,6 @@
   "aliases": {
     "components": "~/modules/core/components",
     "utils": "~/modules/core/lib/utils",
-    "ui": "~/modules/core/components/design-system"
+    "ui": "~/modules/core/components/ui"
   }
 }

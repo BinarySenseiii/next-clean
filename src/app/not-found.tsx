@@ -3,7 +3,7 @@
 import Link from 'next/link';
 
 import { getBackgroundPattern } from '~/core/components/bg-patterns';
-import { Button } from '~/core/components/design-system/button';
+import { Button } from '~/core/components/ui/button';
 
 const NotFoundPage = () => {
   return (

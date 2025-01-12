@@ -5,7 +5,7 @@ import { type Viewport } from 'next';
 
 import '~/core/styles/globals.css';
 
-import { fontSans } from '~/core/components/design-system/fonts';
+import { fontSans } from '~/core/components/ui/fonts';
 import config from '~/core/constant/config';
 import { getSEOTags, renderJsonLd } from '~/core/lib/seo';
 import { cn } from '~/core/lib/utils';

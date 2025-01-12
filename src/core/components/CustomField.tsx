@@ -11,8 +11,8 @@ import { match } from 'ts-pattern';
 
 import { RenderPasswordRequirements } from '../constant/validations';
 
-import { FormControl, FormField, FormItem, FormLabel, FormMessage } from './design-system/form';
-import { Input } from './design-system/input';
+import { FormControl, FormField, FormItem, FormLabel, FormMessage } from './ui/form';
+import { Input } from './ui/input';
 
 export enum FORM_FIELD {
   INPUT = 'input',
