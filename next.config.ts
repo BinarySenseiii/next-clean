@@ -17,7 +17,7 @@ async function createNextConfig(): Promise<NextConfig> {
 
   return {
     experimental: {
-      optimizePackageImports: ['lucide-react'],
+      optimizePackageImports: ['lucide-react', 'react-use'],
       typedRoutes: true, // make sure to run build command to generate route types
     },
   };
