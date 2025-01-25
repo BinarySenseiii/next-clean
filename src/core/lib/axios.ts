@@ -6,43 +6,43 @@ import axios, {
   type AxiosRequestConfig,
   type AxiosResponse,
   isAxiosError,
-} from 'axios';
+} from 'axios'
 
-import config from '~/core/constant/config';
+import config from '~/core/constant/config'
 
-const BASE_URL = `https://${config.domainName}`;
+const BASE_URL = `https://${config.domainName}`
 
 const axiosInstance: AxiosInstance = axios.create({
   baseURL: BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
-});
+})
 
 axiosInstance.interceptors.response.use(
   (response: AxiosResponse) => {
-    const authorization = response.headers['authorization'];
+    const authorization = response.headers['authorization']
 
     if (authorization) {
-      console.log('have access to some headers');
+      console.log('have access to some headers')
     }
 
-    return response;
+    return response
   },
   (error: AxiosError) => {
-    handleError(error);
+    handleError(error)
 
-    return Promise.reject(error);
+    return Promise.reject(error)
   },
-);
+)
 
 const handleError = (error: AxiosError): void => {
   if (isAxiosError(error)) {
-    console.error(`API error on ${error.config?.url}: ${error.message}`);
+    console.error(`API error on ${error.config?.url}: ${error.message}`)
   } else {
-    console.error('Unexpected error:', error);
+    console.error('Unexpected error:', error)
   }
-};
+}
 
 /**
  * Generic request handler to handle all types of requests with a consistent pattern.
@@ -52,18 +52,20 @@ const handleError = (error: AxiosError): void => {
  */
 export const handleRequest = async <T>(
   endpoint: string,
-  options: AxiosRequestConfig = { method: 'GET' },
+  options: AxiosRequestConfig = {method: 'GET'},
 ): Promise<T> => {
   try {
-    const response: AxiosResponse<T> = await axiosInstance(endpoint, options);
+    const response: AxiosResponse<T> = await axiosInstance(endpoint, options)
 
-    return response.data;
+    return response.data
   } catch (error) {
     if (isAxiosError(error)) {
-      throw new Error(`API request failed: ${(error as AxiosError).message} on ${endpoint}`);
+      throw new Error(
+        `API request failed: ${(error as AxiosError).message} on ${endpoint}`,
+      )
     }
-    throw error;
+    throw error
   }
-};
+}
 
-export default axiosInstance;
+export default axiosInstance

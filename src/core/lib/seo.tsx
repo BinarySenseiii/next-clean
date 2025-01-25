@@ -1,15 +1,15 @@
 /** @format */
 
-import type { Metadata } from 'next';
-import Script from 'next/script';
-import { type SoftwareApplication, type WithContext } from 'schema-dts';
+import type {Metadata} from 'next'
+import Script from 'next/script'
+import {type SoftwareApplication, type WithContext} from 'schema-dts'
 
-import config from '~/core/constant/config';
+import config from '~/core/constant/config'
 
 export type SeoMeta = {
-  canonicalUrlRelative?: string;
-  extraTags?: Record<string, never>;
-} & Metadata;
+  canonicalUrlRelative?: string
+  extraTags?: Record<string, never>
+} & Metadata
 
 // for generating openGraph (OG) Image https://imgsrc.io/
 // for getting favicon https://favicon.io/
@@ -78,8 +78,8 @@ export const getSEOTags = ({
 
     // If you want to add extra tags, you can pass them here
     ...extraTags,
-  };
-};
+  }
+}
 
 // Strctured Data for Rich Results on Google. Learn more: https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
 // Find your type here (SoftwareApp, Book...): https://developers.google.com/search/docs/appearance/structured-data/search-gallery
@@ -91,39 +91,39 @@ export const getSEOTags = ({
 export const jsonLd: WithContext<SoftwareApplication> = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
-  'name': config.appName,
-  'description': config.appDescription,
-  'image': 'https://yourdomain.com/icon.png',
-  'url': `https://${config.domainName}/`,
-  'author': {
+  name: config.appName,
+  description: config.appDescription,
+  image: 'https://yourdomain.com/icon.png',
+  url: `https://${config.domainName}/`,
+  author: {
     '@type': 'Person',
-    'name': config.author,
+    name: config.author,
   },
-  'datePublished': '2024-01-01',
-  'applicationCategory': 'WebApplication',
-  'aggregateRating': {
+  datePublished: '2024-01-01',
+  applicationCategory: 'WebApplication',
+  aggregateRating: {
     '@type': 'AggregateRating',
-    'ratingValue': '4.5',
-    'ratingCount': '50',
+    ratingValue: '4.5',
+    ratingCount: '50',
   },
-  'offers': [
+  offers: [
     {
       '@type': 'Offer',
-      'price': '0.00',
-      'priceCurrency': 'USD',
+      price: '0.00',
+      priceCurrency: 'USD',
     },
   ],
-  'operatingSystem': 'Windows, macOS, Linux',
-  'softwareVersion': '1.0.0',
-  'license': 'https://opensource.org/licenses/MIT',
-};
+  operatingSystem: 'Windows, macOS, Linux',
+  softwareVersion: '1.0.0',
+  license: 'https://opensource.org/licenses/MIT',
+}
 
 export const renderJsonLd = () => {
   return (
     <Script
-      id='jsonLd-data'
-      type='application/ld+json'
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      id="jsonLd-data"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
     />
-  );
-};
+  )
+}

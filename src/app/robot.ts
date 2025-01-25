@@ -1,8 +1,8 @@
 /** @format */
 
-import { type MetadataRoute } from 'next';
+import {type MetadataRoute} from 'next'
 
-import config from '~/core/constant/config';
+import config from '~/core/constant/config'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -12,5 +12,5 @@ export default function robots(): MetadataRoute.Robots {
       disallow: '/private/',
     },
     sitemap: `https://${config.domainName}/sitemap.xml`,
-  };
+  }
 }

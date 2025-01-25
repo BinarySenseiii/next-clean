@@ -1,6 +1,6 @@
 /** @format */
 
-import { type ConfigProps } from '~/core/types/_config';
+import {type ConfigProps} from '~/core/types/_config'
 
 const config: ConfigProps = {
   author: 'faisal tariq',
@@ -18,6 +18,6 @@ const config: ConfigProps = {
     discord: 'https://discord.gg/cAbzWNQw',
     email: 'faisaltariq1812@gmail.com',
   },
-};
+}
 
-export default config;
+export default config

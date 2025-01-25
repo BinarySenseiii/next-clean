@@ -1,20 +1,20 @@
 /** @format */
 
-import type React from 'react';
-import { memo } from 'react';
+import type React from 'react'
+import {memo} from 'react'
 
-import { cn } from '~/core/lib/utils';
+import {cn} from '~/core/lib/utils'
 
 export const validatePasswordRequirements = (password: string) =>
-  passwordRequirements.every(({ re }) => re.test(password));
+  passwordRequirements.every(({re}) => re.test(password))
 
 interface PasswordRequirement {
-  re: RegExp;
-  label: string;
+  re: RegExp
+  label: string
 }
 
 interface RenderPasswordRequirementsProps {
-  password: string;
+  password: string
 }
 
 const passwordRequirements: PasswordRequirement[] = [
@@ -34,12 +34,12 @@ const passwordRequirements: PasswordRequirement[] = [
     re: /[$&+,:;=?@#|'<>.^*()%!-]/,
     label: 'Includes special symbol',
   },
-];
+]
 
-export const RenderPasswordRequirements: React.FC<RenderPasswordRequirementsProps> = memo(
-  ({ password }) => {
+export const RenderPasswordRequirements: React.FC<RenderPasswordRequirementsProps> =
+  memo(({password}) => {
     return (
-      <ul className='space-y-0.5'>
+      <ul className="space-y-0.5">
         {passwordRequirements.map((req, index) => (
           <li
             key={index}
@@ -51,8 +51,7 @@ export const RenderPasswordRequirements: React.FC<RenderPasswordRequirementsProp
           </li>
         ))}
       </ul>
-    );
-  },
-);
+    )
+  })
 
-RenderPasswordRequirements.displayName = 'RenderPasswordRequirements';
+RenderPasswordRequirements.displayName = 'RenderPasswordRequirements'

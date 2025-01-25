@@ -1,8 +1,8 @@
 /** @format */
 
-import { vercel } from '@t3-oss/env-core/presets';
-import { createEnv } from '@t3-oss/env-nextjs';
-import { z } from 'zod';
+import {vercel} from '@t3-oss/env-core/presets'
+import {createEnv} from '@t3-oss/env-nextjs'
+import {z} from 'zod'
 
 export const env = createEnv({
   /*
@@ -36,4 +36,4 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
-});
+})
