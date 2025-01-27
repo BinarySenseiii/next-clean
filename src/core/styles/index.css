@@ -1,0 +1,40 @@
+/** @format */
+@import 'tailwindcss';
+
+@import './defaults.css' layer(base);
+@import './utils.css' layer(utilities);
+@import './elements.css' layer(components);
+
+/*
+see: https://tailwindcss.com/docs/theme#referencing-other-variables
+Referencing other variables
+
+when defining theme variables that reference other variables, use the inline option
+
+Using the inline option, the utility class will use the theme variable value instead of referencing the actual theme variable:
+
+*/
+@theme inline {
+  --font-sans: var(--font-inter);
+}
+
+/*
+see: https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl
+
+oklch() is a new way to define CSS colors. In oklch(L C H) or oklch(L C H / a), each item corresponds as follows:
+
+L is perceived lightness (0%-100%). “Perceived” means that it has consistent lightness for our eyes, unlike L in hsl().
+C is chroma, from gray to the most saturated color.
+H is the hue angle (0-360).
+a is opacity (0-1 or 0-100%).
+
+*/
+
+@theme {
+  /* --*: initial; To completely disable the default theme and use only custom values, set the global theme variable namespace to initial */
+
+  --color-dark-charcoal: oklch(15.43% 0 0);
+  --color-deep-brown: oklch(29.4% 0.0671 34.63);
+  --color-brick-red: oklch(47.94% 0.1361 34.54);
+  --color-vivid-orange: oklch(67.3% 0.1856 34.55);
+}

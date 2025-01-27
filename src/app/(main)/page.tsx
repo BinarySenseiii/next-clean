@@ -17,13 +17,13 @@ export default function HomePage() {
   }
 
   return (
-    <div className="flex min-h-dvh items-center justify-center bg-black">
+    <div className="flex min-h-dvh items-center justify-center">
       <div
-        className="flex cursor-pointer items-center justify-center gap-2 text-white"
+        className="flex card cursor-pointer gap-4 items-center justify-center"
         onClick={handleCopy}
       >
-        <span>{CLONE_TEXT}</span>
-        <i>{hasCopiedText ? <CheckCheck /> : <Copy />}</i>
+        <span className="text-vivid-orange">{CLONE_TEXT}</span>
+        <i className="text-vivid-orange text-sm">{hasCopiedText ? <CheckCheck /> : <Copy />}</i>
       </div>
     </div>
   )

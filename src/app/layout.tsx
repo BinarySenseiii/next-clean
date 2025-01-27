@@ -3,9 +3,9 @@
 import type React from 'react'
 import {type Viewport} from 'next'
 
-import '~/core/styles/globals.css'
+import '~/core/styles/index.css'
 
-import {fontSans} from '~/core/components/ui/fonts'
+import {fontInter} from '~/core/components/ui/fonts'
 import config from '~/core/constant/config'
 import {getSEOTags, renderJsonLd} from '~/core/lib/seo'
 import {cn} from '~/core/lib/utils'
@@ -28,12 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          'min-h-dvh bg-background font-sans antialiased',
-          fontSans.variable,
-        )}
-      >
+      <body className={cn('min-h-dvh bg-dark-charcoal font-sans antialiased', fontInter.variable)}>
         {renderJsonLd()}
         <RootProviders>{children}</RootProviders>
       </body>

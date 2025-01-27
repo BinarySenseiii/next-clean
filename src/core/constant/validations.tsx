@@ -36,8 +36,8 @@ const passwordRequirements: PasswordRequirement[] = [
   },
 ]
 
-export const RenderPasswordRequirements: React.FC<RenderPasswordRequirementsProps> =
-  memo(({password}) => {
+export const RenderPasswordRequirements: React.FC<RenderPasswordRequirementsProps> = memo(
+  ({password}) => {
     return (
       <ul className="space-y-0.5">
         {passwordRequirements.map((req, index) => (
@@ -52,6 +52,7 @@ export const RenderPasswordRequirements: React.FC<RenderPasswordRequirementsProp
         ))}
       </ul>
     )
-  })
+  },
+)
 
 RenderPasswordRequirements.displayName = 'RenderPasswordRequirements'

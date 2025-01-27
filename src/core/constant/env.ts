@@ -1,6 +1,5 @@
 /** @format */
 
-import {vercel} from '@t3-oss/env-core/presets'
 import {createEnv} from '@t3-oss/env-nextjs'
 import {z} from 'zod'
 
@@ -27,9 +26,6 @@ export const env = createEnv({
   isServer: typeof window === 'undefined',
 
   skipValidation: !!process.env.SKIP_ENV_VALIDATION,
-
-  // Extend the Vercel preset.
-  extends: [vercel()],
 
   runtimeEnv: {
     SERVERVAR: process.env.SERVERVAR,

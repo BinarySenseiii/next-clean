@@ -1,9 +1,9 @@
 /** @format */
 
-import {Roboto} from 'next/font/google'
+import {Inter} from 'next/font/google'
 
-export const fontSans = Roboto({
+export const fontInter = Inter({
   subsets: ['latin'],
-  variable: '--font-sans',
+  variable: '--font-inter',
   weight: ['300', '400', '500', '700', '900'],
 })

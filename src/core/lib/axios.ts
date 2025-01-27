@@ -60,9 +60,7 @@ export const handleRequest = async <T>(
     return response.data
   } catch (error) {
     if (isAxiosError(error)) {
-      throw new Error(
-        `API request failed: ${(error as AxiosError).message} on ${endpoint}`,
-      )
+      throw new Error(`API request failed: ${(error as AxiosError).message} on ${endpoint}`)
     }
     throw error
   }
