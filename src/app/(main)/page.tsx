@@ -11,8 +11,8 @@ const CLONE_TEXT = 'git clone https://github.com/BinarySenseiii/next-clean.git'
 
 function HomePage() {
    const [{ value }, copyToClipboard] = useCopyToClipboard()
-   const count = useCount()
    const { setIncreementCount } = useCountActions()
+   const count = useCount()
    const hasCopiedText = Boolean(value)
 
    const handleCopy = () => {

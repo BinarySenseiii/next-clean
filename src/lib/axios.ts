@@ -6,6 +6,7 @@ import axios, {
    type AxiosRequestConfig,
    type AxiosResponse,
    isAxiosError,
+   type Method,
 } from 'axios'
 
 import { appConfig } from '~/constant'
@@ -52,7 +53,7 @@ const handleError = (error: AxiosError): void => {
  */
 export const handleRequest = async <T>(
    endpoint: string,
-   options: AxiosRequestConfig = { method: 'GET' },
+   options: AxiosRequestConfig & { method: Method },
 ): Promise<T> => {
    try {
       const response: AxiosResponse<T> = await axiosInstance(endpoint, options)
