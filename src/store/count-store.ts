@@ -9,7 +9,7 @@ type CountState = {
 }
 
 type CountActions = {
-   setIncreementCount: (step: number) => void
+   updateIncrementCount: (step: number) => void
 }
 
 type Store = CountState & { actions: CountActions }
@@ -24,20 +24,15 @@ export const useCountStore = createStore<Store>(
 
       // ⬇️ separate "namespace" for actions
       actions: {
-         setIncreementCount: newCount => {
-            set(
-               state => {
-                  state.count = newCount
-               },
-               undefined,
-               'increement',
-            )
+         updateIncrementCount: step => {
+            set(state => {
+               state.count = step
+            })
          },
       },
    }),
    {
       skipPersist: true,
-      store: 'count',
    },
 )
 

@@ -20,6 +20,14 @@ const axiosInstance: AxiosInstance = axios.create({
    },
 })
 
+const handleError = (error: AxiosError): void => {
+   if (isAxiosError(error)) {
+      console.error(`API error on ${error.config?.url}: ${error.message}`)
+   } else {
+      console.error('Unexpected error:', error)
+   }
+}
+
 axiosInstance.interceptors.response.use(
    (response: AxiosResponse) => {
       const authorization = response.headers['authorization']
@@ -36,14 +44,6 @@ axiosInstance.interceptors.response.use(
       return Promise.reject(error)
    },
 )
-
-const handleError = (error: AxiosError): void => {
-   if (isAxiosError(error)) {
-      console.error(`API error on ${error.config?.url}: ${error.message}`)
-   } else {
-      console.error('Unexpected error:', error)
-   }
-}
 
 /**
  * Generic request handler to handle all types of requests with a consistent pattern.
