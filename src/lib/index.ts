@@ -1,3 +1,3 @@
-export * from './seo'
+export * from './api'
 export * from './store'
 export * from './utils'

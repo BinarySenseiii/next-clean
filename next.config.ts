@@ -13,11 +13,11 @@ async function createNextConfig(): Promise<NextConfig> {
    const jiti = createJiti(fileURLToPath(import.meta.url))
 
    // Import env or other files here, within the async function
-   await jiti.import('./src/constant/env.ts')
+   await jiti.import('./src/constants/env.ts')
 
    return {
       experimental: {
-         optimizePackageImports: ['lucide-react', 'react-use', 'lodash'],
+         optimizePackageImports: ['lucide-react', 'lodash'],
          typedRoutes: true, // make sure to run build command to generate route types
       },
    }

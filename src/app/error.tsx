@@ -7,7 +7,7 @@ import { Frown } from 'lucide-react'
 import Link from 'next/link'
 
 import { getBackgroundPattern } from '~/components'
-import { makeUrlsExternal } from '~/helpers'
+import { makeUrlsExternal } from '~/utils'
 
 interface ErrorPageProps {
    error: Error & {
