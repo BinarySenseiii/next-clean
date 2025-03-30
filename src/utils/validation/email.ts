@@ -1,5 +1,7 @@
-export const isValidEmail = (email: string): boolean => {
-   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+import { REGEX } from '~/constants'
 
-   return re.test(email)
+export const isValidEmail = (email: string): boolean => {
+   if (!email) throw new Error('Email is required')
+
+   return REGEX.EMAIL_VALIDATION.test(email)
 }
