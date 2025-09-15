@@ -16,9 +16,9 @@ async function createNextConfig(): Promise<NextConfig> {
    await jiti.import('./src/constants/env.ts')
 
    return {
+      typedRoutes: true,
       experimental: {
          optimizePackageImports: ['lucide-react', 'lodash'],
-         typedRoutes: true, // make sure to run build command to generate route types
       },
    }
 }
