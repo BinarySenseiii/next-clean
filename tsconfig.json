@@ -1,37 +1,47 @@
 {
-   "compilerOptions": {
-      "lib": ["dom", "dom.iterable", "esnext"],
-      "allowJs": true,
-      "skipLibCheck": true,
-      "strict": true,
-      "noEmit": true,
-      "esModuleInterop": true,
-      "module": "esnext",
-      "moduleResolution": "bundler",
-      "resolveJsonModule": true,
-      "isolatedModules": true,
-      "jsx": "preserve",
-      "incremental": true,
-      "plugins": [
-         {
-            "name": "next"
-         }
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "~/*": [
+        "./src/*"
       ],
-
-      "paths": {
-         "~/*": ["./src/*"],
-         "~/features/*": ["./src/features/*"]
-      },
-      "target": "ES2023"
-   },
-   "include": [
-      "eslint.config.mjs",
-      "postcss.config.cjs",
-      "next-env.d.ts",
-      "**/*.ts",
-      "**/*.tsx",
-      ".next/types/**/*.ts",
-      "commitlint.config.js"
-   ],
-   "exclude": ["node_modules"]
+      "~/features/*": [
+        "./src/features/*"
+      ]
+    },
+    "target": "ES2023"
+  },
+  "include": [
+    "eslint.config.mjs",
+    "postcss.config.cjs",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "commitlint.config.js",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
