@@ -46,3 +46,8 @@ yarn-error.log*
 
 # idea files
 .idea
+
+# understand-anything: share the graph, ignore the scratch
+.understand-anything/intermediate/
+.understand-anything/tmp/
+.understand-anything/.trash-*/
