@@ -1,22 +1,21 @@
 /** @format */
 
 'use client'
+import { useState } from 'react'
 import { CheckCheck, Copy } from 'lucide-react'
 import { toast } from 'sonner'
 
 import { useCopyToClipboard } from '~/hooks'
-import { useCount, useCountActions } from '~/store/count-store'
 
 const CLONE_TEXT = 'git clone https://github.com/BinarySenseiii/next-clean.git'
 
 function HomePage() {
    const [copy, isCopied] = useCopyToClipboard()
-   const { updateIncrementCount } = useCountActions()
-   const count = useCount()
+   const [count, setCount] = useState(0)
 
    const handleCopy = () => {
       copy(CLONE_TEXT)
-      updateIncrementCount(count + 1)
+      setCount(prev => prev + 1)
       toast.success('Clone URL copied to clipboard!')
    }
 

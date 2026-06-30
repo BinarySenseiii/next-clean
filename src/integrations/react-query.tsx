@@ -5,6 +5,8 @@ import { QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-qu
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { toast } from 'sonner'
 
+import { ApiError } from '~/lib/api'
+
 // https://tkdodo.eu/blog/react-query-error-handling
 interface ReactQueryProviderProps {
    children: ReactNode
@@ -20,7 +22,9 @@ const ReactQueryProvider = ({ children }: ReactQueryProviderProps) => {
                staleTime: 1000 * 60 * 5, // 5 minutes
                gcTime: 1000 * 60 * 15, // 15 minutes
                retry: (failureCount, error) => {
-                  if (error instanceof Error && error.message === '404') return false
+                  // Don't retry client errors (4xx) — they won't succeed on a retry.
+                  if (error instanceof ApiError && error.status && error.status >= 400 && error.status < 500)
+                     return false
 
                   return failureCount < RETRY_COUNT
                },

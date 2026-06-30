@@ -1,21 +1,27 @@
-import axios, { type AxiosError, type AxiosInstance, type AxiosResponse, isAxiosError } from 'axios'
+import { type AxiosError, type AxiosInstance, type AxiosResponse, create, isAxiosError } from 'axios'
 
 import { appConfig } from '~/config'
 
 const BASE_URL = `https://${appConfig.domainName}`
 
-interface ApiResponse<T> {
-   data: T
-   status: number
-}
-
-interface ApiError extends Error {
+/**
+ * The single error type crossing the API seam. Every rejected request resolves
+ * to an `ApiError`, so callers can branch on `status` instead of re-parsing Axios.
+ */
+export class ApiError extends Error {
+   status?: number
    code?: string
-   response?: AxiosResponse
+
+   constructor(message: string, status?: number, code?: string) {
+      super(message)
+      this.name = 'ApiError'
+      this.status = status
+      this.code = code
+   }
 }
 
 // Custom instance with strict typing
-const axiosInstance: AxiosInstance = axios.create({
+const axiosInstance: AxiosInstance = create({
    baseURL: BASE_URL,
    headers: {
       'Content-Type': 'application/json',
@@ -25,7 +31,8 @@ const axiosInstance: AxiosInstance = axios.create({
 
 // Request interceptor for adding auth headers
 axiosInstance.interceptors.request.use(config => {
-   const token = localStorage.getItem('authToken') // or cookie upto u ..
+   // Guard against non-browser execution (SSR / middleware) where there is no localStorage.
+   const token = typeof window !== 'undefined' ? localStorage.getItem('authToken') : null
    if (token) {
       config.headers.Authorization = `Bearer ${token}`
    }
@@ -33,37 +40,18 @@ axiosInstance.interceptors.request.use(config => {
    return config
 })
 
-// Response interceptor with error handling
+// Response interceptor — owns error normalization for the whole app.
 axiosInstance.interceptors.response.use(
-   (response: AxiosResponse<ApiResponse<unknown>>) => {
-      // Handle token refresh or other headers if needed
-      return response
-   },
-   (error: AxiosError<ApiError>) => {
+   (response: AxiosResponse) => response,
+   (error: AxiosError<{ message?: string }>) => {
       if (!isAxiosError(error)) {
-         return Promise.reject(new Error('Network error occurred'))
+         return Promise.reject(new ApiError('Network error occurred'))
       }
 
-      const { response } = error
-      const errorMessage = response?.data?.message || error.message
+      const status = error.response?.status
+      const message = error.response?.data?.message || error.message
 
-      // Handle specific HTTP status codes
-      switch (response?.status) {
-         case 401:
-            // Handle unauthorized access
-            break
-         case 403:
-            // Handle forbidden access
-            break
-         case 404:
-            // Handle not found
-            break
-         case 500:
-            // Handle server errors
-            break
-      }
-
-      return Promise.reject(new Error(errorMessage))
+      return Promise.reject(new ApiError(message, status, error.code))
    },
 )
 

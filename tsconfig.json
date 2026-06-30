@@ -25,8 +25,8 @@
       "~/*": [
         "./src/*"
       ],
-      "~/features/*": [
-        "./src/features/*"
+      "~/modules/*": [
+        "./src/modules/*"
       ]
     },
     "target": "ES2023"

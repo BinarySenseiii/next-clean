@@ -1,1 +1,1 @@
-export * from './bg-patterns'
+export * from './ui/bg-patterns'

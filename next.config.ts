@@ -1,7 +1,7 @@
 /** @format */
 
 import initializeBundleAnalyzer from '@next/bundle-analyzer'
-import { type NextConfig } from 'next'
+import type { NextConfig } from 'next'
 import { fileURLToPath } from 'node:url'
 
 const withBundleAnalyzer = initializeBundleAnalyzer({

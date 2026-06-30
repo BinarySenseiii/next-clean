@@ -15,7 +15,7 @@ export const slugify = (text: string, separator: string = '-'): string => {
       .replace(/[^\w-]+/g, '') // Remove non-word chars
       .replace(/_/g, separator) // Convert underscores
       .replace(/--+/g, separator) // Condense separators
-      .replace(/^-|-$|/g, '') // Trim leading/trailing
+      .replace(/^-+|-+$/g, '') // Trim leading/trailing
 }
 
 // Advanced version with dictionary replacements

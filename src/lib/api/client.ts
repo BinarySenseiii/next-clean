@@ -1,30 +1,25 @@
-import { type AxiosRequestConfig, isAxiosError, type Method } from 'axios'
+import { type AxiosRequestConfig, type Method } from 'axios'
 
-import axiosInstance from './interceptor'
+import axiosInstance, { ApiError } from './interceptor'
 
-import { type ApiRouteKeys } from '~/constants'
+import { type ApiEndpoint } from '~/constants'
 
-// Type-safe request handler
+export { ApiError }
+
+// Type-safe request handler. Errors are normalized to `ApiError` by the
+// response interceptor, so this wrapper only has to unwrap the payload.
 export const apiRequest = async <T>(
    method: Method,
-   endpoint: ApiRouteKeys,
+   endpoint: ApiEndpoint,
    data?: unknown,
    config?: AxiosRequestConfig,
 ): Promise<T> => {
-   try {
-      const response = await axiosInstance.request<T>({
-         url: endpoint,
-         method,
-         data,
-         ...config,
-      })
+   const response = await axiosInstance.request<T>({
+      url: endpoint,
+      method,
+      data,
+      ...config,
+   })
 
-      return response.data
-   } catch (error) {
-      if (isAxiosError(error)) {
-         const errorMessage = error.response?.data?.message || 'Request failed'
-         throw new Error(errorMessage)
-      }
-      throw error
-   }
+   return response.data
 }

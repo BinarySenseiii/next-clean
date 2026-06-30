@@ -8,8 +8,8 @@ import '~/styles/index.css'
 
 import { fontInter } from '~/components/ui'
 import { appConfig, generateSeoMetadata, jsonLd } from '~/config'
-import { cn } from '~/lib'
-import RootProviders from '~/providers'
+import RootProviders from '~/integrations'
+import { cn } from '~/utils'
 
 export const viewport: Viewport = {
    themeColor: appConfig.theme,
