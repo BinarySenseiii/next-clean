@@ -1,0 +1,3250 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "next-clean",
+    "languages": [
+      "typescript",
+      "markdown",
+      "json",
+      "css",
+      "javascript"
+    ],
+    "frameworks": [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "TanStack Query",
+      "Zustand",
+      "Axios",
+      "Zod",
+      "React Hook Form",
+      "Motion",
+      "nuqs"
+    ],
+    "description": "Open-source Next.js 16 starter template (App Router + Turbopack, React 19, TypeScript 5 strict, Tailwind CSS v4, Shadcn-style setup) with a type-safe Axios HTTP layer, TanStack Query data hooks, Zustand stores, t3-env validation, and SEO/JSON-LD metadata.",
+    "analyzedAt": "2026-06-30T10:03:28.028Z",
+    "gitCommitHash": "ed799cd37ce2ad91c338d17816be0863d8f1f605"
+  },
+  "nodes": [
+    {
+      "id": "file:src/app/api/v1/products/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "filePath": "src/app/api/v1/products/route.ts",
+      "summary": "Next.js App Router API route handler exposing GET /api/v1/products, returning a Zod-validated array of products as a JSON response.",
+      "tags": [
+        "api-handler",
+        "entry-point",
+        "validation",
+        "route"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Uses Next.js Route Handler convention (exported HTTP-method function) with a Zod schema to parse/validate the response payload."
+    },
+    {
+      "id": "function:src/app/api/v1/products/route.ts:GET",
+      "type": "function",
+      "name": "GET",
+      "filePath": "src/app/api/v1/products/route.ts",
+      "lineRange": [
+        12,
+        16
+      ],
+      "summary": "GET route handler that validates mock product data against the product schema and returns it via Response.json.",
+      "tags": [
+        "api-handler",
+        "validation",
+        "route"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/modules/products/api/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/modules/products/api/index.ts",
+      "summary": "Barrel file re-exporting the products API layer (query-key factory and raw API functions) for the products module.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/modules/products/api/product-query-keys.ts",
+      "type": "file",
+      "name": "product-query-keys.ts",
+      "filePath": "src/modules/products/api/product-query-keys.ts",
+      "summary": "Hierarchical TanStack Query key factory for the products feature; all keys descend from a shared root so broad invalidation cascades to every list and detail entry.",
+      "tags": [
+        "factory",
+        "data-model",
+        "api",
+        "query-keys"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Uses `as const` tuples to give each query key a precise readonly type, enabling type-safe cache invalidation."
+    },
+    {
+      "id": "file:src/modules/products/hooks/use-product-mutation.ts",
+      "type": "file",
+      "name": "use-product-mutation.ts",
+      "filePath": "src/modules/products/hooks/use-product-mutation.ts",
+      "summary": "TanStack Query mutation hooks for creating, updating, and deleting products, each invalidating the relevant query-key slices on success.",
+      "tags": [
+        "hook",
+        "service",
+        "api",
+        "mutation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/modules/products/hooks/use-product-mutation.ts:useCreateProduct",
+      "type": "function",
+      "name": "useCreateProduct",
+      "filePath": "src/modules/products/hooks/use-product-mutation.ts",
+      "lineRange": [
+        5,
+        12
+      ],
+      "summary": "Mutation hook that creates a product and invalidates the product lists cache on success.",
+      "tags": [
+        "hook",
+        "mutation",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/modules/products/hooks/use-product-mutation.ts:useUpdateProduct",
+      "type": "function",
+      "name": "useUpdateProduct",
+      "filePath": "src/modules/products/hooks/use-product-mutation.ts",
+      "lineRange": [
+        14,
+        24
+      ],
+      "summary": "Mutation hook that updates a product and invalidates both the product lists and the affected detail cache entry on success.",
+      "tags": [
+        "hook",
+        "mutation",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/modules/products/hooks/use-product-mutation.ts:useDeleteProduct",
+      "type": "function",
+      "name": "useDeleteProduct",
+      "filePath": "src/modules/products/hooks/use-product-mutation.ts",
+      "lineRange": [
+        26,
+        33
+      ],
+      "summary": "Mutation hook that deletes a product and invalidates the product lists cache on success.",
+      "tags": [
+        "hook",
+        "mutation",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/modules/products/hooks/use-products.ts",
+      "type": "file",
+      "name": "use-products.ts",
+      "filePath": "src/modules/products/hooks/use-products.ts",
+      "summary": "TanStack Query read hooks for fetching the product list (with optional filters) and a single product by id, keyed via the product query-key factory.",
+      "tags": [
+        "hook",
+        "service",
+        "api",
+        "data-fetching"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/modules/products/hooks/use-products.ts:useProducts",
+      "type": "function",
+      "name": "useProducts",
+      "filePath": "src/modules/products/hooks/use-products.ts",
+      "lineRange": [
+        6,
+        10
+      ],
+      "summary": "Query hook that fetches the filtered product list via getProducts, keyed by the list query key.",
+      "tags": [
+        "hook",
+        "data-fetching",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/modules/products/hooks/use-products.ts:useProduct",
+      "type": "function",
+      "name": "useProduct",
+      "filePath": "src/modules/products/hooks/use-products.ts",
+      "lineRange": [
+        12,
+        17
+      ],
+      "summary": "Query hook that fetches a single product by id via getProduct, keyed by the detail query key.",
+      "tags": [
+        "hook",
+        "data-fetching",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/modules/products/types.ts",
+      "type": "file",
+      "name": "types.ts",
+      "filePath": "src/modules/products/types.ts",
+      "summary": "Defines the product domain types and the Zod productSchema used for runtime validation across the products module and API route.",
+      "tags": [
+        "type-definition",
+        "data-model",
+        "validation",
+        "schema-definition"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Co-locates a Zod schema with inferred TypeScript types, giving a single source of truth for both runtime validation and static typing."
+    },
+    {
+      "id": "file:src/constants/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/constants/index.ts",
+      "summary": "Barrel file for the constants layer, re-exporting env, API endpoints, enums, and regex modules so consumers import via the single ~/constants entry point.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "constants",
+        "re-export"
+      ],
+      "complexity": "simple",
+      "languageNotes": "TypeScript barrel using re-exports to expose the constants directory as one module."
+    },
+    {
+      "id": "file:src/lib/api/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/lib/api/index.ts",
+      "summary": "Barrel file for the HTTP layer, re-exporting the apiRequest client wrapper (and related API helpers) under the ~/lib/api entry point.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "api",
+        "re-export"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/modules/products/api/product-api.ts",
+      "type": "file",
+      "name": "product-api.ts",
+      "filePath": "src/modules/products/api/product-api.ts",
+      "summary": "Raw product API functions for the products feature module, wrapping apiRequest to perform CRUD operations against the products endpoint.",
+      "tags": [
+        "api-handler",
+        "service",
+        "products",
+        "crud"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Thin typed wrappers delegating to the generic apiRequest<T> client with strongly-typed Product return shapes."
+    },
+    {
+      "id": "file:src/utils/string/url.ts",
+      "type": "file",
+      "name": "url.ts",
+      "filePath": "src/utils/string/url.ts",
+      "summary": "String utility that rewrites raw URLs in text into external anchor tags with configurable styling.",
+      "tags": [
+        "utility",
+        "string",
+        "formatting",
+        "url"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/validation/email.ts",
+      "type": "file",
+      "name": "email.ts",
+      "filePath": "src/utils/validation/email.ts",
+      "summary": "Validation helper that checks whether a string is a well-formed email using the shared EMAIL_VALIDATION regex.",
+      "tags": [
+        "utility",
+        "validation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/modules/products/api/product-api.ts:getProducts",
+      "type": "function",
+      "name": "getProducts",
+      "filePath": "src/modules/products/api/product-api.ts",
+      "lineRange": [
+        8,
+        9
+      ],
+      "summary": "Fetches the product list via a GET request, forwarding optional filters as query params and returning a typed Product array.",
+      "tags": [
+        "api-handler",
+        "query",
+        "products"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/modules/products/api/product-api.ts:getProduct",
+      "type": "function",
+      "name": "getProduct",
+      "filePath": "src/modules/products/api/product-api.ts",
+      "lineRange": [
+        11,
+        11
+      ],
+      "summary": "Fetches a single product by id via a GET request to the products endpoint.",
+      "tags": [
+        "api-handler",
+        "query",
+        "products"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/modules/products/api/product-api.ts:createProduct",
+      "type": "function",
+      "name": "createProduct",
+      "filePath": "src/modules/products/api/product-api.ts",
+      "lineRange": [
+        13,
+        13
+      ],
+      "summary": "Creates a new product via a POST request, sending the payload (Product without id) and returning the created Product.",
+      "tags": [
+        "api-handler",
+        "mutation",
+        "products"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/modules/products/api/product-api.ts:updateProduct",
+      "type": "function",
+      "name": "updateProduct",
+      "filePath": "src/modules/products/api/product-api.ts",
+      "lineRange": [
+        15,
+        15
+      ],
+      "summary": "Updates an existing product via a PATCH request, extracting the id for the URL and sending the remaining fields as the body.",
+      "tags": [
+        "api-handler",
+        "mutation",
+        "products"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/modules/products/api/product-api.ts:deleteProduct",
+      "type": "function",
+      "name": "deleteProduct",
+      "filePath": "src/modules/products/api/product-api.ts",
+      "lineRange": [
+        17,
+        17
+      ],
+      "summary": "Deletes a product by id via a DELETE request to the products endpoint.",
+      "tags": [
+        "api-handler",
+        "mutation",
+        "products"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/string/url.ts:makeUrlsExternal",
+      "type": "function",
+      "name": "makeUrlsExternal",
+      "filePath": "src/utils/string/url.ts",
+      "lineRange": [
+        11,
+        16
+      ],
+      "summary": "Replaces raw URLs found in a text string with external anchor tags (target/rel attributes) and an optional CSS class.",
+      "tags": [
+        "utility",
+        "string",
+        "url",
+        "formatting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/validation/email.ts:isValidEmail",
+      "type": "function",
+      "name": "isValidEmail",
+      "filePath": "src/utils/validation/email.ts",
+      "lineRange": [
+        3,
+        7
+      ],
+      "summary": "Returns true when the given string matches the shared EMAIL_VALIDATION regex pattern.",
+      "tags": [
+        "utility",
+        "validation",
+        "email"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/error.tsx",
+      "type": "file",
+      "name": "error.tsx",
+      "filePath": "src/app/error.tsx",
+      "summary": "Next.js App Router global error boundary that renders a styled fallback UI, logs the error via useEffect, formats the error message with makeUrlsExternal, and offers a reset action plus a home link.",
+      "tags": [
+        "entry-point",
+        "error-handling",
+        "component",
+        "client-component",
+        "app-router"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "App Router special file requiring 'use client' and the ({ error, reset }) prop contract."
+    },
+    {
+      "id": "function:src/app/error.tsx:ErrorPage",
+      "type": "function",
+      "name": "ErrorPage",
+      "filePath": "src/app/error.tsx",
+      "lineRange": [
+        19,
+        58
+      ],
+      "summary": "Client error boundary component that logs the caught error and renders a recovery screen with a background pattern, formatted message, retry button, and home navigation link.",
+      "tags": [
+        "component",
+        "error-handling",
+        "event-handler",
+        "client-component"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/app/not-found.tsx",
+      "type": "file",
+      "name": "not-found.tsx",
+      "filePath": "src/app/not-found.tsx",
+      "summary": "Next.js App Router 404 page that renders a not-found screen using a shared background pattern from the components barrel.",
+      "tags": [
+        "entry-point",
+        "error-handling",
+        "component",
+        "app-router",
+        "not-found"
+      ],
+      "complexity": "simple",
+      "languageNotes": "App Router special file (not-found.tsx) rendered for unmatched routes and notFound() calls."
+    },
+    {
+      "id": "function:src/app/not-found.tsx:NotFoundPage",
+      "type": "function",
+      "name": "NotFoundPage",
+      "filePath": "src/app/not-found.tsx",
+      "lineRange": [
+        7,
+        26
+      ],
+      "summary": "Renders the 404 not-found UI including a shared background pattern.",
+      "tags": [
+        "component",
+        "error-handling",
+        "not-found"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/components/index.ts",
+      "summary": "Barrel file re-exporting the components directory so consumers import shared UI (e.g. getBackgroundPattern) via the ~/components alias.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "component",
+        "exports"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/utils/index.ts",
+      "summary": "Barrel file re-exporting the utils directory so consumers import pure helpers (e.g. cn, makeUrlsExternal) via the ~/utils alias.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "utility",
+        "exports"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/layout.tsx",
+      "summary": "Next.js App Router root layout that defines viewport and SEO metadata, injects JSON-LD structured data, and wraps all pages in the global RootProviders.",
+      "tags": [
+        "entry-point",
+        "layout",
+        "seo",
+        "providers",
+        "app-router"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Exports Next.js metadata/viewport route conventions alongside the default layout component."
+    },
+    {
+      "id": "function:src/app/layout.tsx:RootLayout",
+      "type": "function",
+      "name": "RootLayout",
+      "filePath": "src/app/layout.tsx",
+      "lineRange": [
+        24,
+        41
+      ],
+      "summary": "Root layout component rendering the html/body shell, composed classes via cn(), JSON-LD script tag, and the RootProviders wrapper around page children.",
+      "tags": [
+        "component",
+        "layout",
+        "entry-point",
+        "seo"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/ui/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/components/ui/index.ts",
+      "summary": "Barrel file re-exporting UI primitive components from the components/ui directory for convenient import via the directory path.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "ui",
+        "components"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/integrations/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "src/integrations/index.tsx",
+      "summary": "Composes app-wide providers (ReactQueryProvider, nuqs adapter) via reduceRight and renders global components like the Sonner Toaster, exposing the RootProviders wrapper used in the root layout.",
+      "tags": [
+        "providers",
+        "entry-point",
+        "composition",
+        "integration"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Uses reduceRight over a providers array to avoid deeply nested provider JSX."
+    },
+    {
+      "id": "function:src/integrations/index.tsx:RootProviders",
+      "type": "function",
+      "name": "RootProviders",
+      "filePath": "src/integrations/index.tsx",
+      "lineRange": [
+        26,
+        39
+      ],
+      "summary": "Wraps children in the configured provider stack via reduceRight and renders global components (Toaster) alongside the page content.",
+      "tags": [
+        "component",
+        "providers",
+        "composition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/integrations/react-query.tsx",
+      "type": "file",
+      "name": "react-query.tsx",
+      "filePath": "src/integrations/react-query.tsx",
+      "summary": "Configures the TanStack Query QueryClient (staleTime, retry logic) and a QueryCache that surfaces errors as Sonner toasts, exposing the ReactQueryProvider used in the integrations stack.",
+      "tags": [
+        "providers",
+        "react-query",
+        "integration",
+        "error-handling"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Holds the QueryClient in useState so it is created once per client mount rather than per render."
+    },
+    {
+      "id": "function:src/integrations/react-query.tsx:ReactQueryProvider",
+      "type": "function",
+      "name": "ReactQueryProvider",
+      "filePath": "src/integrations/react-query.tsx",
+      "lineRange": [
+        17,
+        62
+      ],
+      "summary": "Provider component that lazily instantiates a configured QueryClient with global query/mutation error handling via toast notifications and wraps children in QueryClientProvider.",
+      "tags": [
+        "component",
+        "react-query",
+        "provider",
+        "error-handling"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/app/robot.ts",
+      "type": "file",
+      "name": "robot.ts",
+      "filePath": "src/app/robot.ts",
+      "summary": "Next.js App Router robots metadata route that generates robots.txt rules from the app config, allowing all crawlers and pointing to the sitemap.",
+      "tags": [
+        "entry-point",
+        "seo",
+        "metadata",
+        "configuration"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Uses the Next.js convention file `robots.ts` which exports a default function returning a MetadataRoute.Robots object."
+    },
+    {
+      "id": "function:src/app/robot.ts:robots",
+      "type": "function",
+      "name": "robots",
+      "filePath": "src/app/robot.ts",
+      "lineRange": [
+        7,
+        16
+      ],
+      "summary": "Default-exported function returning robots.txt directives (crawler rules and sitemap URL) derived from the application domain config.",
+      "tags": [
+        "seo",
+        "metadata",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/config/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/config/index.ts",
+      "summary": "Barrel file re-exporting the config module's public surface (app config and SEO config).",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/api/client.ts",
+      "type": "file",
+      "name": "client.ts",
+      "filePath": "src/lib/api/client.ts",
+      "summary": "Exposes the generic, type-safe `apiRequest<T>` wrapper that all API calls use, delegating to the configured Axios instance and unwrapping the response payload.",
+      "tags": [
+        "service",
+        "api-handler",
+        "utility",
+        "serialization"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Generic function typed via `ApiEndpoint`/`Method`; re-exports `ApiError` so consumers import error handling and the request helper from a single module."
+    },
+    {
+      "id": "function:src/lib/api/client.ts:apiRequest",
+      "type": "function",
+      "name": "apiRequest",
+      "filePath": "src/lib/api/client.ts",
+      "lineRange": [
+        11,
+        25
+      ],
+      "summary": "Generic async request handler that issues a typed Axios request for a given method/endpoint and returns the unwrapped response data; errors are normalized upstream by the response interceptor.",
+      "tags": [
+        "service",
+        "api-handler",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/api/interceptor.ts",
+      "type": "file",
+      "name": "interceptor.ts",
+      "filePath": "src/lib/api/interceptor.ts",
+      "summary": "Configured Axios instance (baseURL from appConfig.domainName) with request/response interceptors for auth headers and status-code handling, plus the `ApiError` class used to normalize failures.",
+      "tags": [
+        "service",
+        "middleware",
+        "api-handler",
+        "validation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Centralizes Axios configuration and normalizes thrown errors into a custom `ApiError` carrying HTTP status and code."
+    },
+    {
+      "id": "class:src/lib/api/interceptor.ts:ApiError",
+      "type": "class",
+      "name": "ApiError",
+      "filePath": "src/lib/api/interceptor.ts",
+      "lineRange": [
+        11,
+        21
+      ],
+      "summary": "Custom Error subclass carrying HTTP status and error code, used to normalize API failures across the HTTP layer.",
+      "tags": [
+        "data-model",
+        "validation",
+        "type-definition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/config/app.config.ts",
+      "type": "file",
+      "name": "app.config.ts",
+      "filePath": "src/config/app.config.ts",
+      "summary": "Exposes the central `appConfig` object holding application-wide settings such as app name, domain name, theme, and social links, consumed across the SEO and integration layers.",
+      "tags": [
+        "config",
+        "configuration",
+        "app-settings",
+        "singleton"
+      ],
+      "complexity": "simple",
+      "languageNotes": "TypeScript const config object typed via the shared types barrel."
+    },
+    {
+      "id": "file:src/config/seo.config.ts",
+      "type": "file",
+      "name": "seo.config.ts",
+      "filePath": "src/config/seo.config.ts",
+      "summary": "Builds per-page SEO metadata via `generateSeoMetadata()` (titles, descriptions, OpenGraph, canonical URLs) and exports a `jsonLd` structured-data object, seeding defaults from `appConfig`.",
+      "tags": [
+        "config",
+        "seo",
+        "metadata",
+        "structured-data"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Uses Next.js `Metadata` type and schema-dts `WithContext<SoftwareApplication>` for typed JSON-LD."
+    },
+    {
+      "id": "file:src/types/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/types/index.ts",
+      "summary": "Barrel entry point for project-wide shared TypeScript types re-exported under `~/types`.",
+      "tags": [
+        "type-definition",
+        "barrel",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/config/seo.config.ts:generateSeoMetadata",
+      "type": "function",
+      "name": "generateSeoMetadata",
+      "filePath": "src/config/seo.config.ts",
+      "lineRange": [
+        21,
+        79
+      ],
+      "summary": "Produces a Next.js `Metadata`/`SeoMeta` object, merging caller overrides with `appConfig` defaults for title, description, keywords, OpenGraph, and canonical URL; called in the root layout and overridable per page.",
+      "tags": [
+        "seo",
+        "metadata",
+        "factory",
+        "configuration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/lib/store/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/lib/store/index.ts",
+      "summary": "Barrel for the lib/store layer, re-exporting the createStore Zustand factory so feature stores import it via the directory path.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "store",
+        "state-management"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/modules/cart/store/cart-store.ts",
+      "type": "file",
+      "name": "cart-store.ts",
+      "filePath": "src/modules/cart/store/cart-store.ts",
+      "summary": "Client-only cart Zustand store built with createStore (immer, non-persisted), holding cart items plus add/update/remove actions and exposing granular selector hooks (useCart, useCartState, useCartActions).",
+      "tags": [
+        "store",
+        "state-management",
+        "feature",
+        "cart",
+        "hook"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Uses zustand/react/shallow useShallow to memoize object selectors and keep server-cache state (products via TanStack Query) separate from client cart state."
+    },
+    {
+      "id": "file:src/modules/products/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/modules/products/index.ts",
+      "summary": "Barrel for the products module, re-exporting its api, hooks, types, and store so consumers import the slice through ~/modules/products.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "feature",
+        "products"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.claude/skills/codebase-design/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": ".claude/skills/codebase-design/SKILL.md",
+      "summary": "Entry-point definition for the codebase-design skill, establishing a shared vocabulary (module, interface, seam, depth, adapter, leverage, locality) and principles for designing deep modules with testable interfaces.",
+      "tags": [
+        "documentation",
+        "entry-point",
+        "skill-definition",
+        "design-guidelines",
+        "glossary"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Claude Code skill document with YAML frontmatter (name + description) followed by markdown body; links to companion sub-documents via relative paths."
+    },
+    {
+      "id": "document:.claude/skills/codebase-design/DEEPENING.md",
+      "type": "document",
+      "name": "DEEPENING.md",
+      "filePath": ".claude/skills/codebase-design/DEEPENING.md",
+      "summary": "Companion sub-document explaining how to deepen a module given its dependencies, covering the four dependency categories, seam discipline, and a replace-don't-layer testing strategy.",
+      "tags": [
+        "documentation",
+        "design-guidelines",
+        "testing-strategy",
+        "dependency-management",
+        "ports-and-adapters"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.claude/skills/codebase-design/DESIGN-IT-TWICE.md",
+      "type": "document",
+      "name": "DESIGN-IT-TWICE.md",
+      "filePath": ".claude/skills/codebase-design/DESIGN-IT-TWICE.md",
+      "summary": "Companion sub-document describing a process for exploring alternative module interfaces by spawning parallel sub-agents and comparing the designs on depth, locality, and seam placement.",
+      "tags": [
+        "documentation",
+        "design-process",
+        "design-guidelines",
+        "interface-design",
+        "sub-agents"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.commitlintrc.json",
+      "type": "config",
+      "name": ".commitlintrc.json",
+      "filePath": ".commitlintrc.json",
+      "summary": "Commitlint configuration that extends @commitlint/config-conventional to enforce conventional commit message formats (feat:, chore:, etc.) via the Husky commit-msg hook.",
+      "tags": [
+        "configuration",
+        "commitlint",
+        "git-hooks",
+        "conventions"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.env.example",
+      "type": "config",
+      "name": ".env.example",
+      "filePath": ".env.example",
+      "summary": "Template enumerating the environment variables the app expects, mirroring the t3-env zod schema in src/constants/env.ts so developers can scaffold their own .env file.",
+      "tags": [
+        "configuration",
+        "environment",
+        "template",
+        "secrets"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.prettierrc.json",
+      "type": "config",
+      "name": ".prettierrc.json",
+      "filePath": ".prettierrc.json",
+      "summary": "Prettier formatting configuration defining the repo's code style: no semicolons, single quotes, 3-space tabs, 120 print width, trailing commas, and avoid-style arrow parens.",
+      "tags": [
+        "configuration",
+        "prettier",
+        "formatting",
+        "code-style",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:CLAUDE.md",
+      "type": "document",
+      "name": "CLAUDE.md",
+      "filePath": "CLAUDE.md",
+      "summary": "Guidance document for Claude Code describing the project stack, commands, conventions, and the module-based architecture (modules, lib/api, lib/store, integrations, config).",
+      "tags": [
+        "documentation",
+        "guidance",
+        "architecture",
+        "conventions"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:CODE_OF_CONDUCT.md",
+      "type": "document",
+      "name": "CODE_OF_CONDUCT.md",
+      "filePath": "CODE_OF_CONDUCT.md",
+      "summary": "Contributor Covenant code of conduct outlining community standards, enforcement responsibilities, and a tiered enforcement guideline for the open-source project.",
+      "tags": [
+        "documentation",
+        "community",
+        "governance",
+        "contributing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:CONTEXT.md",
+      "type": "document",
+      "name": "CONTEXT.md",
+      "filePath": "CONTEXT.md",
+      "summary": "Domain glossary defining core project concepts and the self-contained module slice pattern (api, hooks, store, types, barrel) used under src/modules.",
+      "tags": [
+        "documentation",
+        "glossary",
+        "architecture",
+        "domain"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Project landing documentation introducing the Next.js starter template, listing its key features (App Router, ESLint, Tailwind, t3-env, type-safe Axios, Husky), and getting-started instructions.",
+      "tags": [
+        "documentation",
+        "entry-point",
+        "overview",
+        "getting-started"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:SECURITY.md",
+      "type": "document",
+      "name": "SECURITY.md",
+      "filePath": "SECURITY.md",
+      "summary": "Security policy describing supported versions and the process for privately reporting vulnerabilities in the project.",
+      "tags": [
+        "documentation",
+        "security",
+        "policy",
+        "vulnerability-reporting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "Project manifest declaring dependencies (Next.js 16, React 19, TanStack Query, Zustand, Axios, t3-env), yarn scripts (dev, build, typecheck, lint, format), and lint-staged/commit tooling.",
+      "tags": [
+        "configuration",
+        "manifest",
+        "dependencies",
+        "build-system",
+        "scripts"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Uses overrides and resolutions to pin transitive dependency versions; type: module enables ESM."
+    },
+    {
+      "id": "config:skills-lock.json",
+      "type": "config",
+      "name": "skills-lock.json",
+      "filePath": "skills-lock.json",
+      "summary": "Lockfile pinning the versions and sources of the Claude Code skills installed in this repository for reproducible tooling.",
+      "tags": [
+        "configuration",
+        "lockfile",
+        "tooling",
+        "skills"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "tsconfig.json",
+      "summary": "TypeScript compiler configuration enabling strict mode and defining the ~/* to src/* path alias used for all internal imports, plus include/exclude globs for the build.",
+      "tags": [
+        "configuration",
+        "typescript",
+        "build-system",
+        "path-alias"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Path mapping (~/* -> src/*) drives the project's import convention enforced by ESLint simple-import-sort."
+    },
+    {
+      "id": "file:src/styles/index.css",
+      "type": "file",
+      "name": "index.css",
+      "filePath": "src/styles/index.css",
+      "summary": "Root Tailwind CSS v4 stylesheet that imports tailwindcss and the layered defaults/utilities/elements partials, then defines the CSS-first @theme with the project's oklch brand colors and font-sans token.",
+      "tags": [
+        "entry-point",
+        "styling",
+        "tailwind",
+        "theme",
+        "configuration"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Tailwind v4 CSS-first config: uses @import 'tailwindcss', cascade layers via layer(base|utilities|components), @theme/@theme inline blocks, and oklch() color definitions instead of a tailwind.config.js."
+    },
+    {
+      "id": "file:src/styles/defaults.css",
+      "type": "file",
+      "name": "defaults.css",
+      "filePath": "src/styles/defaults.css",
+      "summary": "Base-layer reset partial that applies a default border-color to all elements and pseudo-elements, restoring Tailwind's preflight border behavior.",
+      "tags": [
+        "styling",
+        "css-reset",
+        "base-layer",
+        "preflight"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/styles/elements.css",
+      "type": "file",
+      "name": "elements.css",
+      "filePath": "src/styles/elements.css",
+      "summary": "Components-layer partial defining the reusable .card class styled with the theme's deep-brown color, rounded corners, spacing, and shadow tokens.",
+      "tags": [
+        "styling",
+        "component",
+        "components-layer",
+        "theme"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/styles/utils.css",
+      "type": "file",
+      "name": "utils.css",
+      "filePath": "src/styles/utils.css",
+      "summary": "Empty utilities-layer partial reserved for project-specific custom utility classes, imported into index.css under layer(utilities).",
+      "tags": [
+        "styling",
+        "utilities-layer",
+        "placeholder"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.claude/skills/grill-with-docs/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": ".claude/skills/grill-with-docs/SKILL.md",
+      "summary": "Claude Code skill definition describing a documentation-grilling workflow for adversarially questioning docs.",
+      "tags": [
+        "documentation",
+        "claude-skill",
+        "workflow"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.claude/skills/handoff/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": ".claude/skills/handoff/SKILL.md",
+      "summary": "Claude Code skill definition describing a session handoff workflow for transferring task context.",
+      "tags": [
+        "documentation",
+        "claude-skill",
+        "workflow"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:.claude/skills/improve-codebase-architecture/HTML-REPORT.md",
+      "type": "document",
+      "name": "HTML-REPORT.md",
+      "filePath": ".claude/skills/improve-codebase-architecture/HTML-REPORT.md",
+      "summary": "Reference guide for generating HTML architecture reports, covering scaffold, candidate cards, Mermaid diagram patterns, and styling conventions.",
+      "tags": [
+        "documentation",
+        "claude-skill",
+        "reporting",
+        "architecture"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.claude/skills/improve-codebase-architecture/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": ".claude/skills/improve-codebase-architecture/SKILL.md",
+      "summary": "Claude Code skill defining a three-step process (explore, present HTML candidates, grilling loop) for improving codebase architecture.",
+      "tags": [
+        "documentation",
+        "claude-skill",
+        "architecture",
+        "workflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:.claude/skills/obsidian-vault/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": ".claude/skills/obsidian-vault/SKILL.md",
+      "summary": "Claude Code skill describing Obsidian vault management workflows including note search, creation, linking, and index discovery.",
+      "tags": [
+        "documentation",
+        "claude-skill",
+        "obsidian",
+        "workflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:.husky/commit-msg",
+      "type": "file",
+      "name": "commit-msg",
+      "filePath": ".husky/commit-msg",
+      "summary": "Husky Git hook that runs commitlint to enforce conventional commit message format.",
+      "tags": [
+        "git-hook",
+        "build-system",
+        "validation",
+        "ci-cd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.husky/pre-commit",
+      "type": "file",
+      "name": "pre-commit",
+      "filePath": ".husky/pre-commit",
+      "summary": "Husky Git hook that runs lint-staged to lint and format staged files before commit.",
+      "tags": [
+        "git-hook",
+        "build-system",
+        "validation",
+        "ci-cd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.prettierignore",
+      "type": "file",
+      "name": ".prettierignore",
+      "filePath": ".prettierignore",
+      "summary": "Lists paths excluded from Prettier formatting.",
+      "tags": [
+        "configuration",
+        "build-system",
+        "formatting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.understand-anything/.understandignore",
+      "type": "file",
+      "name": ".understandignore",
+      "filePath": ".understand-anything/.understandignore",
+      "summary": "Ignore-pattern file controlling which paths the Understand-Anything analyzer skips when scanning the project.",
+      "tags": [
+        "configuration",
+        "tooling",
+        "ignore-rules"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:commitlint.config.js",
+      "type": "config",
+      "name": "commitlint.config.js",
+      "filePath": "commitlint.config.js",
+      "summary": "Commitlint configuration extending @commitlint/config-conventional to enforce conventional commit messages.",
+      "tags": [
+        "configuration",
+        "build-system",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:eslint.config.mjs",
+      "type": "config",
+      "name": "eslint.config.mjs",
+      "filePath": "eslint.config.mjs",
+      "summary": "Flat ESLint configuration wiring up Next.js, TypeScript, simple-import-sort, and inline type-import rules for the project.",
+      "tags": [
+        "configuration",
+        "build-system",
+        "linting",
+        "typescript"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Uses the ESLint flat config (.mjs) format composing multiple shared rule sets."
+    },
+    {
+      "id": "config:next.config.ts",
+      "type": "config",
+      "name": "next.config.ts",
+      "filePath": "next.config.ts",
+      "summary": "Next.js configuration that validates environment variables at build time by importing env.ts through jiti, and enables project-wide build options.",
+      "tags": [
+        "configuration",
+        "build-system",
+        "nextjs",
+        "environment"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Imports the TS env schema via jiti so invalid environment variables fail the build."
+    },
+    {
+      "id": "config:postcss.config.cjs",
+      "type": "config",
+      "name": "postcss.config.cjs",
+      "filePath": "postcss.config.cjs",
+      "summary": "PostCSS configuration enabling the Tailwind CSS v4 plugin for the build pipeline.",
+      "tags": [
+        "configuration",
+        "build-system",
+        "tailwind",
+        "styling"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/(auth)/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "src/app/(auth)/layout.tsx",
+      "summary": "Layout component for the (auth) route group wrapping sign-in and sign-up pages.",
+      "tags": [
+        "component",
+        "layout",
+        "nextjs",
+        "routing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/(auth)/sign-in/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/(auth)/sign-in/page.tsx",
+      "summary": "Sign-in page route component within the (auth) route group.",
+      "tags": [
+        "component",
+        "page",
+        "nextjs",
+        "routing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/(auth)/sign-up/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/(auth)/sign-up/page.tsx",
+      "summary": "Sign-up page route component within the (auth) route group.",
+      "tags": [
+        "component",
+        "page",
+        "nextjs",
+        "routing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/app/(marketing)/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "src/app/(marketing)/page.tsx",
+      "summary": "Marketing home page client component showing a copyable git clone command with a click-to-copy counter and toast feedback.",
+      "tags": [
+        "component",
+        "page",
+        "entry-point",
+        "nextjs",
+        "client-component"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/layout/.gitkeep",
+      "type": "file",
+      "name": ".gitkeep",
+      "filePath": "src/components/layout/.gitkeep",
+      "summary": "Placeholder file keeping the empty layout components directory under version control.",
+      "tags": [
+        "placeholder",
+        "version-control",
+        "scaffold"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/shared/.gitkeep",
+      "type": "file",
+      "name": ".gitkeep",
+      "filePath": "src/components/shared/.gitkeep",
+      "summary": "Placeholder file keeping the empty shared components directory under version control.",
+      "tags": [
+        "placeholder",
+        "version-control",
+        "scaffold"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/ui/bg-patterns.tsx",
+      "type": "file",
+      "name": "bg-patterns.tsx",
+      "filePath": "src/components/ui/bg-patterns.tsx",
+      "summary": "Catalog of decorative background pattern components (grids and gradients, light/dark variants) plus a BACKGROUND_OPTIONS registry and getBackgroundPattern lookup helper.",
+      "tags": [
+        "component",
+        "ui",
+        "styling",
+        "factory",
+        "registry"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Defines many small presentational components keyed into a single options array for runtime lookup."
+    },
+    {
+      "id": "file:src/components/ui/fonts.ts",
+      "type": "file",
+      "name": "fonts.ts",
+      "filePath": "src/components/ui/fonts.ts",
+      "summary": "Configures and exports the Inter web font via next/font for use across the application.",
+      "tags": [
+        "ui",
+        "fonts",
+        "styling",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/constants/api-endpoints.ts",
+      "type": "file",
+      "name": "api-endpoints.ts",
+      "filePath": "src/constants/api-endpoints.ts",
+      "summary": "Defines the API_ENDPOINTS constant and the ApiRouteKeys type used to type-check endpoint references in the HTTP layer.",
+      "tags": [
+        "constants",
+        "api",
+        "type-definition",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/constants/enums.ts",
+      "type": "file",
+      "name": "enums.ts",
+      "filePath": "src/constants/enums.ts",
+      "summary": "Shared enumeration constants used across the application.",
+      "tags": [
+        "constants",
+        "type-definition",
+        "enums"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/constants/env.ts",
+      "type": "file",
+      "name": "env.ts",
+      "filePath": "src/constants/env.ts",
+      "summary": "Validates and exports typed environment variables using t3-env and zod, splitting server and client schemas with Vercel preset extension.",
+      "tags": [
+        "constants",
+        "environment",
+        "validation",
+        "configuration"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Uses t3-env createEnv with zod schemas; client vars are NEXT_PUBLIC_-prefixed and validation runs at build time."
+    },
+    {
+      "id": "file:src/constants/regex.ts",
+      "type": "file",
+      "name": "regex.ts",
+      "filePath": "src/constants/regex.ts",
+      "summary": "Central collection of reusable regular expression patterns (the REGEX constant) for validation across the project.",
+      "tags": [
+        "constants",
+        "validation",
+        "regex",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/ui/bg-patterns.tsx:getBackgroundPattern",
+      "type": "function",
+      "name": "getBackgroundPattern",
+      "filePath": "src/components/ui/bg-patterns.tsx",
+      "lineRange": [
+        307,
+        311
+      ],
+      "summary": "Looks up a background pattern component by id from the BACKGROUND_OPTIONS registry.",
+      "tags": [
+        "utility",
+        "factory",
+        "lookup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/hooks/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/hooks/index.ts",
+      "summary": "Barrel file re-exporting the app-wide React hooks (use-copy, use-toggle, use-mouse-position, use-isomorphic-layout) so they are reachable via the ~/hooks directory import.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "hooks",
+        "exports"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/hooks/use-copy.ts",
+      "type": "file",
+      "name": "use-copy.ts",
+      "filePath": "src/hooks/use-copy.ts",
+      "summary": "App-wide React hook that copies text to the clipboard via the Clipboard API and tracks a transient copied state that auto-resets after a configurable delay.",
+      "tags": [
+        "hook",
+        "clipboard",
+        "utility",
+        "react"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/hooks/use-isomorphic-layout.ts",
+      "type": "file",
+      "name": "use-isomorphic-layout.ts",
+      "filePath": "src/hooks/use-isomorphic-layout.ts",
+      "summary": "Tiny SSR-safe hook that resolves to useLayoutEffect on the client and useEffect on the server to avoid React hydration warnings.",
+      "tags": [
+        "hook",
+        "ssr",
+        "react",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/hooks/use-mouse-position.ts",
+      "type": "file",
+      "name": "use-mouse-position.ts",
+      "filePath": "src/hooks/use-mouse-position.ts",
+      "summary": "App-wide React hook that tracks the mouse position relative to an optional ref element, using a layout effect to attach and clean up a document mousemove listener.",
+      "tags": [
+        "hook",
+        "event-handler",
+        "react",
+        "mouse-tracking"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/hooks/use-toggle.ts",
+      "type": "file",
+      "name": "use-toggle.ts",
+      "filePath": "src/hooks/use-toggle.ts",
+      "summary": "Small React hook exposing a boolean state plus a memoized toggle callback for on/off UI interactions.",
+      "tags": [
+        "hook",
+        "state",
+        "react",
+        "utility"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/lib/index.ts",
+      "summary": "Barrel file for the lib layer, re-exporting the API and store submodules for ~/lib directory imports.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "exports"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/store/create-store.ts",
+      "type": "file",
+      "name": "create-store.ts",
+      "filePath": "src/lib/store/create-store.ts",
+      "summary": "Zustand store factory wrapping a creator with immer (direct state mutation) and optional persist middleware; supports skipPersist and a custom localStorage name via config.",
+      "tags": [
+        "factory",
+        "store",
+        "state-management",
+        "zustand"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Generic createStore<T> composes immer and persist middleware, conditionally selecting the persisted vs non-persisted variant based on config."
+    },
+    {
+      "id": "file:src/modules/cart/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/modules/cart/index.ts",
+      "summary": "Barrel file for the cart feature module, re-exporting its store slice.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "exports"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/modules/cart/store/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/modules/cart/store/index.ts",
+      "summary": "Barrel file re-exporting the cart Zustand store and its selector hooks.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "exports",
+        "store"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/modules/products/hooks/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/modules/products/hooks/index.ts",
+      "summary": "Barrel file re-exporting the products feature TanStack Query hooks (queries and mutations).",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "exports",
+        "hooks"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/proxy.ts",
+      "type": "file",
+      "name": "proxy.ts",
+      "filePath": "src/proxy.ts",
+      "summary": "Next.js middleware that performs route redirects via NextResponse.redirect, with a config matcher controlling which paths it runs on.",
+      "tags": [
+        "middleware",
+        "routing",
+        "redirect",
+        "nextjs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/types/config.types.ts",
+      "type": "file",
+      "name": "config.types.ts",
+      "filePath": "src/types/config.types.ts",
+      "summary": "Shared TypeScript type definitions describing the application config shape (app metadata, domain, theme, socials).",
+      "tags": [
+        "type-definition",
+        "config",
+        "types"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/cn.ts",
+      "type": "file",
+      "name": "cn.ts",
+      "filePath": "src/utils/cn.ts",
+      "summary": "Exposes the cn() class-name helper that merges clsx conditional classes through tailwind-merge to resolve Tailwind conflicts.",
+      "tags": [
+        "utility",
+        "styling",
+        "tailwind",
+        "class-names"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/formatting/currency.ts",
+      "type": "file",
+      "name": "currency.ts",
+      "filePath": "src/utils/formatting/currency.ts",
+      "summary": "Currency formatting helper that renders a numeric amount as a USD-formatted string via Intl.NumberFormat.",
+      "tags": [
+        "utility",
+        "formatting",
+        "currency",
+        "i18n"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/formatting/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/utils/formatting/index.ts",
+      "summary": "Barrel file re-exporting the formatting utilities (e.g. currency formatting).",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "exports",
+        "formatting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/string/capitalization.ts",
+      "type": "file",
+      "name": "capitalization.ts",
+      "filePath": "src/utils/string/capitalization.ts",
+      "summary": "String helper that capitalizes the first letter of each word in a lowercased input string.",
+      "tags": [
+        "utility",
+        "string",
+        "formatting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/string/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/utils/string/index.ts",
+      "summary": "Barrel file re-exporting the string utilities (capitalization, slugify, truncate).",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "exports",
+        "string"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/string/slugify.ts",
+      "type": "file",
+      "name": "slugify.ts",
+      "filePath": "src/utils/string/slugify.ts",
+      "summary": "String utilities producing URL-safe slugs: a basic slugify normalizing diacritics and separators, plus professionalSlugify applying custom term replacements before slugifying.",
+      "tags": [
+        "utility",
+        "string",
+        "slug",
+        "url"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/string/truncate.ts",
+      "type": "file",
+      "name": "truncate.ts",
+      "filePath": "src/utils/string/truncate.ts",
+      "summary": "String truncation helpers: truncate cuts to a max character length with an ellipsis, and truncateWords avoids splitting mid-word.",
+      "tags": [
+        "utility",
+        "string",
+        "truncation",
+        "formatting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/uuid.ts",
+      "type": "file",
+      "name": "uuid.ts",
+      "filePath": "src/utils/uuid.ts",
+      "summary": "Thin wrapper exposing generateUUID() that returns a v4 UUID via the uuid package.",
+      "tags": [
+        "utility",
+        "uuid",
+        "identifier"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/utils/validation/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "src/utils/validation/index.ts",
+      "summary": "Barrel file re-exporting the validation utilities.",
+      "tags": [
+        "barrel",
+        "entry-point",
+        "exports",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/hooks/use-copy.ts:useCopyToClipboard",
+      "type": "function",
+      "name": "useCopyToClipboard",
+      "filePath": "src/hooks/use-copy.ts",
+      "lineRange": [
+        7,
+        40
+      ],
+      "summary": "Hook that returns a copy callback and an isCopied flag; writes text to the clipboard and resets the copied state after a configurable delay.",
+      "tags": [
+        "hook",
+        "clipboard",
+        "react",
+        "callback"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/hooks/use-mouse-position.ts:useMousePosition",
+      "type": "function",
+      "name": "useMousePosition",
+      "filePath": "src/hooks/use-mouse-position.ts",
+      "lineRange": [
+        14,
+        54
+      ],
+      "summary": "Hook tracking the cursor position relative to an optional ref element, attaching a document mousemove listener inside a layout effect and cleaning it up on unmount.",
+      "tags": [
+        "hook",
+        "event-handler",
+        "react",
+        "mouse-tracking"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/hooks/use-toggle.ts:useToggle",
+      "type": "function",
+      "name": "useToggle",
+      "filePath": "src/hooks/use-toggle.ts",
+      "lineRange": [
+        5,
+        15
+      ],
+      "summary": "Hook returning a boolean state and a memoized toggle callback that flips the value.",
+      "tags": [
+        "hook",
+        "state",
+        "react",
+        "callback"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/store/create-store.ts:createStore",
+      "type": "function",
+      "name": "createStore",
+      "filePath": "src/lib/store/create-store.ts",
+      "lineRange": [
+        12,
+        27
+      ],
+      "summary": "Generic Zustand store factory that wraps the creator with immer and, unless skipPersist is set, persist + createJSONStorage middleware keyed by a configurable name.",
+      "tags": [
+        "factory",
+        "store",
+        "zustand",
+        "state-management"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/proxy.ts:middleware",
+      "type": "function",
+      "name": "middleware",
+      "filePath": "src/proxy.ts",
+      "lineRange": [
+        5,
+        7
+      ],
+      "summary": "Next.js middleware entry that issues a redirect via NextResponse.redirect for matched requests.",
+      "tags": [
+        "middleware",
+        "routing",
+        "redirect",
+        "nextjs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/cn.ts:cn",
+      "type": "function",
+      "name": "cn",
+      "filePath": "src/utils/cn.ts",
+      "lineRange": [
+        4,
+        6
+      ],
+      "summary": "Merges conditional class names via clsx and resolves Tailwind class conflicts with tailwind-merge.",
+      "tags": [
+        "utility",
+        "styling",
+        "tailwind",
+        "class-names"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/formatting/currency.ts:formatToUSD",
+      "type": "function",
+      "name": "formatToUSD",
+      "filePath": "src/utils/formatting/currency.ts",
+      "lineRange": [
+        1,
+        6
+      ],
+      "summary": "Formats a numeric amount as a USD currency string using Intl.NumberFormat with the en-US locale.",
+      "tags": [
+        "utility",
+        "formatting",
+        "currency",
+        "i18n"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/string/capitalization.ts:pureCapitalize",
+      "type": "function",
+      "name": "pureCapitalize",
+      "filePath": "src/utils/string/capitalization.ts",
+      "lineRange": [
+        5,
+        6
+      ],
+      "summary": "Lowercases the input and capitalizes the first character of each word via a regex replace.",
+      "tags": [
+        "utility",
+        "string",
+        "formatting"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/string/slugify.ts:slugify",
+      "type": "function",
+      "name": "slugify",
+      "filePath": "src/utils/string/slugify.ts",
+      "lineRange": [
+        8,
+        19
+      ],
+      "summary": "Normalizes a string into a URL-safe slug by handling diacritics, lowercasing, trimming, and collapsing separators.",
+      "tags": [
+        "utility",
+        "string",
+        "slug",
+        "url"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/string/slugify.ts:professionalSlugify",
+      "type": "function",
+      "name": "professionalSlugify",
+      "filePath": "src/utils/string/slugify.ts",
+      "lineRange": [
+        22,
+        38
+      ],
+      "summary": "Applies a map of custom term replacements to the input before delegating to slugify, producing a refined slug.",
+      "tags": [
+        "utility",
+        "string",
+        "slug",
+        "url"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/string/truncate.ts:truncate",
+      "type": "function",
+      "name": "truncate",
+      "filePath": "src/utils/string/truncate.ts",
+      "lineRange": [
+        9,
+        13
+      ],
+      "summary": "Truncates text to a maximum character length, appending an ellipsis when shortened.",
+      "tags": [
+        "utility",
+        "string",
+        "truncation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/string/truncate.ts:truncateWords",
+      "type": "function",
+      "name": "truncateWords",
+      "filePath": "src/utils/string/truncate.ts",
+      "lineRange": [
+        16,
+        23
+      ],
+      "summary": "Truncates text to a maximum length without splitting mid-word by cutting at the last space, then appends an ellipsis.",
+      "tags": [
+        "utility",
+        "string",
+        "truncation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/utils/uuid.ts:generateUUID",
+      "type": "function",
+      "name": "generateUUID",
+      "filePath": "src/utils/uuid.ts",
+      "lineRange": [
+        3,
+        3
+      ],
+      "summary": "Returns a v4 UUID string by delegating to the uuid package's uuidv4.",
+      "tags": [
+        "utility",
+        "uuid",
+        "identifier"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/app/api/v1/products/route.ts",
+      "target": "function:src/app/api/v1/products/route.ts:GET",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/api/v1/products/route.ts",
+      "target": "function:src/app/api/v1/products/route.ts:GET",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/api/v1/products/route.ts",
+      "target": "file:src/modules/products/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/modules/products/api/product-query-keys.ts",
+      "target": "file:src/modules/products/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/modules/products/hooks/use-product-mutation.ts",
+      "target": "file:src/modules/products/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/modules/products/hooks/use-product-mutation.ts",
+      "target": "function:src/modules/products/hooks/use-product-mutation.ts:useCreateProduct",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/modules/products/hooks/use-product-mutation.ts",
+      "target": "function:src/modules/products/hooks/use-product-mutation.ts:useUpdateProduct",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/modules/products/hooks/use-product-mutation.ts",
+      "target": "function:src/modules/products/hooks/use-product-mutation.ts:useDeleteProduct",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/modules/products/hooks/use-product-mutation.ts",
+      "target": "function:src/modules/products/hooks/use-product-mutation.ts:useCreateProduct",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/modules/products/hooks/use-product-mutation.ts",
+      "target": "function:src/modules/products/hooks/use-product-mutation.ts:useUpdateProduct",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/modules/products/hooks/use-product-mutation.ts",
+      "target": "function:src/modules/products/hooks/use-product-mutation.ts:useDeleteProduct",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/modules/products/hooks/use-products.ts",
+      "target": "file:src/modules/products/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/modules/products/hooks/use-products.ts",
+      "target": "file:src/modules/products/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/modules/products/hooks/use-products.ts",
+      "target": "function:src/modules/products/hooks/use-products.ts:useProducts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/modules/products/hooks/use-products.ts",
+      "target": "function:src/modules/products/hooks/use-products.ts:useProduct",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/modules/products/hooks/use-products.ts",
+      "target": "function:src/modules/products/hooks/use-products.ts:useProducts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/modules/products/hooks/use-products.ts",
+      "target": "function:src/modules/products/hooks/use-products.ts:useProduct",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/modules/products/hooks/use-products.ts:useProducts",
+      "target": "function:src/modules/products/api/product-api.ts:getProducts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/modules/products/hooks/use-products.ts:useProduct",
+      "target": "function:src/modules/products/api/product-api.ts:getProduct",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/modules/products/api/product-api.ts",
+      "target": "file:src/constants/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/modules/products/api/product-api.ts",
+      "target": "file:src/lib/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/modules/products/api/product-api.ts",
+      "target": "file:src/modules/products/types.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/utils/string/url.ts",
+      "target": "file:src/constants/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/utils/validation/email.ts",
+      "target": "file:src/constants/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/modules/products/api/product-api.ts",
+      "target": "function:src/modules/products/api/product-api.ts:getProducts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/modules/products/api/product-api.ts",
+      "target": "function:src/modules/products/api/product-api.ts:getProduct",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/modules/products/api/product-api.ts",
+      "target": "function:src/modules/products/api/product-api.ts:createProduct",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/modules/products/api/product-api.ts",
+      "target": "function:src/modules/products/api/product-api.ts:updateProduct",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/modules/products/api/product-api.ts",
+      "target": "function:src/modules/products/api/product-api.ts:deleteProduct",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/modules/products/api/product-api.ts",
+      "target": "function:src/modules/products/api/product-api.ts:getProducts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/modules/products/api/product-api.ts",
+      "target": "function:src/modules/products/api/product-api.ts:getProduct",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/modules/products/api/product-api.ts",
+      "target": "function:src/modules/products/api/product-api.ts:createProduct",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/modules/products/api/product-api.ts",
+      "target": "function:src/modules/products/api/product-api.ts:updateProduct",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/modules/products/api/product-api.ts",
+      "target": "function:src/modules/products/api/product-api.ts:deleteProduct",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/string/url.ts",
+      "target": "function:src/utils/string/url.ts:makeUrlsExternal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/utils/string/url.ts",
+      "target": "function:src/utils/string/url.ts:makeUrlsExternal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/validation/email.ts",
+      "target": "function:src/utils/validation/email.ts:isValidEmail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/utils/validation/email.ts",
+      "target": "function:src/utils/validation/email.ts:isValidEmail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/modules/products/api/product-api.ts:getProducts",
+      "target": "function:src/lib/api/client.ts:apiRequest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/modules/products/api/product-api.ts:getProduct",
+      "target": "function:src/lib/api/client.ts:apiRequest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/modules/products/api/product-api.ts:createProduct",
+      "target": "function:src/lib/api/client.ts:apiRequest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/modules/products/api/product-api.ts:updateProduct",
+      "target": "function:src/lib/api/client.ts:apiRequest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/modules/products/api/product-api.ts:deleteProduct",
+      "target": "function:src/lib/api/client.ts:apiRequest",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/error.tsx",
+      "target": "file:src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/error.tsx",
+      "target": "file:src/utils/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/not-found.tsx",
+      "target": "file:src/components/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/error.tsx",
+      "target": "function:src/app/error.tsx:ErrorPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/error.tsx",
+      "target": "function:src/app/error.tsx:ErrorPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/not-found.tsx",
+      "target": "function:src/app/not-found.tsx:NotFoundPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/not-found.tsx",
+      "target": "function:src/app/not-found.tsx:NotFoundPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "file:src/components/ui/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "file:src/config/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "file:src/integrations/index.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "file:src/styles/index.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "file:src/utils/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/integrations/index.tsx",
+      "target": "file:src/integrations/react-query.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/integrations/react-query.tsx",
+      "target": "file:src/lib/api/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "function:src/app/layout.tsx:RootLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/layout.tsx",
+      "target": "function:src/app/layout.tsx:RootLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/integrations/index.tsx",
+      "target": "function:src/integrations/index.tsx:RootProviders",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/integrations/index.tsx",
+      "target": "function:src/integrations/index.tsx:RootProviders",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/integrations/react-query.tsx",
+      "target": "function:src/integrations/react-query.tsx:ReactQueryProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/integrations/react-query.tsx",
+      "target": "function:src/integrations/react-query.tsx:ReactQueryProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/app/layout.tsx:RootLayout",
+      "target": "function:src/integrations/index.tsx:RootProviders",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:src/integrations/index.tsx:RootProviders",
+      "target": "function:src/integrations/react-query.tsx:ReactQueryProvider",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/app/robot.ts",
+      "target": "file:src/config/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/robot.ts",
+      "target": "function:src/app/robot.ts:robots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/app/robot.ts",
+      "target": "function:src/app/robot.ts:robots",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api/client.ts",
+      "target": "file:src/constants/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/api/client.ts",
+      "target": "file:src/lib/api/interceptor.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/api/client.ts",
+      "target": "function:src/lib/api/client.ts:apiRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api/client.ts",
+      "target": "function:src/lib/api/client.ts:apiRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api/interceptor.ts",
+      "target": "file:src/config/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/api/interceptor.ts",
+      "target": "class:src/lib/api/interceptor.ts:ApiError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api/interceptor.ts",
+      "target": "class:src/lib/api/interceptor.ts:ApiError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api/client.ts",
+      "target": "class:src/lib/api/interceptor.ts:ApiError",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/config/app.config.ts",
+      "target": "file:src/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/config/seo.config.ts",
+      "target": "file:src/config/app.config.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/config/seo.config.ts",
+      "target": "function:src/config/seo.config.ts:generateSeoMetadata",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/config/seo.config.ts",
+      "target": "function:src/config/seo.config.ts:generateSeoMetadata",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/modules/cart/store/cart-store.ts",
+      "target": "file:src/lib/store/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/modules/cart/store/cart-store.ts",
+      "target": "file:src/modules/products/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "document:.claude/skills/codebase-design/SKILL.md",
+      "target": "document:.claude/skills/codebase-design/DEEPENING.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.claude/skills/codebase-design/SKILL.md",
+      "target": "document:.claude/skills/codebase-design/DESIGN-IT-TWICE.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:tsconfig.json",
+      "target": "file:src/app/layout.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:.env.example",
+      "target": "file:src/constants/env.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:package.json",
+      "target": "file:src/app/layout.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:package.json",
+      "target": "config:.commitlintrc.json",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:.commitlintrc.json",
+      "target": "config:package.json",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:src/app/layout.tsx",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "config:package.json",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:CLAUDE.md",
+      "target": "config:package.json",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:CLAUDE.md",
+      "target": "config:tsconfig.json",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:CLAUDE.md",
+      "target": "file:src/constants/env.ts",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:CONTEXT.md",
+      "target": "document:CLAUDE.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:src/styles/index.css",
+      "target": "file:src/styles/defaults.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/styles/index.css",
+      "target": "file:src/styles/utils.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/styles/index.css",
+      "target": "file:src/styles/elements.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/app/(marketing)/page.tsx",
+      "target": "file:src/hooks/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ui/bg-patterns.tsx",
+      "target": "function:src/components/ui/bg-patterns.tsx:getBackgroundPattern",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/ui/bg-patterns.tsx",
+      "target": "function:src/components/ui/bg-patterns.tsx:getBackgroundPattern",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:next.config.ts",
+      "target": "file:src/constants/env.ts",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:eslint.config.mjs",
+      "target": "file:src/app/(marketing)/page.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:postcss.config.cjs",
+      "target": "file:src/components/ui/bg-patterns.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:.husky/commit-msg",
+      "target": "config:commitlint.config.js",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/hooks/use-copy.ts",
+      "target": "function:src/hooks/use-copy.ts:useCopyToClipboard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/hooks/use-copy.ts",
+      "target": "function:src/hooks/use-copy.ts:useCopyToClipboard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/hooks/use-mouse-position.ts",
+      "target": "function:src/hooks/use-mouse-position.ts:useMousePosition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/hooks/use-mouse-position.ts",
+      "target": "function:src/hooks/use-mouse-position.ts:useMousePosition",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/hooks/use-toggle.ts",
+      "target": "function:src/hooks/use-toggle.ts:useToggle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/hooks/use-toggle.ts",
+      "target": "function:src/hooks/use-toggle.ts:useToggle",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/store/create-store.ts",
+      "target": "function:src/lib/store/create-store.ts:createStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/store/create-store.ts",
+      "target": "function:src/lib/store/create-store.ts:createStore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/proxy.ts",
+      "target": "function:src/proxy.ts:middleware",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/proxy.ts",
+      "target": "function:src/proxy.ts:middleware",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/cn.ts",
+      "target": "function:src/utils/cn.ts:cn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/utils/cn.ts",
+      "target": "function:src/utils/cn.ts:cn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/formatting/currency.ts",
+      "target": "function:src/utils/formatting/currency.ts:formatToUSD",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/utils/formatting/currency.ts",
+      "target": "function:src/utils/formatting/currency.ts:formatToUSD",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/formatting/index.ts",
+      "target": "file:src/utils/formatting/currency.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/utils/string/capitalization.ts",
+      "target": "function:src/utils/string/capitalization.ts:pureCapitalize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/utils/string/capitalization.ts",
+      "target": "function:src/utils/string/capitalization.ts:pureCapitalize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/string/slugify.ts",
+      "target": "function:src/utils/string/slugify.ts:slugify",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/utils/string/slugify.ts",
+      "target": "function:src/utils/string/slugify.ts:slugify",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/string/slugify.ts",
+      "target": "function:src/utils/string/slugify.ts:professionalSlugify",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/utils/string/slugify.ts",
+      "target": "function:src/utils/string/slugify.ts:professionalSlugify",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:src/utils/string/slugify.ts:professionalSlugify",
+      "target": "function:src/utils/string/slugify.ts:slugify",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/string/truncate.ts",
+      "target": "function:src/utils/string/truncate.ts:truncate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/utils/string/truncate.ts",
+      "target": "function:src/utils/string/truncate.ts:truncate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/string/truncate.ts",
+      "target": "function:src/utils/string/truncate.ts:truncateWords",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/utils/string/truncate.ts",
+      "target": "function:src/utils/string/truncate.ts:truncateWords",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/uuid.ts",
+      "target": "function:src/utils/uuid.ts:generateUUID",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/utils/uuid.ts",
+      "target": "function:src/utils/uuid.ts:generateUUID",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/utils/string/index.ts",
+      "target": "file:src/utils/string/capitalization.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/utils/string/index.ts",
+      "target": "file:src/utils/string/slugify.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/utils/string/index.ts",
+      "target": "file:src/utils/string/truncate.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/hooks/index.ts",
+      "target": "file:src/hooks/use-copy.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/hooks/index.ts",
+      "target": "file:src/hooks/use-toggle.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/hooks/index.ts",
+      "target": "file:src/hooks/use-mouse-position.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/hooks/index.ts",
+      "target": "file:src/hooks/use-isomorphic-layout.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:app-routing",
+      "name": "App & Routing",
+      "description": "Next.js App Router entry points — route groups ((auth), (marketing)), the root layout/providers wiring, special files (error, not-found, robots), the /api/v1 route handler, and the redirect middleware.",
+      "nodeIds": [
+        "file:src/app/api/v1/products/route.ts",
+        "file:src/app/error.tsx",
+        "file:src/app/not-found.tsx",
+        "file:src/app/layout.tsx",
+        "file:src/app/robot.ts",
+        "file:src/app/(auth)/layout.tsx",
+        "file:src/app/(auth)/sign-in/page.tsx",
+        "file:src/app/(auth)/sign-up/page.tsx",
+        "file:src/app/(marketing)/page.tsx",
+        "file:src/proxy.ts"
+      ]
+    },
+    {
+      "id": "layer:feature-modules",
+      "name": "Feature Modules",
+      "description": "Self-contained feature slices under src/modules (products API/query-keys/hooks/types, cart Zustand store) that compose the core HTTP and store layers into domain functionality.",
+      "nodeIds": [
+        "file:src/modules/products/api/index.ts",
+        "file:src/modules/products/api/product-query-keys.ts",
+        "file:src/modules/products/hooks/use-product-mutation.ts",
+        "file:src/modules/products/hooks/use-products.ts",
+        "file:src/modules/products/types.ts",
+        "file:src/modules/products/api/product-api.ts",
+        "file:src/modules/cart/store/cart-store.ts",
+        "file:src/modules/products/index.ts",
+        "file:src/modules/cart/index.ts",
+        "file:src/modules/cart/store/index.ts",
+        "file:src/modules/products/hooks/index.ts"
+      ]
+    },
+    {
+      "id": "layer:core-library",
+      "name": "Core Library & Integrations",
+      "description": "Cross-cutting infrastructure: the type-safe Axios HTTP layer (apiRequest client + interceptor/ApiError), the createStore Zustand factory, and the app-wide provider stack (TanStack Query, nuqs, Toaster).",
+      "nodeIds": [
+        "file:src/lib/api/index.ts",
+        "file:src/integrations/index.tsx",
+        "file:src/integrations/react-query.tsx",
+        "file:src/lib/api/client.ts",
+        "file:src/lib/api/interceptor.ts",
+        "file:src/lib/store/index.ts",
+        "file:src/lib/index.ts",
+        "file:src/lib/store/create-store.ts"
+      ]
+    },
+    {
+      "id": "layer:ui-styling",
+      "name": "UI, Hooks & Styling",
+      "description": "Presentational building blocks: shared UI components (background patterns, fonts), the Tailwind v4 CSS-first theme and layered style partials, and reusable app-wide React interaction hooks (copy, toggle, mouse-position, isomorphic-layout).",
+      "nodeIds": [
+        "file:src/components/index.ts",
+        "file:src/components/ui/index.ts",
+        "file:src/styles/index.css",
+        "file:src/styles/defaults.css",
+        "file:src/styles/elements.css",
+        "file:src/styles/utils.css",
+        "file:src/components/layout/.gitkeep",
+        "file:src/components/shared/.gitkeep",
+        "file:src/components/ui/bg-patterns.tsx",
+        "file:src/components/ui/fonts.ts",
+        "file:src/hooks/index.ts",
+        "file:src/hooks/use-copy.ts",
+        "file:src/hooks/use-isomorphic-layout.ts",
+        "file:src/hooks/use-mouse-position.ts",
+        "file:src/hooks/use-toggle.ts"
+      ]
+    },
+    {
+      "id": "layer:foundation",
+      "name": "Foundation",
+      "description": "Project-wide primitives every other layer depends on: validated env/constants/enums/regex, app & SEO config, shared TypeScript types, and pure utility helpers (cn, uuid, string/formatting/validation).",
+      "nodeIds": [
+        "file:src/constants/index.ts",
+        "file:src/utils/string/url.ts",
+        "file:src/utils/validation/email.ts",
+        "file:src/utils/index.ts",
+        "file:src/config/index.ts",
+        "file:src/config/app.config.ts",
+        "file:src/config/seo.config.ts",
+        "file:src/types/index.ts",
+        "file:src/constants/api-endpoints.ts",
+        "file:src/constants/enums.ts",
+        "file:src/constants/env.ts",
+        "file:src/constants/regex.ts",
+        "file:src/types/config.types.ts",
+        "file:src/utils/cn.ts",
+        "file:src/utils/formatting/currency.ts",
+        "file:src/utils/formatting/index.ts",
+        "file:src/utils/string/capitalization.ts",
+        "file:src/utils/string/index.ts",
+        "file:src/utils/string/slugify.ts",
+        "file:src/utils/string/truncate.ts",
+        "file:src/utils/uuid.ts",
+        "file:src/utils/validation/index.ts"
+      ]
+    },
+    {
+      "id": "layer:documentation",
+      "name": "Documentation",
+      "description": "Markdown documentation for the template — README, CLAUDE/CONTEXT guidance, governance (CODE_OF_CONDUCT, SECURITY), and the bundled Claude Code skill definitions under .claude/skills.",
+      "nodeIds": [
+        "document:.claude/skills/codebase-design/SKILL.md",
+        "document:.claude/skills/codebase-design/DEEPENING.md",
+        "document:.claude/skills/codebase-design/DESIGN-IT-TWICE.md",
+        "document:CLAUDE.md",
+        "document:CODE_OF_CONDUCT.md",
+        "document:CONTEXT.md",
+        "document:README.md",
+        "document:SECURITY.md",
+        "document:.claude/skills/grill-with-docs/SKILL.md",
+        "document:.claude/skills/handoff/SKILL.md",
+        "document:.claude/skills/improve-codebase-architecture/HTML-REPORT.md",
+        "document:.claude/skills/improve-codebase-architecture/SKILL.md",
+        "document:.claude/skills/obsidian-vault/SKILL.md"
+      ]
+    },
+    {
+      "id": "layer:tooling-config",
+      "name": "Tooling & Configuration",
+      "description": "Build, lint, format, and Git-hook configuration that governs the repo: package.json, tsconfig, ESLint/Prettier/PostCSS/commitlint configs, next.config, .env.example, Husky hooks, and ignore files.",
+      "nodeIds": [
+        "config:.commitlintrc.json",
+        "config:.env.example",
+        "config:.prettierrc.json",
+        "config:package.json",
+        "config:skills-lock.json",
+        "config:tsconfig.json",
+        "file:.husky/commit-msg",
+        "file:.husky/pre-commit",
+        "file:.prettierignore",
+        "file:.understand-anything/.understandignore",
+        "config:commitlint.config.js",
+        "config:eslint.config.mjs",
+        "config:next.config.ts",
+        "config:postcss.config.cjs"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "What Is This Project?",
+      "description": "Start with the README to understand the template's mission: a feature-packed, customizable Next.js 16 starter (App Router + Turbopack, React 19, strict TypeScript, Tailwind v4, SEO, env validation, type-safe Axios, Husky). CONTEXT.md and CLAUDE.md then translate that pitch into the actual conventions you'll see throughout the tour — the self-contained module-slice pattern, the ~/* path alias, and barrel exports. Read these first to get the map before walking the territory.",
+      "nodeIds": [
+        "document:README.md",
+        "document:CONTEXT.md",
+        "document:CLAUDE.md"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Application Entry Point",
+      "description": "The root layout is where every page begins. It defines viewport and SEO metadata, injects JSON-LD structured data, mounts the global font and stylesheet, and wraps all routes in <RootProviders>. This single file is the spine of the app — the BFS dependency traversal starts here, and the rest of the tour follows the imports fanning out from it.",
+      "nodeIds": [
+        "file:src/app/layout.tsx"
+      ],
+      "languageLesson": "Next.js App Router uses convention-based 'special files'. layout.tsx exports a default component plus typed `metadata`/`viewport` objects that Next.js reads at build time to populate <head> — no manual <head> wiring needed."
+    },
+    {
+      "order": 3,
+      "title": "Booting the Provider Stack",
+      "description": "Building on the layout's <RootProviders> import, the integrations layer composes app-wide context providers. index.tsx flattens a providers array with reduceRight (avoiding deeply nested JSX) and renders globals like the Sonner Toaster, while react-query.tsx configures the TanStack Query client — 5-minute staleTime, retry logic, and a QueryCache that surfaces errors as toasts. This is how client-side data fetching and global UI get wired in exactly once.",
+      "nodeIds": [
+        "file:src/integrations/index.tsx",
+        "file:src/integrations/react-query.tsx"
+      ],
+      "languageLesson": "The QueryClient is held in useState(() => new QueryClient()) so it is instantiated once per client mount rather than recreated on every render — a standard React pattern for expensive, stable singletons."
+    },
+    {
+      "order": 4,
+      "title": "App & SEO Configuration",
+      "description": "The layout pulls its metadata from the config layer. app.config.ts is the single source of truth for app name, domain, theme, and social links, while seo.config.ts exposes generateSeoMetadata() — a factory that merges per-page overrides with those defaults to produce Next.js Metadata plus typed JSON-LD structured data. The root layout calls it once; any page can override it by exporting its own metadata.",
+      "nodeIds": [
+        "file:src/config/app.config.ts",
+        "file:src/config/seo.config.ts"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Validated Environment & Constants",
+      "description": "Beneath config sits the foundation layer. env.ts validates environment variables at build time with t3-env + zod (server and client schemas, NEXT_PUBLIC_-prefixed client vars), so a missing or malformed variable fails the build rather than crashing at runtime. Alongside it, api-endpoints.ts defines the typed route map that the HTTP layer keys against, with .env.example mirroring the schema so contributors can scaffold their own .env.",
+      "nodeIds": [
+        "file:src/constants/env.ts",
+        "file:src/constants/api-endpoints.ts",
+        "config:.env.example"
+      ],
+      "languageLesson": "next.config.ts imports env.ts through jiti so the zod schema runs during the build. Combined with t3-env's createEnv, invalid environment variables become a compile-time error instead of a production surprise."
+    },
+    {
+      "order": 6,
+      "title": "The Type-Safe HTTP Layer",
+      "description": "This is the most depended-upon code in the project — apiRequest has the highest fan-in in the whole graph. interceptor.ts is the configured Axios instance: baseURL from appConfig.domainName, a request interceptor that attaches auth headers, a response interceptor that normalizes failures into a custom ApiError carrying HTTP status and code. client.ts wraps it in the generic apiRequest<T>(method, endpoint, data?) that every API call in the app flows through.",
+      "nodeIds": [
+        "file:src/lib/api/interceptor.ts",
+        "file:src/lib/api/client.ts"
+      ],
+      "languageLesson": "apiRequest<T> is a generic function: the caller specifies the expected response shape T, and TypeScript propagates it through the Axios call so each call site gets a strongly-typed result without casting."
+    },
+    {
+      "order": 7,
+      "title": "Feature Slice — Types & Raw API",
+      "description": "Now we descend into a real feature module. The products slice begins with its data model: types.ts co-locates a Zod productSchema with the TypeScript types inferred from it, giving one source of truth for both runtime validation and static typing (it's the second-highest fan-in node). product-api.ts then provides thin, typed CRUD wrappers (getProducts, getProduct, createProduct, updateProduct, deleteProduct) that all delegate to apiRequest from Step 6.",
+      "nodeIds": [
+        "file:src/modules/products/types.ts",
+        "file:src/modules/products/api/product-api.ts"
+      ],
+      "languageLesson": "Zod's z.infer<typeof productSchema> derives the static type directly from the validation schema, so the runtime guard and the compile-time type can never drift apart."
+    },
+    {
+      "order": 8,
+      "title": "Feature Slice — Query Keys & Hooks",
+      "description": "On top of the raw API sits the TanStack Query layer. product-query-keys.ts is a hierarchical key factory where every key descends from a shared root, so a single invalidation can cascade to all lists and details. use-products.ts exposes read hooks (useProducts list, useProduct detail) and use-product-mutation.ts exposes create/update/delete mutations that invalidate the right key slices on success — closing the component-to-server loop.",
+      "nodeIds": [
+        "file:src/modules/products/api/product-query-keys.ts",
+        "file:src/modules/products/hooks/use-products.ts",
+        "file:src/modules/products/hooks/use-product-mutation.ts"
+      ],
+      "languageLesson": "Query keys are declared with `as const` tuples, giving each key a precise readonly type. This lets TanStack Query match keys structurally for cache invalidation while TypeScript guards against typos."
+    },
+    {
+      "order": 9,
+      "title": "The Server Side of the Slice",
+      "description": "The products feature is end-to-end: the same Zod schema from Step 7 also guards the server. This App Router route handler exposes GET /api/v1/products, validating mock product data against productSchema before returning it as JSON. It demonstrates the template's full data round-trip — one schema validating both the response the server emits and the data the client hooks consume.",
+      "nodeIds": [
+        "file:src/app/api/v1/products/route.ts"
+      ],
+      "languageLesson": "Next.js Route Handlers export functions named after HTTP methods (GET, POST, ...). The exported `GET` here returns a Response via Response.json, the App Router equivalent of the old pages/api handlers."
+    },
+    {
+      "order": 10,
+      "title": "Client State — The Store Factory",
+      "description": "Where server state lives in TanStack Query, client/UI state lives in Zustand. create-store.ts is a generic createStore<T> factory wrapping Zustand with immer (mutate state directly inside set) and persist middleware, with a skipPersist flag for ephemeral stores. cart-store.ts applies it: a non-persisted cart store with add/update/remove actions exposing granular selector hooks (useCart, useCartActions) rather than the whole store, keeping client cart state cleanly separate from server-cached products.",
+      "nodeIds": [
+        "file:src/lib/store/create-store.ts",
+        "file:src/modules/cart/store/cart-store.ts"
+      ],
+      "languageLesson": "Selectors use zustand/react/shallow's useShallow to memoize object selections, so a component re-renders only when the specific slice it reads actually changes — not on every store update."
+    },
+    {
+      "order": 11,
+      "title": "Styling — Tailwind v4 Theme",
+      "description": "Returning to a depth-1 import from the root layout, the styling system is Tailwind CSS v4 with CSS-first config — no tailwind.config.js. index.css imports tailwindcss and the layered defaults/utils/elements partials, then defines an @theme block of oklch brand colors and the font token. The cn() helper (clsx + tailwind-merge) is the companion used everywhere to compose conditional classes and resolve Tailwind conflicts.",
+      "nodeIds": [
+        "file:src/styles/index.css",
+        "file:src/utils/cn.ts"
+      ],
+      "languageLesson": "Tailwind v4 moves configuration into CSS: @import 'tailwindcss', cascade layers via @layer, and @theme blocks using oklch() colors replace the JS config file entirely."
+    },
+    {
+      "order": 12,
+      "title": "Shared UI, Hooks & Error States",
+      "description": "The presentational toolkit rounds out the front end. bg-patterns.tsx is a registry of decorative background components with a getBackgroundPattern lookup, consumed by the App Router's special error.tsx and not-found.tsx screens. The app-wide hooks barrel collects reusable interaction logic — useCopyToClipboard, useToggle, useMousePosition, and an SSR-safe isomorphic layout effect — the kind of primitives the marketing page's click-to-copy demo is built from.",
+      "nodeIds": [
+        "file:src/components/ui/bg-patterns.tsx",
+        "file:src/app/error.tsx",
+        "file:src/app/not-found.tsx",
+        "file:src/hooks/index.ts"
+      ],
+      "languageLesson": "error.tsx and not-found.tsx are App Router special files. error.tsx must be a 'use client' component and receives the ({ error, reset }) prop contract, letting it both display and recover from runtime errors."
+    },
+    {
+      "order": 13,
+      "title": "Pure Utilities & Routing Glue",
+      "description": "At the foundation are pure, dependency-light helpers: string utilities (slugify, truncate, capitalize, makeUrlsExternal), formatting (formatToUSD), validation (isValidEmail backed by shared regex), and generateUUID. proxy.ts is the Next.js middleware that handles route redirects via a config matcher. These are the leaf nodes everything else quietly leans on.",
+      "nodeIds": [
+        "file:src/utils/string/slugify.ts",
+        "file:src/utils/formatting/currency.ts",
+        "file:src/utils/validation/email.ts",
+        "file:src/proxy.ts"
+      ]
+    },
+    {
+      "order": 14,
+      "title": "Tooling, Quality & Conventions",
+      "description": "Finally, the guardrails that keep contributions consistent. package.json declares the dependency set and yarn scripts (dev, build, typecheck, lint); tsconfig.json enables strict mode and the ~/* path alias; eslint.config.mjs enforces import sorting and inline type imports; .prettierrc.json fixes the house style (no semicolons, single quotes, 3-space tabs). The Husky pre-commit and commit-msg hooks run lint-staged and commitlint, so formatting and conventional-commit messages are enforced before code ever lands.",
+      "nodeIds": [
+        "config:package.json",
+        "config:tsconfig.json",
+        "config:eslint.config.mjs",
+        "config:.prettierrc.json",
+        "file:.husky/pre-commit"
+      ],
+      "languageLesson": "Conventional commits (feat:, chore:, fix:) are enforced by commitlint via the Husky commit-msg hook. Paired with lint-staged in pre-commit, the repo guarantees every commit is formatted, linted, and conventionally named."
+    }
+  ]
+}

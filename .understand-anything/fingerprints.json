@@ -1,0 +1,2121 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "ed799cd37ce2ad91c338d17816be0863d8f1f605",
+  "generatedAt": "2026-06-30T10:04:21.397Z",
+  "files": {
+    ".claude/skills/codebase-design/DEEPENING.md": {
+      "filePath": ".claude/skills/codebase-design/DEEPENING.md",
+      "contentHash": "125e6b77413ad2bc7cf7a772bc74336d580a50f9e797db2178ed133d62333d06",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 38,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/skills/codebase-design/DESIGN-IT-TWICE.md": {
+      "filePath": ".claude/skills/codebase-design/DESIGN-IT-TWICE.md",
+      "contentHash": "21c3264953bd30ee87b181a3ccaf0e70649f461e5ffd7dc654acee4ba1788b31",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/skills/codebase-design/SKILL.md": {
+      "filePath": ".claude/skills/codebase-design/SKILL.md",
+      "contentHash": "a8d50abac5a4018f60e1d911d4b6f4e36454ca14d6c390c0695a578c7de65dad",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 115,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/skills/grill-with-docs/SKILL.md": {
+      "filePath": ".claude/skills/grill-with-docs/SKILL.md",
+      "contentHash": "610d091047bcfb9db0f75c057d15538481a721111579fc5ec7f83ad9131a2165",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/skills/handoff/SKILL.md": {
+      "filePath": ".claude/skills/handoff/SKILL.md",
+      "contentHash": "94bee8c16cbfcf9f1e15187f7e5d0d5a93c4adb7c512feceecaab80c8ff7c059",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/skills/improve-codebase-architecture/HTML-REPORT.md": {
+      "filePath": ".claude/skills/improve-codebase-architecture/HTML-REPORT.md",
+      "contentHash": "0b0936104158abeef7246ff6cbabefa4dc055f17589f2833f2d93001421910a1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 124,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/skills/improve-codebase-architecture/SKILL.md": {
+      "filePath": ".claude/skills/improve-codebase-architecture/SKILL.md",
+      "contentHash": "0026900866ed2a542af0559cef11dd7ae707633b75cc6f668c2e7c0a33e35032",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 67,
+      "hasStructuralAnalysis": true
+    },
+    ".claude/skills/obsidian-vault/SKILL.md": {
+      "filePath": ".claude/skills/obsidian-vault/SKILL.md",
+      "contentHash": "7bed1d552aa5e9345e493cd62cb13e65c5d829d153c349afdb2cb91c809fa6c4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 60,
+      "hasStructuralAnalysis": true
+    },
+    ".commitlintrc.json": {
+      "filePath": ".commitlintrc.json",
+      "contentHash": "274caad59d0f625a71b71d104572d3dbc42a1e7e99d2af22f138fa1519c9a3aa",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    ".env.example": {
+      "filePath": ".env.example",
+      "contentHash": "d929c3888557671b11dfa3aac08ee58b790a623d4a3a672a5df5926e84287195",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    ".husky/commit-msg": {
+      "filePath": ".husky/commit-msg",
+      "contentHash": "769a74a182181dc5b51819222b201cb8690bb85043ad10b7aae0a74731d9f809",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    ".husky/pre-commit": {
+      "filePath": ".husky/pre-commit",
+      "contentHash": "69723eb387c8c3d800e8e91ec9635423589506071ad5b91a49819ce037ee09cb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    ".prettierignore": {
+      "filePath": ".prettierignore",
+      "contentHash": "02a9b6c4764eee08725ea09b8331982d6e2d3fc7a97c4d95278f86330954cb10",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": false
+    },
+    ".prettierrc.json": {
+      "filePath": ".prettierrc.json",
+      "contentHash": "6f1fe6b57475abb0903f48f21bd957f305efe14077aa01fe19cef02daa44ac8e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    ".understand-anything/.understandignore": {
+      "filePath": ".understand-anything/.understandignore",
+      "contentHash": "1ffca9e23f7e4f89a9f26b29d704142f2d8e0589cf67c612089d88c004762e39",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 54,
+      "hasStructuralAnalysis": false
+    },
+    "CLAUDE.md": {
+      "filePath": "CLAUDE.md",
+      "contentHash": "aa2d8bbb5a3d03efb03d89d3984eb5fdf3460dca9017ea2a3a7674eeb3661fbf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 61,
+      "hasStructuralAnalysis": true
+    },
+    "CODE_OF_CONDUCT.md": {
+      "filePath": "CODE_OF_CONDUCT.md",
+      "contentHash": "6fa454133174498a066b0183c700f14f7028c4d4609249b9c194cf15da75b24b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 129,
+      "hasStructuralAnalysis": true
+    },
+    "commitlint.config.js": {
+      "filePath": "commitlint.config.js",
+      "contentHash": "4e3ad176710a592aaaa873b18aca9df82518600840b8a46f40f5c7629380eb7e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    "CONTEXT.md": {
+      "filePath": "CONTEXT.md",
+      "contentHash": "6eccd6c589ca745efa2c887975016bfa9802994f3b49a84055037f1acc8e48a2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "eslint.config.mjs": {
+      "filePath": "eslint.config.mjs",
+      "contentHash": "63f538730f17350557a2705918146086a9ab10abf3b09b7db367f7bff0755d04",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@eslint/js",
+          "specifiers": [
+            "pluginJs"
+          ]
+        },
+        {
+          "source": "@next/eslint-plugin-next",
+          "specifiers": [
+            "nextPlugin"
+          ]
+        },
+        {
+          "source": "eslint-config-prettier",
+          "specifiers": [
+            "eslintConfigPrettier"
+          ]
+        },
+        {
+          "source": "eslint-plugin-import",
+          "specifiers": [
+            "importPlugin"
+          ]
+        },
+        {
+          "source": "eslint-plugin-promise",
+          "specifiers": [
+            "pluginPromise"
+          ]
+        },
+        {
+          "source": "eslint-plugin-react",
+          "specifiers": [
+            "pluginReact"
+          ]
+        },
+        {
+          "source": "eslint-plugin-simple-import-sort",
+          "specifiers": [
+            "simpleImportSort"
+          ]
+        },
+        {
+          "source": "globals",
+          "specifiers": [
+            "globals"
+          ]
+        },
+        {
+          "source": "typescript-eslint",
+          "specifiers": [
+            "tseslint"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 114,
+      "hasStructuralAnalysis": true
+    },
+    "next.config.ts": {
+      "filePath": "next.config.ts",
+      "contentHash": "356a489e224781e6ab13c87f0b6ea101a876309d14e037c22cc5af9fb429386a",
+      "functions": [
+        {
+          "name": "createNextConfig",
+          "params": [],
+          "returnType": "Promise<NextConfig>",
+          "exported": false,
+          "lineCount": 14
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@next/bundle-analyzer",
+          "specifiers": [
+            "initializeBundleAnalyzer"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "NextConfig"
+          ]
+        },
+        {
+          "source": "node:url",
+          "specifiers": [
+            "fileURLToPath"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 27,
+      "hasStructuralAnalysis": true
+    },
+    "package.json": {
+      "filePath": "package.json",
+      "contentHash": "8cc972527bc12bbc28519a74549346fb11bf5c64b38fd55afa6b043e5d8d6a33",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 108,
+      "hasStructuralAnalysis": true
+    },
+    "postcss.config.cjs": {
+      "filePath": "postcss.config.cjs",
+      "contentHash": "26bd93e186de7e01b7797d555925b8e700712c6e436ce9e19e61c7e8f1786e08",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "701f2a07f090028246ff2a067e29a214b571c9c4c728f67c93b2e286dbeaa541",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": true
+    },
+    "SECURITY.md": {
+      "filePath": "SECURITY.md",
+      "contentHash": "ba9643955bfcb04524a6fe5a8c2929b54abc2e67bb3480ce806e742d506e4dc9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 22,
+      "hasStructuralAnalysis": true
+    },
+    "skills-lock.json": {
+      "filePath": "skills-lock.json",
+      "contentHash": "29c1bc1f0466929a8891b4ec374f07aa167cad183e2637c706c7448719475203",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 84,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/(auth)/layout.tsx": {
+      "filePath": "src/app/(auth)/layout.tsx",
+      "contentHash": "10c3a197fab84d77e0b165ad8aa474280de83099810c78f8d3c4fc13aa04ccb4",
+      "functions": [
+        {
+          "name": "AuthLayout",
+          "params": [
+            "{ children }"
+          ],
+          "exported": false,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "PropsWithChildren"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/(auth)/sign-in/page.tsx": {
+      "filePath": "src/app/(auth)/sign-in/page.tsx",
+      "contentHash": "5cb3ed71ba78a091e35e413a82074cd38cbe37e63f8bf6a3560d23f7af1d5c19",
+      "functions": [
+        {
+          "name": "SignInPage",
+          "params": [],
+          "exported": false,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/(auth)/sign-up/page.tsx": {
+      "filePath": "src/app/(auth)/sign-up/page.tsx",
+      "contentHash": "eafa2c392445fc28824eebde212d2a78b29f4a3eb90f089632f7ccd5d4ce06d4",
+      "functions": [
+        {
+          "name": "SignUpPage",
+          "params": [],
+          "exported": false,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/(marketing)/page.tsx": {
+      "filePath": "src/app/(marketing)/page.tsx",
+      "contentHash": "194f5b984d870bca41c537630fcea55df8c99bae06b75871a3f64d2c8fc88114",
+      "functions": [
+        {
+          "name": "HomePage",
+          "params": [],
+          "exported": false,
+          "lineCount": 24
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useState"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "CheckCheck",
+            "Copy"
+          ]
+        },
+        {
+          "source": "sonner",
+          "specifiers": [
+            "toast"
+          ]
+        },
+        {
+          "source": "~/hooks",
+          "specifiers": [
+            "useCopyToClipboard"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 38,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/api/v1/products/route.ts": {
+      "filePath": "src/app/api/v1/products/route.ts",
+      "contentHash": "b189ff2cb4eff661b30ab7bffb6ebad5f69e2b0aa208c47bb7682c2f88bc5e25",
+      "functions": [
+        {
+          "name": "GET",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zod",
+          "specifiers": [
+            "z"
+          ]
+        },
+        {
+          "source": "~/modules/products/types",
+          "specifiers": [
+            "productSchema"
+          ]
+        }
+      ],
+      "exports": [
+        "GET"
+      ],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/error.tsx": {
+      "filePath": "src/app/error.tsx",
+      "contentHash": "7c905a8225baff5299bb8ff3002697a0da3f51ac6fd5a52b5cb9bfffa0ffc772",
+      "functions": [
+        {
+          "name": "ErrorPage",
+          "params": [
+            "{ error, reset }"
+          ],
+          "exported": false,
+          "lineCount": 40
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useEffect"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Frown"
+          ]
+        },
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "~/components",
+          "specifiers": [
+            "getBackgroundPattern"
+          ]
+        },
+        {
+          "source": "~/utils",
+          "specifiers": [
+            "makeUrlsExternal"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 61,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/layout.tsx": {
+      "filePath": "src/app/layout.tsx",
+      "contentHash": "7cd13804645339a7b50cf8a55550407052c7e4bc124d3f9b3e5355070f5ae876",
+      "functions": [
+        {
+          "name": "RootLayout",
+          "params": [
+            "{\n   children,\n}"
+          ],
+          "exported": true,
+          "lineCount": 18
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "next",
+          "specifiers": [
+            "Viewport"
+          ]
+        },
+        {
+          "source": "next/script",
+          "specifiers": [
+            "Script"
+          ]
+        },
+        {
+          "source": "~/styles/index.css",
+          "specifiers": []
+        },
+        {
+          "source": "~/components/ui",
+          "specifiers": [
+            "fontInter"
+          ]
+        },
+        {
+          "source": "~/config",
+          "specifiers": [
+            "appConfig",
+            "generateSeoMetadata",
+            "jsonLd"
+          ]
+        },
+        {
+          "source": "~/integrations",
+          "specifiers": [
+            "RootProviders"
+          ]
+        },
+        {
+          "source": "~/utils",
+          "specifiers": [
+            "cn"
+          ]
+        }
+      ],
+      "exports": [
+        "viewport",
+        "metadata",
+        "RootLayout"
+      ],
+      "totalLines": 42,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/not-found.tsx": {
+      "filePath": "src/app/not-found.tsx",
+      "contentHash": "6384d04f2f4d51e9a81364dc297ecaf090380af1befe02fe7cdfe02d7e2a4993",
+      "functions": [
+        {
+          "name": "NotFoundPage",
+          "params": [],
+          "exported": false,
+          "lineCount": 20
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "~/components",
+          "specifiers": [
+            "getBackgroundPattern"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 29,
+      "hasStructuralAnalysis": true
+    },
+    "src/app/robot.ts": {
+      "filePath": "src/app/robot.ts",
+      "contentHash": "799478245ae87eeaa7425679b1dfc354355ad2ed766e4d3d308f2072567f9475",
+      "functions": [
+        {
+          "name": "robots",
+          "params": [],
+          "returnType": "MetadataRoute.Robots",
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next",
+          "specifiers": [
+            "MetadataRoute"
+          ]
+        },
+        {
+          "source": "~/config",
+          "specifiers": [
+            "appConfig"
+          ]
+        }
+      ],
+      "exports": [
+        "robots"
+      ],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/index.ts": {
+      "filePath": "src/components/index.ts",
+      "contentHash": "68346c8ee36a824abb983609103a383ae98f732ad1eb2673096133c88b473580",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/layout/.gitkeep": {
+      "filePath": "src/components/layout/.gitkeep",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "src/components/shared/.gitkeep": {
+      "filePath": "src/components/shared/.gitkeep",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "src/components/ui/bg-patterns.tsx": {
+      "filePath": "src/components/ui/bg-patterns.tsx",
+      "contentHash": "6683d2279a5b32d3c8f07255531c48f0122f1e4265b23a71d5f5c7665c7417ec",
+      "functions": [
+        {
+          "name": "BgLightGrid1",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "BgLightGrid2",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "BgLightGrid5",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "BgLightGradient1",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "BgLightGrid3",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "BgLightGridGradient1",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "BgDarkGradient1",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "BgLightGrid4",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "BgLightGradient2",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "BgDarkGradient2",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "BgLightGradient3",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "BgLightGradient4",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "BgLightGradient5",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "BgLightGradient6",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "BgDarkGrid1",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "BgDarkGradient3",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "BgLightGridGradient2",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "BgDarkGradient4",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "BgDarkGradient5",
+          "params": [],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "BgDarkGrid2",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "BgDarkGridGradient1",
+          "params": [],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "BgDarkGrid3",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "getBackgroundPattern",
+          "params": [
+            "id"
+          ],
+          "returnType": "ReactNode",
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactElement",
+            "ReactNode"
+          ]
+        }
+      ],
+      "exports": [
+        "BACKGROUND_OPTIONS",
+        "getBackgroundPattern"
+      ],
+      "totalLines": 315,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/ui/fonts.ts": {
+      "filePath": "src/components/ui/fonts.ts",
+      "contentHash": "ac2882c5104ac7a738bdb55f9920b5e38681a5250dd733c03e13563283161b67",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/font/google",
+          "specifiers": [
+            "Inter"
+          ]
+        }
+      ],
+      "exports": [
+        "fontInter"
+      ],
+      "totalLines": 10,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/ui/index.ts": {
+      "filePath": "src/components/ui/index.ts",
+      "contentHash": "3f43f06352617d0acb5b67a409f8e31dc8c169e04659d4b0639d17a178cc0dfe",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": true
+    },
+    "src/config/app.config.ts": {
+      "filePath": "src/config/app.config.ts",
+      "contentHash": "8963d699d554f1bae59bea9b340ef1cec13b311e06b673084760d150937d86c4",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "~/types",
+          "specifiers": [
+            "ConfigProps"
+          ]
+        }
+      ],
+      "exports": [
+        "appConfig"
+      ],
+      "totalLines": 22,
+      "hasStructuralAnalysis": true
+    },
+    "src/config/index.ts": {
+      "filePath": "src/config/index.ts",
+      "contentHash": "a578e9c30b53c43d13c9c61918ac502212de3b8bf7127b0060f6f94f307b67a4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": true
+    },
+    "src/config/seo.config.ts": {
+      "filePath": "src/config/seo.config.ts",
+      "contentHash": "f91ff91fcc653bb90db8bac0cc307cf438eb654bd76f7b820e70c74abd6b8524",
+      "functions": [
+        {
+          "name": "generateSeoMetadata",
+          "params": [
+            "{\n   title,\n   description,\n   keywords,\n   openGraph,\n   canonicalUrlRelative,\n   extraTags,\n}"
+          ],
+          "returnType": "SeoMeta",
+          "exported": true,
+          "lineCount": 59
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        },
+        {
+          "source": "schema-dts",
+          "specifiers": [
+            "SoftwareApplication",
+            "WithContext"
+          ]
+        },
+        {
+          "source": "./app.config",
+          "specifiers": [
+            "appConfig"
+          ]
+        }
+      ],
+      "exports": [
+        "generateSeoMetadata",
+        "jsonLd"
+      ],
+      "totalLines": 117,
+      "hasStructuralAnalysis": true
+    },
+    "src/constants/api-endpoints.ts": {
+      "filePath": "src/constants/api-endpoints.ts",
+      "contentHash": "9ce81ca6e6f94116a73ef7bc725372cadad61dc0349f8c07ccd5434255ece593",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "API_ENDPOINTS"
+      ],
+      "totalLines": 20,
+      "hasStructuralAnalysis": true
+    },
+    "src/constants/enums.ts": {
+      "filePath": "src/constants/enums.ts",
+      "contentHash": "f73b5780b13cf16162c5ad2999db9ec9770c4ed89eafbdfd7d3b5ad5b6c2ebb5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "src/constants/env.ts": {
+      "filePath": "src/constants/env.ts",
+      "contentHash": "10a1d7d35b0bfd04b2dea501f643b0fee4ce333c4a5df72085fe1dcead292b83",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@t3-oss/env-core/presets-zod",
+          "specifiers": [
+            "vercel"
+          ]
+        },
+        {
+          "source": "@t3-oss/env-nextjs",
+          "specifiers": [
+            "createEnv"
+          ]
+        },
+        {
+          "source": "zod",
+          "specifiers": [
+            "z"
+          ]
+        }
+      ],
+      "exports": [
+        "env"
+      ],
+      "totalLines": 38,
+      "hasStructuralAnalysis": true
+    },
+    "src/constants/index.ts": {
+      "filePath": "src/constants/index.ts",
+      "contentHash": "1a5100ee2f82756108f10f4a99a69d8ea0e0d6665a789467386cb5857f7a4701",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": true
+    },
+    "src/constants/regex.ts": {
+      "filePath": "src/constants/regex.ts",
+      "contentHash": "4992a62c74ddb0c89afe4584bc456159dfc053b5f829836cbf5df212975bc4c0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "REGEX"
+      ],
+      "totalLines": 81,
+      "hasStructuralAnalysis": true
+    },
+    "src/hooks/index.ts": {
+      "filePath": "src/hooks/index.ts",
+      "contentHash": "a153d61f9ae0b7608eb0b69329d7c3c7788e1e8923cb275d40576202f64cdd7f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": true
+    },
+    "src/hooks/use-copy.ts": {
+      "filePath": "src/hooks/use-copy.ts",
+      "contentHash": "79a79449d2fc7850f64f9022ca4f80c461dde175afe569237b48797f257af34c",
+      "functions": [
+        {
+          "name": "useCopyToClipboard",
+          "params": [
+            "delay"
+          ],
+          "returnType": "[CopyFn, boolean]",
+          "exported": true,
+          "lineCount": 34
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "* as React"
+          ]
+        }
+      ],
+      "exports": [
+        "useCopyToClipboard"
+      ],
+      "totalLines": 41,
+      "hasStructuralAnalysis": true
+    },
+    "src/hooks/use-isomorphic-layout.ts": {
+      "filePath": "src/hooks/use-isomorphic-layout.ts",
+      "contentHash": "f419710a18763089d49faeaaca7b70cf7c66241a194db749e2b7fdaf1797334e",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "* as React"
+          ]
+        }
+      ],
+      "exports": [
+        "useIsomorphicLayoutEffect"
+      ],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "src/hooks/use-mouse-position.ts": {
+      "filePath": "src/hooks/use-mouse-position.ts",
+      "contentHash": "ccea88764a595892bcc54616439e37eca633405c1419425096fad3326b6ca640",
+      "functions": [
+        {
+          "name": "useMousePosition",
+          "params": [],
+          "returnType": "[Position, React.Ref<T>]",
+          "exported": true,
+          "lineCount": 41
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "* as React"
+          ]
+        }
+      ],
+      "exports": [
+        "useMousePosition"
+      ],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "src/hooks/use-toggle.ts": {
+      "filePath": "src/hooks/use-toggle.ts",
+      "contentHash": "dd063ae90a35e1e55738207d025eea8a5380f7c9733dde6fbf1b7db89ba6ae54",
+      "functions": [
+        {
+          "name": "useToggle",
+          "params": [
+            "defaultValue"
+          ],
+          "returnType": "[boolean, () => void, React.Dispatch<React.SetStateAction<boolean>>]",
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "* as React"
+          ]
+        }
+      ],
+      "exports": [
+        "useToggle"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "src/integrations/index.tsx": {
+      "filePath": "src/integrations/index.tsx",
+      "contentHash": "4efa8b047e26213ed713e4479d292dbf9130bddfc0998a4b473cb3989fc51b1b",
+      "functions": [
+        {
+          "name": "RootProviders",
+          "params": [
+            "{ children }"
+          ],
+          "exported": false,
+          "lineCount": 14
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "nuqs/adapters/next/app",
+          "specifiers": [
+            "NuqsAdapter"
+          ]
+        },
+        {
+          "source": "sonner",
+          "specifiers": [
+            "Toaster",
+            "ToasterProps"
+          ]
+        },
+        {
+          "source": "./react-query",
+          "specifiers": [
+            "ReactQueryProvider"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 42,
+      "hasStructuralAnalysis": true
+    },
+    "src/integrations/react-query.tsx": {
+      "filePath": "src/integrations/react-query.tsx",
+      "contentHash": "626d4acb3d3db1cc40f76ea9ce512625012ce0f86d383c857f26247e137add0f",
+      "functions": [
+        {
+          "name": "ReactQueryProvider",
+          "params": [
+            "{ children }"
+          ],
+          "exported": false,
+          "lineCount": 46
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "ReactNode",
+            "useState"
+          ]
+        },
+        {
+          "source": "@tanstack/react-query",
+          "specifiers": [
+            "QueryCache",
+            "QueryClient",
+            "QueryClientProvider"
+          ]
+        },
+        {
+          "source": "@tanstack/react-query-devtools",
+          "specifiers": [
+            "ReactQueryDevtools"
+          ]
+        },
+        {
+          "source": "sonner",
+          "specifiers": [
+            "toast"
+          ]
+        },
+        {
+          "source": "~/lib/api",
+          "specifiers": [
+            "ApiError"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 65,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/api/client.ts": {
+      "filePath": "src/lib/api/client.ts",
+      "contentHash": "c0a00420b7607fb3be9a2578b8d3c36218b6cdee100dfec9136760331ae7027e",
+      "functions": [
+        {
+          "name": "apiRequest",
+          "params": [
+            "method",
+            "endpoint",
+            "data",
+            "config"
+          ],
+          "returnType": "Promise<T>",
+          "exported": true,
+          "lineCount": 15
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "axios",
+          "specifiers": [
+            "AxiosRequestConfig",
+            "Method"
+          ]
+        },
+        {
+          "source": "./interceptor",
+          "specifiers": [
+            "axiosInstance",
+            "ApiError"
+          ]
+        },
+        {
+          "source": "~/constants",
+          "specifiers": [
+            "ApiEndpoint"
+          ]
+        }
+      ],
+      "exports": [
+        "ApiError",
+        "apiRequest"
+      ],
+      "totalLines": 26,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/api/index.ts": {
+      "filePath": "src/lib/api/index.ts",
+      "contentHash": "314360fea332659ed3bfd5278392bb67422edf0e4e4bd19ab6472eee3f12a457",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/api/interceptor.ts": {
+      "filePath": "src/lib/api/interceptor.ts",
+      "contentHash": "aefd1593af454ac2801266c21580fd5778a7f40bdc0330dedaec0e440eaa3e66",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ApiError",
+          "methods": [
+            "constructor"
+          ],
+          "properties": [
+            "status",
+            "code"
+          ],
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
+      "imports": [
+        {
+          "source": "axios",
+          "specifiers": [
+            "AxiosError",
+            "AxiosInstance",
+            "AxiosResponse",
+            "create",
+            "isAxiosError"
+          ]
+        },
+        {
+          "source": "~/config",
+          "specifiers": [
+            "appConfig"
+          ]
+        }
+      ],
+      "exports": [
+        "ApiError"
+      ],
+      "totalLines": 59,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/index.ts": {
+      "filePath": "src/lib/index.ts",
+      "contentHash": "598655bcd63eb67f0bca0036bc7881f377331d267411b75e0b2f96e2ffe89c0e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/store/create-store.ts": {
+      "filePath": "src/lib/store/create-store.ts",
+      "contentHash": "d0f591460d302396217ad542482b511be124c326ff3f0dbb2986b25795d236c2",
+      "functions": [
+        {
+          "name": "createStore",
+          "params": [
+            "storeCreator",
+            "config"
+          ],
+          "exported": true,
+          "lineCount": 16
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zustand",
+          "specifiers": [
+            "create"
+          ]
+        },
+        {
+          "source": "zustand/middleware",
+          "specifiers": [
+            "createJSONStorage",
+            "persist"
+          ]
+        },
+        {
+          "source": "zustand/middleware/immer",
+          "specifiers": [
+            "immer"
+          ]
+        },
+        {
+          "source": "zustand/vanilla",
+          "specifiers": [
+            "StateCreator"
+          ]
+        }
+      ],
+      "exports": [
+        "createStore"
+      ],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/store/index.ts": {
+      "filePath": "src/lib/store/index.ts",
+      "contentHash": "2f777b98814de830275db2bc8a99e2b88203293059f3f0c6dc8c97d8b5f01387",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "src/modules/cart/index.ts": {
+      "filePath": "src/modules/cart/index.ts",
+      "contentHash": "fa984ff554dbb4b309cd040e360ba02ac1b8b4e12dc6e5c96fb60d913508ab38",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "src/modules/cart/store/cart-store.ts": {
+      "filePath": "src/modules/cart/store/cart-store.ts",
+      "contentHash": "f2a71227ffddb945b41f3baa844191b7f186d5fec21046ef02a746b18ec609e9",
+      "functions": [
+        {
+          "name": "useCart",
+          "params": [],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "useCartState",
+          "params": [],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "useCartActions",
+          "params": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zustand/react/shallow",
+          "specifiers": [
+            "useShallow"
+          ]
+        },
+        {
+          "source": "~/lib/store",
+          "specifiers": [
+            "createStore"
+          ]
+        },
+        {
+          "source": "~/modules/products",
+          "specifiers": [
+            "Product"
+          ]
+        }
+      ],
+      "exports": [
+        "useCartStore",
+        "useCart",
+        "useCartState",
+        "useCartActions"
+      ],
+      "totalLines": 60,
+      "hasStructuralAnalysis": true
+    },
+    "src/modules/cart/store/index.ts": {
+      "filePath": "src/modules/cart/store/index.ts",
+      "contentHash": "756d02a89fdbae7bd83a07ee726d1e48e922a2581a46c2de4e7db0e07eb210a1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "src/modules/products/api/index.ts": {
+      "filePath": "src/modules/products/api/index.ts",
+      "contentHash": "fbb460fb83c1cbcb2c4159fa286cf9703e8c964fd52dbc78187f3a148fb9d2ab",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": true
+    },
+    "src/modules/products/api/product-api.ts": {
+      "filePath": "src/modules/products/api/product-api.ts",
+      "contentHash": "bb58650d7bc19f1bbdf85d63065da8f0aae74ccec2d87c1ed0a5a8418e15a71f",
+      "functions": [
+        {
+          "name": "getProducts",
+          "params": [
+            "filters"
+          ],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "getProduct",
+          "params": [
+            "id"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "createProduct",
+          "params": [
+            "payload"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "updateProduct",
+          "params": [
+            "{ id, ...payload }"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "deleteProduct",
+          "params": [
+            "id"
+          ],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../types",
+          "specifiers": [
+            "Product",
+            "ProductFilters"
+          ]
+        },
+        {
+          "source": "~/constants",
+          "specifiers": [
+            "API_ENDPOINTS"
+          ]
+        },
+        {
+          "source": "~/lib/api",
+          "specifiers": [
+            "apiRequest"
+          ]
+        }
+      ],
+      "exports": [
+        "getProducts",
+        "getProduct",
+        "createProduct",
+        "updateProduct",
+        "deleteProduct"
+      ],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "src/modules/products/api/product-query-keys.ts": {
+      "filePath": "src/modules/products/api/product-query-keys.ts",
+      "contentHash": "3ded93eccb3a65ddc0be7ee64b03e313591d22bc28247a8de2c67935aa9df25d",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../types",
+          "specifiers": [
+            "ProductFilters"
+          ]
+        }
+      ],
+      "exports": [
+        "productQueryKeys"
+      ],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    "src/modules/products/hooks/index.ts": {
+      "filePath": "src/modules/products/hooks/index.ts",
+      "contentHash": "db07a9ce994670d0f5b755534bb20b48ed6d176735598e6cc88726f1a7a81c49",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": true
+    },
+    "src/modules/products/hooks/use-product-mutation.ts": {
+      "filePath": "src/modules/products/hooks/use-product-mutation.ts",
+      "contentHash": "58861440591fbc0be8695b812cd1345e8b24d37f836bbb4716f660ec20df657a",
+      "functions": [
+        {
+          "name": "useCreateProduct",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "useUpdateProduct",
+          "params": [],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "useDeleteProduct",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-query",
+          "specifiers": [
+            "useMutation",
+            "useQueryClient"
+          ]
+        },
+        {
+          "source": "../api",
+          "specifiers": [
+            "createProduct",
+            "deleteProduct",
+            "productQueryKeys",
+            "updateProduct"
+          ]
+        }
+      ],
+      "exports": [
+        "useCreateProduct",
+        "useUpdateProduct",
+        "useDeleteProduct"
+      ],
+      "totalLines": 34,
+      "hasStructuralAnalysis": true
+    },
+    "src/modules/products/hooks/use-products.ts": {
+      "filePath": "src/modules/products/hooks/use-products.ts",
+      "contentHash": "8301fd4904b9500bdd49580ad9b34c5c2cf2747f12a81a5f87f9b445782680c8",
+      "functions": [
+        {
+          "name": "useProducts",
+          "params": [
+            "filters"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "useProduct",
+          "params": [
+            "id"
+          ],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-query",
+          "specifiers": [
+            "useQuery"
+          ]
+        },
+        {
+          "source": "../api",
+          "specifiers": [
+            "getProduct",
+            "getProducts",
+            "productQueryKeys"
+          ]
+        },
+        {
+          "source": "../types",
+          "specifiers": [
+            "ProductFilters"
+          ]
+        }
+      ],
+      "exports": [
+        "useProducts",
+        "useProduct"
+      ],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "src/modules/products/index.ts": {
+      "filePath": "src/modules/products/index.ts",
+      "contentHash": "591eb9f80a76d5f1c2b7df75b92cfe9974b6066fcf5fdff5e433b0db0b4b0f4b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "src/modules/products/types.ts": {
+      "filePath": "src/modules/products/types.ts",
+      "contentHash": "155f7a3d0cc78f1a9cda75a6e621860b0a5baa6bb3cd9bc4e0ecec20145d7aa1",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zod",
+          "specifiers": [
+            "z"
+          ]
+        }
+      ],
+      "exports": [
+        "productSchema"
+      ],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "src/proxy.ts": {
+      "filePath": "src/proxy.ts",
+      "contentHash": "17fe6af6deb62aec27c7a79cb2833dd691249be3fe4f568c181e6aae75ac6543",
+      "functions": [
+        {
+          "name": "middleware",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextRequest"
+          ]
+        },
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextResponse"
+          ]
+        }
+      ],
+      "exports": [
+        "middleware",
+        "config"
+      ],
+      "totalLines": 13,
+      "hasStructuralAnalysis": true
+    },
+    "src/styles/defaults.css": {
+      "filePath": "src/styles/defaults.css",
+      "contentHash": "d1a57f404e710fe9618d662bf825c1782c21554c03beb5f631fbe66a2ac651c9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": false
+    },
+    "src/styles/elements.css": {
+      "filePath": "src/styles/elements.css",
+      "contentHash": "991591337d5594b62ce27b3a65914accf65b545c55bd0111e132609463da96ca",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": false
+    },
+    "src/styles/index.css": {
+      "filePath": "src/styles/index.css",
+      "contentHash": "b1712db0d2fd50b5885906143840353384a522dfff8d9449def84bf5c4c26ba3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 41,
+      "hasStructuralAnalysis": false
+    },
+    "src/styles/utils.css": {
+      "filePath": "src/styles/utils.css",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "src/types/config.types.ts": {
+      "filePath": "src/types/config.types.ts",
+      "contentHash": "ad68eaed82c108e87b9b2976e4380a69bfd1cd4af9fe925c713de979373c869a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": true
+    },
+    "src/types/index.ts": {
+      "filePath": "src/types/index.ts",
+      "contentHash": "26a090960c0470849aa5b6b2e36245de812a62b861e1435c469ec78d4e344af8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "src/utils/cn.ts": {
+      "filePath": "src/utils/cn.ts",
+      "contentHash": "80c246cdf6ff5d830274f528b2427466897473a1589cab57a1b8448facdd20da",
+      "functions": [
+        {
+          "name": "cn",
+          "params": [
+            "...inputs"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "clsx",
+          "specifiers": [
+            "ClassValue",
+            "clsx"
+          ]
+        },
+        {
+          "source": "tailwind-merge",
+          "specifiers": [
+            "twMerge"
+          ]
+        }
+      ],
+      "exports": [
+        "cn"
+      ],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "src/utils/formatting/currency.ts": {
+      "filePath": "src/utils/formatting/currency.ts",
+      "contentHash": "f4d6c9c49122cf88741550509fbbe60808f5e359105dd2d4bac6209b2431a949",
+      "functions": [
+        {
+          "name": "formatToUSD",
+          "params": [
+            "amount"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "formatToUSD"
+      ],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "src/utils/formatting/index.ts": {
+      "filePath": "src/utils/formatting/index.ts",
+      "contentHash": "42e232eb771ce03c617d9aba90673d7b4340cff524c510e62e7edffaf0f6315e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "src/utils/index.ts": {
+      "filePath": "src/utils/index.ts",
+      "contentHash": "084639c92f3319a640319d4383aff896bed87fbb956191f2f3a0b07f63f1f83d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "src/utils/string/capitalization.ts": {
+      "filePath": "src/utils/string/capitalization.ts",
+      "contentHash": "433b78b95c47717ed91ef83707963157ae7b020532bf3130d5efdff23e6c6046",
+      "functions": [
+        {
+          "name": "pureCapitalize",
+          "params": [
+            "input"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 2
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "pureCapitalize"
+      ],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "src/utils/string/index.ts": {
+      "filePath": "src/utils/string/index.ts",
+      "contentHash": "47c53a1229d66e1bb7621d61af25132f6d4fea69f759c187a1e925d01032045b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": true
+    },
+    "src/utils/string/slugify.ts": {
+      "filePath": "src/utils/string/slugify.ts",
+      "contentHash": "18f07ee74d48af4278f196a204f74870e54ead54e55d700e160f0e754abbd664",
+      "functions": [
+        {
+          "name": "slugify",
+          "params": [
+            "text",
+            "separator"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "professionalSlugify",
+          "params": [
+            "text",
+            "replacements"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 17
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "slugify",
+        "professionalSlugify"
+      ],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "src/utils/string/truncate.ts": {
+      "filePath": "src/utils/string/truncate.ts",
+      "contentHash": "d2518f162a44cc589b6285ff8256dd74c6600afeb7dd093af3d44e0d1d286155",
+      "functions": [
+        {
+          "name": "truncate",
+          "params": [
+            "text",
+            "maxLength",
+            "ellipsis"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "truncateWords",
+          "params": [
+            "text",
+            "maxLength",
+            "ellipsis"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "truncate",
+        "truncateWords"
+      ],
+      "totalLines": 24,
+      "hasStructuralAnalysis": true
+    },
+    "src/utils/string/url.ts": {
+      "filePath": "src/utils/string/url.ts",
+      "contentHash": "b1ddafcfa55c197bd1ea8a2e1e9cef053ce9890cf7d08f5fcca7f3ff72a576a0",
+      "functions": [
+        {
+          "name": "makeUrlsExternal",
+          "params": [
+            "text",
+            "className"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "~/constants",
+          "specifiers": [
+            "REGEX"
+          ]
+        }
+      ],
+      "exports": [
+        "makeUrlsExternal"
+      ],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "src/utils/uuid.ts": {
+      "filePath": "src/utils/uuid.ts",
+      "contentHash": "39b09cc4e92f9bbf65439b71fe50fdcb30241646207d8f7c191215f601a3ecdc",
+      "functions": [
+        {
+          "name": "generateUUID",
+          "params": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "uuid",
+          "specifiers": [
+            "uuidv4"
+          ]
+        }
+      ],
+      "exports": [
+        "generateUUID"
+      ],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    "src/utils/validation/email.ts": {
+      "filePath": "src/utils/validation/email.ts",
+      "contentHash": "a429f043441b04503e5c70734ce128f57d29d12ef392dffd992d51048b407d4b",
+      "functions": [
+        {
+          "name": "isValidEmail",
+          "params": [
+            "email"
+          ],
+          "returnType": "boolean",
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "~/constants",
+          "specifiers": [
+            "REGEX"
+          ]
+        }
+      ],
+      "exports": [
+        "isValidEmail"
+      ],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    "src/utils/validation/index.ts": {
+      "filePath": "src/utils/validation/index.ts",
+      "contentHash": "bef55c3eeb91d8936817501f508072b5a229f74c40c3de552e0abb746a8c9b7f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "tsconfig.json": {
+      "filePath": "tsconfig.json",
+      "contentHash": "7bd9df5419d3ae6a84358c34a23be04be835f8fac12b98e2f4a9f002f4f2a18f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 48,
+      "hasStructuralAnalysis": true
+    }
+  }
+}
